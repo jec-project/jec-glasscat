@@ -1,0 +1,28 @@
+{
+  "name": "jec-glasscat",
+  "version": "0.0.1",
+  "description": "JEC GlassCat - The GlassCat Aplication Server is the default JEC implementation.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pechemann/jec-glasscat.git"
+  },
+  "keywords": [
+    "JEC",
+    "Glasscat",
+    "Node.js",
+    "node",
+    "JavaScript",
+    "TypeScript",
+    "server",
+    "applications"
+  ],
+  "author": "Pascal ECHEMANN",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/pechemann/jec-glasscat/issues"
+  },
+  "homepage": "https://github.com/pechemann/jec-glasscat#readme",
+  "dependencies": { },
+  "devDependencies": {},
+  "peerDependencies": {}
+}
