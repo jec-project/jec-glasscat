@@ -22,7 +22,7 @@
     "url": "https://github.com/pechemann/jec-glasscat/issues"
   },
   "homepage": "https://github.com/pechemann/jec-glasscat#readme",
-  "dependencies": { },
+  "dependencies": {},
   "devDependencies": {},
   "peerDependencies": {}
 }

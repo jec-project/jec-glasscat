@@ -1,0 +1,32 @@
+#####################################
+# JEC GlassCat Project .gitignore
+# Please maintain alphabetical order!
+#####################################
+
+#####################################
+# VSCE
+#####################################
+
+# Ignore VSCE folder
+.vscode
+
+#####################################
+# node_modules
+#####################################
+
+# Ignore 'node_modules' folder
+node_modules
+
+#####################################
+# src
+#####################################
+
+# Ignore JavaScript files in src folder
+src/**/*.js
+
+#####################################
+# test
+#####################################
+
+# Ignore JavaScript files in test folder
+test/**/*.js

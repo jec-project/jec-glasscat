@@ -1,0 +1,13 @@
+{
+  "domains": [
+    {
+      "name": "admin-ejp",
+      "host": "localhost",
+      "target": "${root}/admin",
+      "connector": {
+        "type": "ejp",
+        "server": "admin-server"
+      }
+    }
+  ]
+}

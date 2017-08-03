@@ -1,8 +1,19 @@
 # JEC GlassCat Project
 
-The GlassCat Aplication Server is the default [JavaScript Entreprise Container][jec-url] (JEC) implementation.
+<p align="center">
+  <img src="./assets/glasscat.png" alt="GlassCat Application Server" width="150"/>
+</p>
 
-[![][jec-logo]][jec-url]
+GlassCat is a **Web Applications Server** which provides advanced functionalities for creating, building and deploying JavaScript microservices and Angular projects over NodeJS.
+
+GlassCat is the default [JavaScript Entreprise Container](https://github.com/pechemann/JEC) _(JEC)_ implementation.
+
+
+<p align="center">
+    <a href="https://github.com/pechemann/JEC" title="JavaScript Entreprise Container">
+    <img src="https://raw.githubusercontent.com/pechemann/JEC/master/assets/jec-logos/jec-logo.png" alt="JavaScript Entreprise Container" width="500"/>
+    </a>
+</p>
 
 ## Requirements
 
@@ -14,32 +25,17 @@ JEC GlassCat needs the following system parameters in order to work correctly:
 
 ## Installation
 
-Clone, or download, the JEC GlassCat module and then set up the application with:
+Clone, or download, the JEC GlassCat module and then set up the server with:
 
 ```bash
-$ npm install
+$ glasscat install
 ```
 
-## Running Tests
+## Get Started with GlassCat
 
-To execute all unit tests, use:
+New to GlassCat and need help setting up and customizing the server or learning the basic building blocks? Learn your way around GlassCat and get started with your first app within minutes.
 
-```bash
-$ npm test
-```
-
-## API Reference
-
-The API Reference documentation is not included into the JEC GlassCat node module. To build the API reference documentation, use:
-
-```bash
-$ grunt doc
-```
-
-Documentation will be generated in the `docs/api-reference` repository.
-The online version of the  API reference documentation will be available soon at the JEC Website.
-
-The documentation generator is [TypeDoc](http://typedoc.org/)
+[Browse documentation >](https://github.com/pechemann/jec-glasscat/wiki)
 
 ## Update Release Notes
 
@@ -65,6 +61,3 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
-
-[jec-url]: https://github.com/pechemann/JEC
-[jec-logo]: https://raw.githubusercontent.com/pechemann/JEC/master/assets/jec-logos/jec-logo.png
