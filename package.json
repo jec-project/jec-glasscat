@@ -14,7 +14,9 @@
     "JavaScript",
     "TypeScript",
     "server",
-    "applications"
+    "applications",
+    "Application Server",
+    "microservices"
   ],
   "author": "Pascal ECHEMANN",
   "license": "SEE LICENSE IN LICENSE",
@@ -22,7 +24,19 @@
     "url": "https://github.com/pechemann/jec-glasscat/issues"
   },
   "homepage": "https://github.com/pechemann/jec-glasscat#readme",
-  "dependencies": {},
-  "devDependencies": {},
-  "peerDependencies": {}
+  "scripts": {
+    "postinstall": "node scripts/install/post-install-tasks.js"
+  },
+  "dependencies": {
+    "jec-commons": "^1.1.2",
+    "jec-commons-node": "^1.0.2"
+  },
+  "temp_dependencies": {
+    "jec-glasscat-install": "1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.19",
+    "jec-juta": "^1.1.2",
+    "jec-tiger": "^1.1.3"
+  }
 }

@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target":"ES6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "diagnostics": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "baseUrl": "."
+  },
+  "__filesGlob": [
+    "./server/**/*.ts",
+    "./test/**/*.ts"
+  ],
+  "filesGlob": [
+    "scripts/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "admin/webapp/node_modules",
+    "workspace/**/*",
+    "public/**/*",
+    "assets/**/*",
+    "typings/**/*",
+    "server/**/*"
+  ]
+}

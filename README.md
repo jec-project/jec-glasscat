@@ -28,7 +28,7 @@ JEC GlassCat needs the following system parameters in order to work correctly:
 Clone, or download, the JEC GlassCat module and then set up the server with:
 
 ```bash
-$ glasscat install
+$ npm install
 ```
 
 ## Get Started with GlassCat
