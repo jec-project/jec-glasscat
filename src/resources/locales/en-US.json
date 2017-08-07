@@ -1,0 +1,133 @@
+{
+	"loggers": {
+		"init": "logger initialized: logLevel=%s",
+		"num": "logger #%s",
+		"name": "name: %s",
+		"classref": "class ref: %s",
+		"internalLogLevel": "logLevel: %s"
+	},
+	"singleton": {
+		"info": "singleton %s is available with GUID '%s'."
+	},
+	"errors": {
+		"objectInit": "%s has already been initialized.",
+		"singleton": "You cannot create a %s instance; use getInstance() instead.",
+		"loadingFile": "an error occurred while loading a configuration file:\n%s",
+		"invalidState": "the specified domain state is invalid: state='%s'",
+		"keystoreFile": "an error occurred while loading a keystore file; please read the logs file for more details",
+		"jslet": {
+			"patternsMissing": "jslet error: field 'urlPatterns' is required.",
+			"patternsEmpty": "jslet error: field 'urlPatterns' must not be empty.",
+			"rolesMissing": "jslet security error: field 'roles' is required.",
+			"rolesEmpty": "jslet security error: field 'roles' must not be empty"
+		},
+		"session": {
+			"expired": "session has expired.",
+			"invalidId": "session ID is not valid.",
+			"storageAccessError": "an error occurred while accessing to the session storage connector: '%s'"
+		},
+		"nestedResource": "an error occurred while loading a nested resource."
+	},
+	"warnings": {
+		"invalidContext": "invalid version: context= %s, kernel=%s",
+		"invalidLogLevel": "you cannot define a log level for the ConsoleLogger class: '%s'"
+	},
+	"context": {
+		"start": "verifying context configuration",
+		"valid": "context initialized",
+		"invalid": "context initialized with errors! Please check the bootstrap file."
+	},
+	"environment": {
+		"start": "environment information:",
+		"host": "host operating system is: %s, %s, %s",
+		"hostName": "hostname is: %s",
+		"directory": "home directory is: %s",
+		"totalMemory": "total memory: %s bytes",
+		"freeMemory": "available free memory: %s bytes"
+	},
+	"cpus": {
+		"start": "CPUs information:",
+		"num": "CPU #%s",
+		"model": "model: %s",
+		"speed": "speed: %s"
+	},
+	"domains": {
+		"connectors": {
+			"added": "new connector added to the domain manager:",
+			"name": "name: %s",
+			"type": "connector type: %s",
+			"target": "target directory: '%s'",
+			"contextRoot": "context root: %s",
+			"server": "associated server: '%s'"
+		},
+		"containers": {
+			"init": "domain container initialized:",
+			"contextRoot": "context root: %s",
+			"type": "connector type: %s"
+		}
+	},
+	"http": {
+		"services": {
+			"start": "starting http services",
+			"stop": "stopping http services",
+			"service": {
+				"added": "new service added to the http manager:",
+				"id": "id: %s",
+				"server": "serveur: %s",
+				"config": "listener config: adress=%s, port=%s",
+				"secured": "secured http: %s"
+			}
+		},
+		"servers": {
+			"start": "http service '%s' started on port %s",
+			"stop": "http service '%s' stopped"
+		}
+	},
+	"server": {
+		"ready": "server is ready for e-business",
+		"stop": "server stopped"
+	},
+	"httpErrors": {
+		"forbidden": {
+			"title": "HTTP Status 403 - Access is denied",
+			"message": "HTTP Status 403",
+			"description": "Access to the requested resource has been denied: '%s'"
+		},
+		"error": {
+			"title": "HTTP Request Error - The page cannot be displayed",
+			"message": "HTTP Status '%s'",
+			"description": "There is a problem with the page you are trying to reach and it cannot be displayed."
+		},
+		"notFound": "The requested resource could not be found."
+	},
+	"jslet": {
+		"newContext": "creation of a new jslet context: context root='%s'",
+		"added": "new jslet added to context:\n   * name='%s', URLs='%s', template='%s'",
+		"autowireDetect": "autowired jslet detected: source file='%s'"
+	},
+	"security": {
+		"context": {
+			"securityAdded": "new security context added: contextRoot='%s'",
+			"sessionAdded": "new session context added: contextRoot='%s'"
+		},
+		"roles": {
+			"added": "new security role added: %s"
+		},
+		"constraint": {
+			"added": "new security constraint added: contextRoot='%s', name='%s'"
+		}
+	},
+	"ejp": {
+		"updateStart": "EJP configuration update start: projectPath=%s",
+		"updateComplete": "EJP configuration update complete: project=%s",
+		"updateFailed": "EJP configuration update failed: project=%s, error=%s"
+	},
+	"srcInspector": {
+		"init": "source inspector initialized",
+		"initError": "source inspector already initialized",
+		"processorAdded": "source file processor added: %s",
+		"sourcePathAdded": "source inspector path added: %s",
+		"lookupStart": "source inspector lookup start",
+		"lookupComplete": "source inspector lookup complete"
+	}
+}

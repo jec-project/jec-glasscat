@@ -10,19 +10,14 @@
     "preserveConstEnums": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "baseUrl": "."
+    "baseUrl": "./"
   },
   "filesGlob": [
-    "./scripts/**/*.ts",
     "./src/**/*.ts",
-    "./test/**/*.ts"
+    "./webapp/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "admin/webapp/node_modules",
-    "workspace/**/*",
-    "public/**/*",
-    "assets/**/*",
-    "typings/**/*"
+    "./webapp/node_modules"
   ]
 }
+

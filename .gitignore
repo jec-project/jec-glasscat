@@ -30,3 +30,19 @@ src/**/*.js
 
 # Ignore JavaScript files in test folder
 test/**/*.js
+
+#####################################
+# Post install folders
+#####################################
+
+# Ignore 'public' folder
+public
+
+# Ignore 'workspace' folder
+workspace
+
+#####################################
+# temp files
+#####################################
+
+glasscat.bat

@@ -1,0 +1,12 @@
+{
+	"webapp": {
+		"name": "<% projectName %>",
+    "description": "Your project description here.",
+		"version": "0.0.1",
+		"contextRoot": "<% contextRoot %>",
+		"welcomeFile": "index.html",
+		"jslets": {
+			"enableAutowire": true
+		}
+	}
+}

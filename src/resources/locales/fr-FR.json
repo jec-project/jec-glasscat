@@ -1,0 +1,133 @@
+{
+	"loggers": {
+		"init": "logger initialisé: logLevel=%s",
+		"num": "logger n°%s",
+		"name": "nom : %s",
+		"classref": "reférence de la classe : %s",
+		"internalLogLevel": "logLevel : %s"
+	},
+		"singleton": {
+		"info": "le singleton %s est disponible avec le GUID '%s'."
+	},
+	"errors": {
+		"objectInit": "%s a déjà été initialisé",
+		"singleton": "Vous ne pouvez pas créer une instance de %s; utilisez getInstance() à la place.",
+		"loadingFile": "une erreur est survenue lors du chargement d'un fichier de configuration :\n%s",
+		"invalidState": "l'état spécifié pour le domaine est non valide : state='%s'",
+		"keystoreFile": "une erreur est survenue lors du chargement d'un fichier de stockage des clés d'authentification; consultez le fichier de logs pour plus de détails",
+		"jslet": {
+			"patternsMissing": "erreur jslet : le champ 'urlPatterns' est obligatoire.",
+			"patternsEmpty": "erreur jslet : le champ 'urlPatterns' ne peut pas être vide.",
+			"rolesMissing": "erreur de sécurité jslet : le champ 'roles' est obligatoire.",
+			"rolesEmpty": "erreur de sécurité jslet : le champ 'roles' ne peut pas être vide."
+		},
+		"session": {
+			"expired": "la session a expirée.",
+			"invalidId": "l'identifiant de session n'est pas valide.",
+			"storageAccessError": "une erreur est survenue lors de l'access au connecteur de stockage de session : '%s'"
+		},
+		"nestedResource": "une erreur est survenue au chargement d'une ressource embarquée."
+	},
+	"warnings": {
+		"invalidContext": "version non valide : contexte= %s, kernel=%s",
+		"invalidLogLevel": "vous ne pouvez pas définir de niveau de logs pour la classe ConsoleLogger : '%s'"
+	},
+	"context": {
+		"start": "vérification de la configuration du contexte",
+		"valid": "le contexte a été initialisé",
+		"invalid": "le contexte a été initialisé avec des erreurs ! Veuillez vérifier le fichier boostrap."
+	},
+	"environment": {
+		"start": "informations sur l'environment :",
+		"host": "système d'exploitation : %s, %s, %s",
+		"hostName": "hostname : %s",
+		"directory": "répertoire de base : %s",
+		"totalMemory": "memoire totale : %s bytes",
+		"freeMemory": "memoire disponible: %s bytes"
+	},
+	"cpus": {
+		"start": "informations sur les UC :",
+		"num": "unité n°%s",
+		"model": "modèle : %s",
+		"speed": "vitesse : %s"
+	},
+	"domains": {
+		"connectors": {
+			"added": "connecteur ajouté au gestionnaire de domaines :",
+			"name": "nom : %s",
+			"type": "type de connecteur : %s",
+			"target": "répertoire de déploiement : '%s'",
+			"contextRoot": "racine de l'application : %s",
+			"server": "serveur associé : '%s'"
+		},
+		"containers": {
+			"init": "conteneur de domaine initialisé :",
+			"contextRoot": "racine du contexte : %s",
+			"type": "type de conteneur : %s"
+		}
+	},
+	"http": {
+		"services": {
+			"start": "démarrage des services http",
+			"stop": "arrêt des services http",
+			"service": {
+				"added": "service ajouté au gestionnaire http :",
+				"id": "id : %s",
+				"server": "server : %s",
+				"config": "configuration du listener : adresse=%s, port=%s",
+				"secured": "http sécurisé : %s"
+			}
+		},
+		"servers": {
+			"start": "le service http '%s' a démarré sur le port %s",
+			"stop": "le service http '%s' est arrêté"
+		}
+	},
+	"server": {
+		"ready": "le serveur est prêt pour le e-business",
+		"stop": "le serveur est arrêté"
+	},
+	"httpErrors": {
+		"forbidden": {
+      "title": "Statut HTTP 403 - Accès refusé",
+      "message": "Statut HTTP 403",
+      "description": "L'accès à la ressource demandée a été refusé : '%s'"
+    },
+		"error": {
+      "title": "Erreur de requette HTTP - La page ne peut être affichée",
+      "message": "Statut HTTP '%s'",
+      "description": "La page à la quelle vous tentez d'accéder ne peut être affichée en raison d'une erreur."
+    },
+		"notFound": "Ressource non trouvée."
+	},
+	"jslet": {
+		"newContext": "création d'un nouveau contexte de jslet : racine du contexte='%s'",
+		"added": "nouvelle jslet ajoutée au contexte :\n   * nom='%s', liste des URL='%s', template='%s'",
+		"autowireDetect": "détection automatique d'unr jslet : fichier source='%s'"
+	},
+	"security": {
+		"context": {
+			"securityAdded": "ajout d'un nouveau contexte de sécurité : racine du contexte='%s'",
+			"sessionAdded": "ajout d'un nouveau contexte de session : racine du contexte='%s'"
+		},
+		"roles": {
+			"added": "ajout d'un nouveau rôle de sécurité : %s"
+		},
+		"constraint": {
+			"added": "ajout d'une nouvelle contrainte de sécurité : racine du contexte='%s', nom='%s'"
+		}
+	},
+	"ejp": {
+		"updateStart": "Début de mise à jour de configuration EJP : projectPath=%s",
+		"updateComplete": "Fin de mise à jour de configuration EJP : projet=%s",
+		"updateFailed": "Erreur de mise à jour de configuration EJP : projet=%s, erreur=%s"
+	},
+	"srcInspector": {
+		"init": "initialisation de l'inspecteur de sources",
+		"initError": "inspecteur de sources déjà initialisé",
+		"processorAdded": "ajout d'un processeur de fichier source : %s",
+		"sourcePathAdded": "ajout d'un chemin à l'inspecteur de fichier source : %s",
+		"lookupStart": "début de l'inspection des fichiers source",
+		"lookupComplete": "fin de l'inspection des fichiers source"
+	}
+}

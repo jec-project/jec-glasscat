@@ -1,0 +1,16 @@
+{
+  "gpm": {
+    "version":"1.0.0"
+  },
+  "project": {
+    "name": "Angular",
+    "version":"1.0.0",
+    "title": "Angular-based GlassCat Project Model",
+    "description": "Deploys an Angular-based GlassCat project with Bootstrap 4 and Font-Faces dependencies.",
+    "author": "ONSOFT SYSTEMS"
+  },
+  "processedFiles": ["html", "json", "css", "ejs", "js"],
+  "preInstall": [],
+  "postInstall": []
+}
+

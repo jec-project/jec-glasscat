@@ -1,0 +1,28 @@
+{
+  "models": [
+    {
+      "name": "Angular",
+      "version":"1.0.0",
+      "target": "angular",
+      "title": "Angular-based GlassCat Project Model",
+      "description": "Deploys an Angular-based GlassCat project with Bootstrap 4 and Font-Faces dependencies.",
+      "author": "ONSOFT SYSTEMS"
+    },
+    {
+      "name": "Basic",
+      "version":"1.0.0",
+      "target": "basic",
+      "title": "Default GlassCat Project Model",
+      "description": "Deploys a basic GlassCat project without any dependencies.",
+      "author": "ONSOFT SYSTEMS"
+    },
+    {
+      "name": "Bootstrap",
+      "version":"1.0.0",
+      "target": "bootstrap",
+      "title": "Bootstrap 4 GlassCat Project Model",
+      "description": "Deploys a GlassCat project based upon the Bootstrap 4 Jumbotron template.",
+      "author": "ONSOFT SYSTEMS"
+    }
+  ]
+}

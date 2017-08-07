@@ -1,0 +1,72 @@
+<div class="container">
+    <h1 class="display-3">Project Structure</h1>
+    <p class="lead">
+        The current section describes the architecture of an Angular project
+        deployed in an <em>Entreprise JavaScript Project</em> (EJP).
+    </p>
+    <h2>GlassCat EJP Structure</h2>
+    <p>
+        EJPs have been designed to clearly separate the presentation (front-side)
+        from the business logic (back-side) of your application. The presentation
+        is located in the <code>webapp</code> folder, while the <code>src</code>
+        directory contains the business logic:
+    </p>
+<pre>
+project
+   │
+   ├─src
+   ├─typings
+   ├─webapp
+   └─tsconfig.json
+</pre>
+    <p>
+        The <code>tsconfig.json</code> file ad the <code>typings</code> folder
+        define TypeScript configuration settings.
+    </p>
+
+<pre>
+webapp
+   │
+   ├─addons
+   ├─app
+   ├─node_modules
+   ├─styles
+   ├─views
+   ├─WEB-INF
+   ├─index.html
+   └─package.json
+</pre>
+
+<pre>
+app
+ │
+ ├─business
+ ├─components
+ ├─modules
+ ├─services
+ ├─templates
+ ├─main.ts
+ └─systemjs.config.js
+</pre>
+
+<pre>
+src
+ │
+ ├─bootstrap
+ ├─jslets
+ └─services
+</pre>
+
+<pre>
+src
+  │
+  ├─services
+  │    └─MyService.ts
+webapp
+  │
+  └─app
+     └───MyService.ts
+</pre>
+
+</div>
+<!-- /container -->

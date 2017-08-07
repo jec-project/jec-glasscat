@@ -29,10 +29,12 @@
   },
   "dependencies": {
     "jec-commons": "^1.1.2",
-    "jec-commons-node": "^1.0.2"
-  },
-  "temp_dependencies": {
-    "jec-glasscat-install": "1.0.0"
+    "jec-commons-node": "^1.0.2",
+    "jec-glasscat-cli": "^1.0.0",
+    "jec-glasscat-core": "^0.1.0",
+    "jec-glasscat-install": "1.0.0",
+    "jec-wildcat": "^1.0.3",
+    "mkpath": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^8.0.19",
