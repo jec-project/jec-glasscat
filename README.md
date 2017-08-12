@@ -25,7 +25,25 @@ JEC GlassCat needs the following system parameters in order to work correctly:
 
 ## Installation
 
-Clone, or download, the JEC GlassCat module and then set up the server with:
+### JEC-CLI
+
+The easiest way to install Glasscat is to use the [JEC Command Line Interface _(JEC-CLI)_](https://github.com/pechemann/jec-cli) .
+<br/>
+First install [JEC-CLI](https://github.com/pechemann/jec-cli), then run the following command in the target directory:
+
+```bash
+$ jec install-glasscat
+```
+
+or use the alias:
+
+```bash
+$ jec ig
+```
+
+### Manual Installation
+
+If you do not want use [JEC-CLI](https://github.com/pechemann/jec-cli), clone, or download, the JEC GlassCat module and then set up the server with:
 
 ```bash
 $ npm install
