@@ -35,6 +35,9 @@ test/**/*.js
 # Post install folders
 #####################################
 
+# Ignore 'server' folder
+server
+
 # Ignore 'public' folder
 public
 

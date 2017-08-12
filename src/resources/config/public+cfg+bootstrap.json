@@ -41,32 +41,8 @@
             "factory": "${server}/net/http/monitoring/ConsoleTransactionMonitorFactory"
           }
         }
-      ],
-      "security": {
-        "headerModules":[
-          {
-            "listener": "admin",
-            "additionalModules": [
-              {
-                "name": "noCache",
-                "settings": {
-                  "directives": {
-                     "sandbox": ["allow-forms", "allow-scripts"]
-                  }
-                }
-              }
-            ]
-          },
-           {
-            "listener": "default",
-            "modules": []
-          }
-        ]
-      }
+      ]
     },
     "errorPage": "${server}/templates/error/errors.ejs"
-  },
-  "modules": {
-
   }
 }

@@ -13,7 +13,6 @@
     "baseUrl": "."
   },
   "filesGlob": [
-    "./scripts/**/*.ts",
     "./src/**/*.ts",
     "./test/**/*.ts"
   ],
@@ -23,6 +22,7 @@
     "workspace/**/*",
     "public/**/*",
     "assets/**/*",
-    "typings/**/*"
+    "typings/**/*",
+    "src/resources/wildcat/**/*"
   ]
 }
