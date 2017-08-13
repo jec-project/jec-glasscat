@@ -1,0 +1,40 @@
+<h1>Config</h1>
+<p class="lead">This section contains all information about the Glasscat server
+  configure options used to compile the current executable.</p>
+
+<p-panel>
+  <p-header>
+    <i class="fa fa-list"></i> Release properties
+  </p-header>
+  <div>
+    <p-dataTable [value]="releaseModel">
+      <p-column field="name" header="Variable"></p-column>
+      <p-column field="value" header="Value"></p-column>
+    </p-dataTable>
+  </div>
+  <p>&nbsp;</p>
+  <p-fieldset legend="Information" toggleable="true" collapsed="true">
+    Release Properties are extracted from the Node.js <code>process.release</code>
+    property. For more details please read the <a target="_blank" href="https://nodejs.org/dist/latest-v7.x/docs/api/">Node.js v7.0.0 Documentation</a>.
+  </p-fieldset>
+</p-panel>
+
+<div>&nbsp;</div>
+
+<p-panel>
+  <p-header>
+    <i class="fa fa-list"></i> Config properties
+  </p-header>
+  <div>
+    <p-dataTable [value]="propertiesModel" [rows]="10" [paginator]="true" [rowsPerPageOptions]="[5,10,20]">
+      <p-column field="name" header="Name" [sortable]="true" [filter]="true"></p-column>
+      <p-column field="value" header="Value" [sortable]="true" [filter]="true"></p-column>
+      <p-column field="type" header="Type" [sortable]="true"></p-column>
+    </p-dataTable>
+  </div>
+  <p>&nbsp;</p>
+  <p-fieldset legend="Information" toggleable="true" collapsed="true">
+    Environment Properties are extracted from the Node.js <code>process.config</code>
+    property. For more details please read the <a target="_blank" href="https://nodejs.org/dist/latest-v7.x/docs/api/">Node.js v7.0.0 Documentation</a>.
+  </p-fieldset>
+</p-panel>

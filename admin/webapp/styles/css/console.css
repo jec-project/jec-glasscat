@@ -1,0 +1,266 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+}
+h1, h2, h3, h4, h5, h6 {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 15px;
+}
+.navbar-top{
+  background: #0275d8;
+  color: #fff;
+  height: 70px;
+  display: block;
+  left: 300px;
+  right: 0;
+  position: absolute;
+}
+.userMenu{
+  right: 0;
+  top: O;
+  position: absolute;
+}
+.userMenu button{
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border: 1px outset #0275d8;
+}
+.app-side-menu{
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+}
+.navbar-left{
+  top: 80px;
+  left: 10px;
+  right: 10px;
+  display: block;
+  position: absolute;
+}
+
+.brand-logo{
+  background: #0275d8;
+  color: #fff;
+  height: 70px;
+  display: block;
+  width: 300px;
+}
+.brand-logo img{
+  width: 64px;
+  height: 64px;
+  margin: auto;
+  display: block;
+}
+.navbar-brand{
+  color: #fff;
+  font-size: 44px;
+  text-decoration: none;
+  margin: 2px 0 0 10px;
+  display: block;
+}
+.content-wrapper{
+  left: 300px;
+  right: 0;
+  top: 60px;
+  display: block;
+  position: absolute;
+  padding: 20px;
+}
+
+.list-group{
+  background: #f5f5f5;
+  border: 1px solid #e6e6e6;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+.label-info{
+  background: #f5f5f5;
+  border: 1px solid #e6e6e6;
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+.list-unstyled{
+  list-style: none;
+}
+.ui-fieldset{
+  background: #e2e2e2;
+}
+
+.form-label {
+  padding-top: 12px;
+}
+
+.project-status-valid{
+  width: 100%;
+  text-align: center;
+  display: block;
+  color: #3c763d;
+  font-size: 20px;
+}
+.project-status-error{
+  width: 100%;
+  text-align: center;
+  display: block;
+  color: #a94442;
+  font-size: 20px;
+}
+
+/* Dialog component custom style */
+#error-alert .ui-dialog .ui-dialog-titlebar,
+#error-alert .ui-dialog-btn {
+  background-color: #f2dede;
+  border-color: #ebcccc;
+  color: #a94442;
+}
+#error-alert .dialog-content{
+  float:left;
+  margin-left: 60px;
+}
+#error-alert .dialog-content-icon{
+  position: absolute;
+  color: #a94442;
+  font-size: 36px;
+  float:left;
+}
+#error-alert .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-icon {
+  color: #a94442;
+}
+
+.ui-panel {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+/* Terminal component custom style */
+.ui-terminal.ui-widget-content {
+  border: 1px inset#fff;
+  color: #EAEDED;
+  background-color: #000;
+  font-family: monospace;
+  padding: 10px;
+  height: 500px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.ui-terminal-error{
+  color: #D2691E;
+  padding: 5px 10px;
+}
+
+/* Breadcrumb component wrapper style */
+.breadcrumb-wrapper{
+  margin-bottom: 20px;
+}
+
+/* Breadcrumb component override */
+.ui-breadcrumb .ui-menuitem-text {
+  color: #2d353c;
+  border-bottom: 1px dashed #c7c7c7;
+}
+
+/* PanelMenu component override */
+.ui-panelmenu-panel:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.ui-panelmenu-panel:last-child {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+body .ui-panelmenu .ui-panelmenu-header.ui-state-active {
+  background-color: #fff;
+}
+body .ui-panelmenu .ui-panelmenu-header.ui-state-active a,
+body .ui-panelmenu .ui-panelmenu-header.ui-state-active .fa {
+  color: #2d353c;
+}
+body .ui-panelmenu .ui-panelmenu-header.ui-state-active a:hover {
+  color: #000;
+}
+.ui-panelmenu-content-wrapper .ui-panelmenu-content{
+  border: none;
+}
+
+/* InputSwitch component override */
+body .ui-inputswitch {  
+  text-transform: initial;
+  min-height: 35px;
+}
+.ui-inputswitch .ui-inputswitch-on, .ui-inputswitch .ui-inputswitch-off {
+  padding: 5px 0 0 2px;
+  min-width: 70px;
+}
+
+/* Bug-fixes */
+
+/* Lisbox component filter bug-fix */
+body .ui-listbox .ui-listbox-header .ui-listbox-filter-container {
+  width: calc(100% - 32px);
+}
+
+/* Spinner component buttons bug-fix */
+.ui-fluid .ui-spinner .ui-spinner-button {
+  width: 40px;
+}
+.ui-fluid .ui-spinner .ui-spinner-button .fa {
+  left: 50%;
+}
+.ui-spinner-up {
+border-top-right-radius: 0.25em;
+}
+.ui-spinner-down {
+border-bottom-right-radius: 0.25em;
+}
+
+/* Radiobuttons icon bug-fix */
+body .ui-radiobutton .ui-radiobutton-box .ui-radiobutton-icon {
+  top: 0.5em;
+}
+
+/* Help Table style */
+.helpTable {
+  width: 100%;
+  font-size: 13px;
+  border-collapse: collapse;
+  border: 1px solid #e6e6e6;
+  color: #2d353c;
+}
+.helpTable th {
+  padding: 5px;
+  background-color: #f5f5f5;
+  border: 1px solid #e6e6e6;
+}
+.helpTable td {
+  padding: 5px;
+  border: 1px solid #e6e6e6;
+}
+
+/* WaitingService popup style */
+#blockuiContent{
+  color:#ffffff;
+  margin: 0;
+  width: 350px;
+  height: 220px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000000;
+  border: 1px solid #777777;
+  border-radius: 4px;
+  font-size: 30px;
+  padding: 30px;
+  box-shadow: 0 1px 2px rgba(0,0,0,1);
+}
+#blockuiContent i, #blockuiContent p{
+  display: block;
+  text-align: center;
+}

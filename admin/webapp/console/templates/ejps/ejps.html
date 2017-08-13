@@ -1,0 +1,14 @@
+<h1>EJP Manager</h1>
+<p class="lead">This section allows you to set all of the selected EJP properties.</p>
+
+<p-panel>
+  <p-header>
+    <div class="ui-helper-clearfix">
+      <span class="ui-panel-title"><i class="fa fa-gears"></i> EJP reference: {{ejpDirectory}}</span>
+      <button type="button" class="ui-button-secondary" pButton icon="fa fa-remove" label="Close" style="float:right;" (click)="closeForm()"></button>
+    </div>
+  </p-header>
+  <p-tabMenu [model]="ejpMenuModel" [activeItem]="ejpActiveItem"></p-tabMenu>
+  <div>&nbsp;</div>
+  <router-outlet></router-outlet>
+</p-panel>

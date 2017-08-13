@@ -1,0 +1,82 @@
+<h1>Create HTTP Task</h1>
+<p class="lead">Follow this wizard instructions to add a new HTTP Task to the configuration file.</p>
+
+<form [formGroup]="newHttpTaskForm">
+  <p-panel>
+    <p-header>
+      <div class="ui-helper-clearfix">
+        <span class="ui-panel-title"><i class="fa fa-info-circle"></i> New  HTTP Task</span>
+        <button pButton type="button" class="ui-button-secondary" icon="fa fa-remove" label="Cancel" style="float:right;" (click)="closeForm()"></button>
+      </div>
+    </p-header>
+    <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+      <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2" for="listenerNameInput">ID *: </label>
+        <div class="ui-grid-col-6">
+          <input id="listenerNameInput" pInputText type="text" formControlName="name" name="name"/>
+        </div>
+      </div>
+      <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2" for="listenerServerInput">Server name *: </label>
+        <div class="ui-grid-col-6">
+          <input id="listenerServerInput" pInputText type="text" formControlName="server" name="server"/>
+        </div>
+      </div>
+      <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2" for="listenerAddressInput">Address *: </label>
+        <div class="ui-grid-col-6">
+          <input id="listenerAddressInput" pInputText type="text" formControlName="address" name="address"/>
+        </div>
+      </div>
+      <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2" for="listenerDomainInput">Domain *: </label>
+        <div class="ui-grid-col-6">
+          <input id="listenerDomainInput" pInputText type="text" formControlName="domain" name="domain"/>
+        </div>
+      </div>
+      <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2" for="listenerPortInput">Port *: </label>
+        <div class="ui-grid-col-2">
+          <input id="listenerPortInput" pInputText type="text" pattern="\d*" formControlName="port" name="port"/>
+        </div>
+      </div>
+      <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2" for="listenerSecuredInput">Secured: </label>
+        <div class="ui-grid-col-6">
+          <p-inputSwitch id="listenerSecuredInput" formControlName="secured" name="secured" onLabel="yes" offLabel="no"></p-inputSwitch>
+        </div>
+      </div>
+      <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2" for="listenerSslPathInput">SSL Path: </label>
+        <div class="ui-grid-col-6">
+          <input id="listenerSslPathInput" pInputText type="text" formControlName="sslPath" name="sslPath"/>
+        </div>
+      </div>
+      <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2" for="enableMonitoringInput">Monitoring enabled: </label>
+        <div class="ui-grid-col-6">
+          <p-inputSwitch id="enableMonitoringInput" formControlName="monitoring" name="monitoring" onLabel="yes" offLabel="no"></p-inputSwitch>
+        </div>
+      </div>
+      <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2" for="monitorFactoryInput">Monitor Factory: </label>
+        <div class="ui-grid-col-6">
+          <input id="monitorFactoryInput" pInputText type="text" formControlName="monitorFactory" name="monitorFactory"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+      <div class="ui-grid-row">
+        <div class="ui-grid-col-2"></div>
+        <div class="ui-grid-col-6">
+          <button pButton type="button" icon="fa fa-plus-square" label="Create" [disabled]="!newHttpTaskForm.valid" (click)="saveContext()"></button>
+        </div>
+        <div class="ui-grid-col-1"></div>
+        <div class="ui-grid-col-3">
+          <button pButton type="button" class="ui-button-warning" icon="fa fa-eraser" label="Reset" (click)="resetForm()"></button>
+        </div>
+      </div>
+    </div>
+  </p-panel>
+</form>

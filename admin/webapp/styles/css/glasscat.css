@@ -1,0 +1,44 @@
+/* Bootstrap 4 CSS override */
+.navbar{
+  border-radius: 0;
+}
+.jumbotron {
+  color: #fff;
+  background: #337ab7;
+  border-radius: 0;
+}
+hr {
+  margin: 2rem 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+h2:not(:first-child) {
+  margin-top: 3rem;
+}
+/* GlassCat CSS */
+#header-logo{
+  width: 36px;
+  height: 36px;
+  float: left;
+  margin-right: 10px;
+  margin-top: -5px;
+}
+#jumbotron-logo{
+  width: 200px;
+  height: 200px;
+  float: right;
+}
+#page-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+footer{
+  padding: 10px;
+}
+.form-signin {
+  max-width: 400px;
+  margin: 2rem auto;
+}

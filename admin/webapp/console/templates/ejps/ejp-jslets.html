@@ -1,0 +1,54 @@
+<form [formGroup]="ejpJsletsForm">
+    <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-2">&nbsp;</div>
+            <h3 class="ui-grid-col-6"><i class="fa fa-file-code-o"></i> Jslets properties</h3>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-2">&nbsp;</div>
+            <div class="ui-grid-col-10" style="padding-bottom:15px">
+                <p-checkbox label="Enable autowire" binary="true" name="enableAutowire" formControlName="enableAutowire"></p-checkbox>
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-2" for="ejpJsletConfigFileInput">Configuration file: </label>
+            <div class="ui-grid-col-5">
+                <input id="ejpJsletConfigFileInput" pInputText [disabled]="true" type="text" name="jsletConfigFile" formControlName="jsletConfigFile" />
+            </div>
+            <div class="ui-grid-col-1">&nbsp;</div>
+            <div class="ui-grid-col-4">
+                <button pButton type="button" icon="fa fa-plus" label="New Jlset" (click)="openJsletWizard()"></button>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+    <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2" for="ejpJsletsInput">Jslets: </label>
+        <div class="ui-grid-col-5">
+            <p-listbox id="ejpJsletsInput" [(ngModel)]="selectedJslets" [options]="jsletListModel" filter="filter"
+                (onChange)="jsletListChange()" multiple="multiple" checkbox="checkbox"
+                [style]="{'height':'190px','max-height':'190px'}"></p-listbox>
+        </div>
+        <div class="ui-grid-col-1"></div>
+        <div class="ui-grid-col-4">
+            <textarea pInputTextarea rows="8" readonly [(ngModel)]="selectedJsletList"></textarea>
+            <div style="height:5px;">&nbsp;</div>
+            <button pButton type="button" icon="fa fa-trash" class="ui-button-secondary" label="Remove" [disabled]="jsletEditable===false" (click)="removeJslets()"></button>
+        </div>
+    </div>
+</div>
+<form [formGroup]="ejpImportJsletForm">
+    <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-2" for="ejpJsletImportInput">Import jslet: </label>
+            <div class="ui-grid-col-5">
+                <input id="ejpJsletImportInput" pInputText type="text" name="importedJslet" formControlName="importedJslet" />
+            </div>
+            <div class="ui-grid-col-1">&nbsp;</div>
+            <div class="ui-grid-col-4">
+                <button pButton type="button" icon="fa fa-edit" [disabled]="!ejpImportJsletForm.valid" class="ui-button-secondary" label="Add" (click)="importJslet()"></button>
+            </div>
+        </div>
+    </div>
+</form>

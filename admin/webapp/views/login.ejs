@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" type="image/png" href="./styles/assets/glasscat.png">
+        <title>GlassCat Applications Server - Console Login</title>
+        <!-- Bootstrap Core CSS -->
+        <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom Fonts -->
+        <link href="./styles/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <!-- GlassCat CSS -->
+        <link href="./styles/css/glasscat.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-light bg-faded navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <a class="navbar-brand" href="./">
+                <img id="header-logo" src="./styles/assets/glasscat.svg"/>
+                <span>GlassCat Applications Server</span>
+            </a>
+        </nav>
+
+        <div class="card form-signin">
+            <div class="card-header">
+                <h2>Please Sign In</h2>
+            </div>
+            <div class="card-block">
+                <%if (locals.statusError) { %>
+                    <div class="alert alert-danger" role="alert">
+                        <strong>Please fix the following input errors:</strong>
+                        <div>
+                            <i class="fa fa-warning"></i> Invalid user name or password!
+                        </div>
+                    </div>
+                <% } %>
+
+                <form role="form" action="./login" method="post">
+                    <fieldset>
+                        <%if (locals.statusError) { %>
+                            <div id="userFormGroup" class="form-group has-error">
+                        <% } else { %>
+                            <div id="userFormGroup" class="form-group">
+                        <% } %>
+                            <div class="input-group">
+                                <span  class="input-group-addon">
+                                    <i class="fa fa-user"></i>
+                                </span >
+                                <input class="form-control" placeholder="User name" name="js_username" autofocus required>
+                            </div>
+                        </div>
+                        <%if (locals.statusError) { %>
+                            <div id="paswordFormGroup" class="form-group has-error">
+                        <% } else { %>
+                            <div id="paswordFormGroup" class="form-group">
+                        <% } %>
+                            <div class="input-group">
+                                <span  class="input-group-addon">
+                                    <i class="fa fa-lock"></i>
+                                </span >
+                                <input class="form-control" placeholder="Password" name="js_password" type="password" value="" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-lg btn-primary btn-block">
+                            <i class="glyphicon glyphicon-log-in"></i> Login
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <hr/>
+
+        <footer>
+            <div>
+                Copyright &copy; 2016-2017, ONSOFT SYSTEMS. All rights reserved.
+            </div>
+        </footer>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <!-- popper.js (necessary for Bootstrap's dropdown plugins) -->
+        <script src="./node_modules/popper.js/dist/popper.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    </body>
+</html>

@@ -15,7 +15,7 @@
 //   limitations under the License.
 
 import {CommandManager} from "jec-glasscat-cli";
-import {CreateJslet} from "../commands/CreateJslet";
+import {CreateJslet} from "jec-glasscat-commands";
 
 /**
  * The __create-jslet__ subcommand creates the specified jslet class into the

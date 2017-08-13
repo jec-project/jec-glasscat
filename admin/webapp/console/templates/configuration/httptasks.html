@@ -1,0 +1,21 @@
+<h1>HTTP Tasks</h1>
+<p class="lead">This section provides all information about the Glasscat HTTP tasks.</p>
+
+<p-panel>
+  <p-header>
+    <div class="ui-helper-clearfix">
+      <span class="ui-panel-title"><i class="fa fa-file-code-o"></i> HTTP Tasks</span>
+      <button type="button" pButton class="ui-button-secondary" icon="fa fa-plus" label="Create" style="float:right;" (click)="openCreateView()"></button>
+    </div>
+  </p-header>
+  <div>
+    <p-dataTable [value]="httpTaskListModel" [rows]="5" resizableColumns="true">
+      <p-column field="id" header="Name" [sortable]="true"></p-column>
+      <p-column header="Action">
+        <template let-item="rowData" pTemplate="type">
+          <button type="button" pButton icon="fa fa-edit" label="Edit" (click)="itemSelect(item)"></button>
+        </template>
+      </p-column>
+    </p-dataTable>
+  </div>
+</p-panel>

@@ -1,0 +1,43 @@
+<h1>Loggers</h1>
+<p class="lead">This section provides all information about the Glasscat logging configuration.</p>
+
+<p-panel>
+  <p-header>
+    <div class="ui-helper-clearfix">
+      <span class="ui-panel-title"><i class="fa fa-info-circle"></i> Log Level</span>
+      <button *ngIf="editLogLevelInactive===false" type="button" class="ui-button-secondary" pButton icon="fa fa-remove" label="Cancel" style="float:right;" (click)="toggleLogLevelEditionMode()"></button>
+      <button *ngIf="editLogLevelInactive===true" type="button" pButton icon="fa fa-edit" label="Edit" style="float:right;" (click)="toggleLogLevelEditionMode()"></button>
+    </div>
+  </p-header>
+  <div>
+    <p>Global log level is: <span class="label-info">{{logLevel}}</span></p>
+  </div>
+  <div *ngIf="editLogLevelInactive===false" style="height:35px;">
+    <div style="float:left;">
+      <p-dropdown [options]="logLevelList" [(ngModel)]="selectedLogLevel" [style]="{'width':'150px'}"></p-dropdown>
+    </div>
+    <div style="float:left;width:5px;">&nbsp;</div>
+    <button type="button" pButton icon="fa fa-save" label="Apply changes" (click)="saveContext()" style="float:left;"></button>
+  </div>
+</p-panel>
+
+<div>&nbsp;</div>
+
+<p-panel>
+  <p-header>
+    <div class="ui-helper-clearfix">
+      <span class="ui-panel-title"><i class="fa fa-file-code-o"></i> Loggers</span>
+      <button type="button" pButton icon="fa fa-plus" class="ui-button-secondary" label="Create" style="float:right;" (click)="openCreateView()"></button>
+    </div>
+  </p-header>
+  <div>
+    <p-dataTable [value]="loggerListModel" [rows]="5" resizableColumns="true">
+      <p-column field="name" header="Name" [sortable]="true"></p-column>
+      <p-column header="Action">
+        <template let-item="rowData" pTemplate="type">
+          <button type="button" pButton icon="fa fa-edit" label="Edit" (click)="itemSelect(item)"></button>
+        </template>
+      </p-column>
+    </p-dataTable>
+  </div>
+</p-panel>

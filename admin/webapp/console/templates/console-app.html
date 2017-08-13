@@ -1,0 +1,48 @@
+<!-- Top bar -->
+<header>
+  <nav class="navbar-top">
+    <div class="navbar-brand">
+      <span>GlassCat Admin Console</span>
+    </div>
+  </nav>
+  <div class="userMenu">
+      <p-menu #userMenu [model]="userMenuModel" [popup]="true" appendTo="body"></p-menu>
+      <button pButton type="button" icon="fa fa-user fa-fw" (click)="userMenu.toggle($event)"></button>
+  </div>
+</header>
+<!-- ./Top bar -->
+
+<!-- App blocking component -->
+
+<p-blockUI [blocked]="appLocked"></p-blockUI>
+
+<!-- Left-hand-side menu -->
+<aside class="app-side-menu">
+  <div class="brand-logo">
+    <img src="../styles/assets/glasscat.png"/>
+  </div>
+  <nav class="navbar-left">
+    <p-panelMenu [model]="appMenuModel"></p-panelMenu>
+  </nav>
+</aside>
+<!-- ./Left-hand-side menu -->
+
+<div class="content-wrapper">
+  <p-confirmDialog header="Confirmation" icon="fa fa-question-circle" width="425"></p-confirmDialog>
+  <p-dialog id="error-alert" header="{{dialogSummary}}" [(visible)]="dialogDisplay" modal="modal" width="425">
+    <div class="dialog-content-icon">
+      <i class="fa fa-warning"></i>
+    </div>
+    <div class="dialog-content" [innerHTML]="dialogDetail"></div>
+    <footer>
+      <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+        <button type="button" class="ui-button-danger" pButton (click)="dialogDisplay=false" label="Ok"></button>
+      </div>
+    </footer>
+  </p-dialog>
+  <p-messages [value]="messagesModel"></p-messages>
+  <div class="breadcrumb-wrapper">
+    <p-breadcrumb [model]="breadcrumbModel"></p-breadcrumb>
+  </div>
+  <router-outlet></router-outlet>
+</div>

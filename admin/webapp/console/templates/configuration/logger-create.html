@@ -1,0 +1,46 @@
+<h1>Create Logger</h1>
+<p class="lead">Follow this wizard instructions to add a new logger to the configuration file.</p>
+
+<form [formGroup]="newLoggerForm">
+  <p-panel>
+    <p-header>
+      <div class="ui-helper-clearfix">
+        <span class="ui-panel-title"><i class="fa fa-file-code-o"></i> New Loggers</span>
+        <button type="button" class="ui-button-secondary" pButton icon="fa fa-remove" label="Cancel" style="float:right;" (click)="closeForm()"></button>
+      </div>
+    </p-header>
+    <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+      <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2" for="loggerNameInput">Name *: </label>
+        <div class="ui-grid-col-6">
+          <input id="loggerNameInput" pInputText type="text" formControlName="name" name="name" placeholder="required"/>
+        </div>
+      </div>
+      <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2" for="loggerFactoryInput">Factory *: </label>
+        <div class="ui-grid-col-6">
+          <input id="loggerFactoryInput" pInputText type="text" formControlName="factory" name="type" placeholder="required"/>
+        </div>
+      </div>
+      <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2" for="loggerLogLevelInput">Log level: </label>
+        <div class="ui-grid-col-6">
+          <p-dropdown id="loggerLogLevelInput" [options]="logLevelList" formControlName="logLevel" [autoWidth]="false"></p-dropdown>
+        </div>
+      </div>
+    </div>
+    <div>&nbsp;</div>
+    <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+      <div class="ui-grid-row">
+        <div class="ui-grid-col-2"></div>
+        <div class="ui-grid-col-6">
+          <button pButton type="button" icon="fa fa-plus-square" label="Create" [disabled]="!newLoggerForm.valid" (click)="saveContext()"></button>
+        </div>
+        <div class="ui-grid-col-1"></div>
+        <div class="ui-grid-col-3">
+          <button pButton type="button" class="ui-button-warning" icon="fa fa-eraser" label="Reset" (click)="resetForm()"></button>
+        </div>
+      </div>
+    </div>
+  </p-panel>
+</form>

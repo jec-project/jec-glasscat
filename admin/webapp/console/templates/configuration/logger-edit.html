@@ -1,0 +1,44 @@
+<h1>Edit Logger</h1>
+<p class="lead">This section allows you to change the selected logger properties.</p>
+
+<form [formGroup]="loggerPropertiesForm">
+  <p-panel>
+    <p-header>
+      <div class="ui-helper-clearfix">
+        <span class="ui-panel-title"><i class="fa fa-info-circle"></i> Logger: {{loggerName}}</span>
+        <button type="button" class="ui-button-secondary" pButton icon="fa fa-remove" label="Cancel" style="float:right;" (click)="closeForm()"></button>
+      </div>
+    </p-header>
+    <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+      <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2" for="loggerNameInput">Name *: </label>
+        <div class="ui-grid-col-6">
+          <input id="loggerNameInput" pInputText type="text" formControlName="name" name="name"/>
+        </div>
+      </div>
+      <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2" for="loggerTypeInput">Factory Class *: </label>
+        <div class="ui-grid-col-6">
+          <input id="loggerTypeInput" pInputText type="text" formControlName="factory" name="factory"/>
+        </div>
+      </div>
+      <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2">Log level: </label>
+        <div class="ui-grid-col-6">
+          <p-dropdown [options]="logLevelList" formControlName="logLevel" [autoWidth]="false"></p-dropdown>
+        </div>
+      </div>
+      <div>&nbsp;</div>
+      <div class="ui-grid-row">
+        <div class="ui-grid-col-2"></div>
+        <div class="ui-grid-col-6">
+          <button pButton type="button" icon="fa fa-save" label="Apply changes" [disabled]="!loggerPropertiesForm.valid" (click)="saveContext()"></button>
+        </div>
+        <div class="ui-grid-col-1"></div>
+        <div class="ui-grid-col-3">
+          <button pButton type="button" icon="fa fa-trash-o" class="ui-button-danger" label="Delete logger" (click)="deleteLogger()"></button>
+        </div>
+      </div>
+    </div>
+  </p-panel>
+</form>

@@ -1,0 +1,83 @@
+<style>
+.domainListStyle{
+  width:95%;
+}
+</style>
+<h1>Domains</h1>
+<p class="lead">Domain Applications are <strong>Entreprise JavaScript Projects</strong> (EJP) only.</p>
+
+<p-panel>
+  <p-header>
+    <i class="fa fa-folder-open"></i> Workspace
+  </p-header>
+  <div>
+    All projects are deployed into the server workspace:
+    <span class="label-info">{{workspace}}</span>
+  </div>
+  <div>&nbsp;</div>
+  <div>
+    <i class="fa fa-info-circle"></i>
+    GlassCat alias for the server workspace is:
+    <span class="label-info">$&#123;root&#125;/workspace</span>
+  </div>
+</p-panel>
+
+<div>&nbsp;</div>
+
+<p-panel>
+  <p-header>
+    <i class="fa fa-cube"></i> New Application
+  </p-header>
+  <div>
+    <button type="button" [disabled]="true" pButton icon="fa fa-share-square-o" label="Import EJP"></button>
+    <button type="button" [disabled]="true" class="ui-button-secondary" pButton icon="fa fa-arrow-circle-o-down" label="Import Project"></button>
+    <button type="button" style="float:right;" class="ui-button-success" pButton icon="fa fa-magic" label="New Project" (click)=openWizard()></button>
+  </div>
+</p-panel>
+
+<div>&nbsp;</div>
+
+<p-panel>
+  <p-header>
+    <i class="fa fa-sitemap"></i> Deployed Domains ({{domainNum}})
+  </p-header>
+  <div>
+    <p-dataTable [value]="domainListModel" [rows]="10" [class]="domainListStyle">
+      <p-column field="name" header="Name" [sortable]="true"></p-column>
+      <p-column field="connector.server" header="Server" [sortable]="true"></p-column>
+      <p-column header="Action">
+        <template let-item="rowData" pTemplate="type">
+          <button type="button" pButton icon="fa fa-dashboard" label="Manage" (click)="manageItemSelect(item)"></button>
+          <button type="button" class="ui-button-secondary" pButton icon="fa fa-edit" label="Edit" (click)="itemSelect(item)"></button>
+        </template>
+      </p-column>
+    </p-dataTable>
+  </div>
+</p-panel>
+
+<div>&nbsp;</div>
+
+<p-panel>
+  <p-header>
+    <div class="ui-helper-clearfix">
+        <i class="fa fa-cubes"></i> Projects In Workspace <span *ngIf="workspaceDomainListed===true">({{workspaceDomainNum}})</span>
+        <button type="button" class="ui-button-secondary" pButton icon="fa fa-edit" label="List projects" style="float:right;" (click)="listWorkspaceProjects()"></button>
+      </div>
+  </p-header>
+  <div>
+    <p-dataTable [value]="domainWokspaceModel" [rows]="10" [class]="domainListStyle">
+      <p-column field="name" header="Name" [sortable]="true"></p-column>
+      <p-column field="invalid" header="Status" [sortable]="true" [style]="{'width':'100px'}">
+        <template let-project="rowData" pTemplate="type">
+            <i *ngIf="project.invalid===false" class="fa fa-check project-status-valid"></i>
+            <i *ngIf="project.invalid===true" class="fa fa-times project-status-error"></i>
+        </template>
+      </p-column>
+      <p-column header="Action">
+        <template let-project="rowData" pTemplate="type">
+          <button type="button" pButton class="ui-button-secondary" icon="fa fa-download" [disabled]="project.deployed" label="Load Domain" (click)="loadDomain(project)"></button>
+        </template>
+      </p-column>
+    </p-dataTable>
+  </div>
+</p-panel>

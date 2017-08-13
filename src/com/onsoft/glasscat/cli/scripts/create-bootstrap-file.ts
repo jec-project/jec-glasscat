@@ -15,7 +15,7 @@
 //   limitations under the License.
 
 import {CommandManager} from "jec-glasscat-cli";
-import {CreateBootstrapFile} from "../commands/CreateBootstrapFile";
+import {CreateBootstrapFile} from "jec-glasscat-commands";
 
 /**
  * The __create-bootstrap-file__ subcommand creates the specified bootstrap 

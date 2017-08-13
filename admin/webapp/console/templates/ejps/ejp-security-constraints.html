@@ -1,0 +1,65 @@
+
+<div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+    <div class="ui-grid-row">
+        <div class="ui-grid-col-2">&nbsp;</div>
+        <div class="ui-grid-col-6">
+            <h3><i class="fa fa-shield"></i> Security properties: </h3>
+            <p-selectButton name="currentFormGroup" [options]="formTypeList" [(ngModel)]="currentForm" (onChange)="navigClickHandler($event)"></p-selectButton>
+        </div>
+    </div>
+</div>
+<div>&nbsp;</div>
+<div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+    <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2" for="ejpSelectInput">Constraints:</label>
+        <div class="ui-grid-col-3">
+            <p-listbox id="ejpSelectInput" [(ngModel)]="selectedItem" [options]="itemListModel"
+                (onChange)="selectListChange()"
+                [style]="{'height':'225px','max-height':'225px'}"></p-listbox>
+        </div>
+        <div class="ui-grid-col-1"></div>
+        <form [formGroup]="ejpConstraintForm" class="ui-grid-col-6">
+            <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-4">
+                        <div style="margin-bottom:10px;padding-top:8px;">
+                            <label class="form-label" for="ejpConstraintNameInput">Name *: </label>
+                        </div>
+                        <div style="margin-bottom:14px;padding-top:8px;">
+                            <label class="form-label" for="ejpConstraintRolesInput">Roles *: </label>
+                        </div>
+                        <div style="margin-bottom:16px;padding-top:8px;">
+                            <label class="form-label" for="ejpUrlPatternInput">URL pattern *: </label>
+                        </div>
+                        <div style="padding-top:8px;">
+                            <label class="form-label" for="ejpErrorUrlInput">Error URL: </label>
+                        </div>
+                    </div>
+                    <div class="ui-grid-col-8">
+                        <div style="margin-bottom:8px;">
+                            <input id="ejpConstraintNameInput" pInputText type="text" name="constraintName" formControlName="constraintName" promp="required"/>
+                        </div>
+                        <div style="margin-bottom:8px;">
+                            <input id="ejpConstraintRolesInput" pInputText type="text" name="constraintRoles" formControlName="constraintRoles" promp="required"/>
+                        </div>
+                        <div style="margin-bottom:8px;">
+                            <input id="ejpUrlPatternInput" pInputText type="text" name="urlPattern" formControlName="urlPattern" promp="required"/>
+                        </div>
+                         <div>
+                            <input id="ejpErrorUrlInput" pInputText type="text" name="errorUrl" formControlName="errorUrl">
+                        </div>
+                        <div>&nbsp;</div>
+                        <div *ngIf="constraintEditable===false">
+                            <button pButton type="button" icon="fa fa-plus" label="Create Resource Map" [disabled]="!ejpConstraintForm.valid" (click)="createConstraint()"></button>
+                        </div>
+                        <div *ngIf="constraintEditable">
+                            <button pButton type="button" icon="fa fa-edit" label="Apply changes" [disabled]="!ejpConstraintForm.valid"  (click)="updateConstraint()" style="margin-bottom:5px;"></button>
+                            <button pButton type="button" icon="fa fa-trash" class="ui-button-secondary" label="Remove" (click)="removeConstraint()" style="margin-bottom:5px;"></button>
+                            <button pButton type="button" icon="fa fa-remove" class="ui-button-secondary" label="Cancel" (click)="cancel()"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<h1>Edit Domain</h1>
+<p class="lead">This section allows you to change the selected domain properties.</p>
+
+<form [formGroup]="projectPropertiesForm">
+  <p-panel>
+    <p-header>
+      <div class="ui-helper-clearfix">
+        <span class="ui-panel-title"><i class="fa fa-info-circle"></i> Domain: {{domainName}}</span>
+        <button type="button" class="ui-button-secondary" pButton icon="fa fa-remove" label="Cancel" style="float:right;" (click)="closeForm()"></button>
+      </div>
+    </p-header>
+    <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+      <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2" for="projectNameInput">Name: </label>
+        <div class="ui-grid-col-6">
+          <input id="projectNameInput" pInputText type="text" formControlName="name" name="name"/>
+        </div>
+        <div class="ui-grid-col-1"></div>
+        <div class="ui-grid-col-3">
+          <button type="button" pButton class="ui-button-secondary" icon="fa fa-upload" label="Unload" (click)="unloadDomain()"></button>
+        </div>
+      </div>
+      <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2" for="projectTypeInput">Project type: </label>
+        <div class="ui-grid-col-6">
+          <input id="projectTypeInput" pInputText type="text" formControlName="type" name="type"/>
+        </div>
+      </div>
+      <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2">Server *: </label>
+        <div class="ui-grid-col-6">
+          <p-dropdown [options]="serverList" formControlName="serverId" [autoWidth]="false" required="true" (onChange)="serverChangeHandler($event)"></p-dropdown>
+        </div>
+      </div>
+      <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2" for="projectHostInput">Host: </label>
+        <div class="ui-grid-col-6">
+          <input id="projectHostInput" pInputText type="text" formControlName="host" name="host"/>
+        </div>
+      </div>
+      <div>&nbsp;</div>
+      <div class="ui-grid-row">
+        <div class="ui-grid-col-2"></div>
+        <div class="ui-grid-col-6">
+          <button pButton type="submit" icon="fa fa-save" label="Apply changes" [disabled]="!projectPropertiesForm.valid" (click)="updateDomain()"></button>
+        </div>
+        <div class="ui-grid-col-1"></div>
+        <div class="ui-grid-col-3">
+          <button pButton type="button" class="ui-button-danger" icon="fa fa-trash-o" label="Delete project" [disabled]="deletable===false" (click)="deleteDomain()"></button>
+        </div>
+      </div>
+    </div>
+  </p-panel>
+</form>

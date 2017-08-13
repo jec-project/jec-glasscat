@@ -10,6 +10,18 @@
 # Ignore VSCE folder
 .vscode
 
+
+#####################################
+# admin
+#####################################
+
+# Ignore admin 'node_modules' folder
+admin/node_modules
+
+# Ignore JavaScript files in src folder
+admin/**/*.js
+!admin/webapp/console/systemjs.config.js
+
 #####################################
 # node_modules
 #####################################

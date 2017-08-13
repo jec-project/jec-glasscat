@@ -1,0 +1,63 @@
+
+<div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+    <div class="ui-grid-row">
+        <div class="ui-grid-col-2">&nbsp;</div>
+        <div class="ui-grid-col-6">
+            <h3><i class="fa fa-shield"></i> Security properties: </h3>
+            <p-selectButton name="currentFormGroup" [options]="formTypeList" [(ngModel)]="currentForm" (onChange)="navigClickHandler($event)"></p-selectButton>
+        </div>
+    </div>
+</div>
+<div>&nbsp;</div>
+<div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+    <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2" for="ejpSelectInput">Roles:</label>
+        <div class="ui-grid-col-3">
+            <p-listbox id="ejpSelectInput" [(ngModel)]="selectedItem" [options]="itemListModel"
+                (onChange)="roleListChange()"
+                [style]="{'height':'225px','max-height':'225px'}"></p-listbox>
+        </div>
+        <div class="ui-grid-col-1"></div>
+        <form [formGroup]="ejpRolesForm" class="ui-grid-col-6">
+            <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-4">
+                        <div style="margin-bottom:10px;padding-top:8px;">
+                            <label class="form-label" for="ejpRoleNameInput">Role *: </label>
+                        </div>
+                        <div style="margin-bottom:10px;padding-top:8px;">
+                            <label class="form-label" for="ejpClassNameInput">Class name *: </label>
+                        </div>
+                        <div  style="padding-top:8px;">
+                            <label class="form-label" for="ejpRolePathInput">File path: </label>
+                        </div>
+                    </div>
+                    <div class="ui-grid-col-8">
+                        <div style="margin-bottom:8px;">
+                            <input id="ejpRoleNameInput" pInputText type="text" name="roleName" formControlName="roleName" promp="required"/>
+                        </div>
+                        <div style="margin-bottom:8px;">
+                            <input id="ejpClassNameInput" pInputText type="text" name="className" formControlName="className"  promp="required"/>
+                        </div>
+                        <div>
+                            <input id="ejpRolePathInput" style="padding-left:34px;z-index:0" pInputText type="text" name="rolePath" formControlName="rolePath"  promp="required"/>
+                            <div style="margin-left:10px;margin-top:-26px;z-index:1;margin-bottom:8px">src/</div>
+                        </div>
+                        <div *ngIf="roleEditable===false" style="margin-top:15px;">
+                            <p-checkbox label="generate class file" binary="true" name="createClassOption" formControlName="createClassOption"></p-checkbox>
+                        </div>
+                        <div>&nbsp;</div>
+                        <div *ngIf="roleEditable===false">
+                            <button pButton type="button" icon="fa fa-plus" label="Create Role" [disabled]="!ejpRolesForm.valid" (click)="createRole()"></button>
+                        </div>
+                        <div *ngIf="roleEditable">
+                            <button pButton type="button" icon="fa fa-edit" label="Apply changes" [disabled]="!ejpRolesForm.valid"  (click)="updateRole()" style="margin-bottom:5px;"></button>
+                            <button pButton type="button" icon="fa fa-trash" class="ui-button-secondary" label="Remove" (click)="removeRole()" style="margin-bottom:5px;"></button>
+                            <button pButton type="button" icon="fa fa-remove" class="ui-button-secondary" label="Cancel" (click)="cancel()"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

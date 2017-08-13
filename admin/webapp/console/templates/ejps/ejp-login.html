@@ -1,0 +1,74 @@
+
+<div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+    <div class="ui-grid-row">
+        <div class="ui-grid-col-2">&nbsp;</div>
+        <div class="ui-grid-col-3">
+            <h3><i class="fa fa-lock"></i> Login properties: </h3>
+            <p-selectButton name="currentFormGroup" [options]="formTypeList" [(ngModel)]="currentForm"></p-selectButton>
+        </div>
+    </div>
+</div>
+<div>&nbsp;</div>
+<form [formGroup]="ejpLoginForm" *ngIf="currentForm==='login'">
+    <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-2" for="ejpAuthMethodInput">Auth. Method: </label>
+            <div class="ui-grid-col-6">
+                <p-dropdown id="ejpAuthMethodInput" [options]="authMethodList"
+                    formControlName="authMethod" name="authMethod" [autoWidth]="false"
+                    (onChange)="authMethodListChange()"></p-dropdown>
+            </div>
+        </div>
+        <div class="ui-grid-row" *ngIf="hasFormConfig">
+            <label class="form-label ui-grid-col-2" for="ejpLoginUrlInput">Login URL: </label>
+            <div class="ui-grid-col-6">
+                <input id="ejpLoginUrlInput" pInputText type="text" name="loginUrl" formControlName="loginUrl"/>
+            </div>
+        </div>
+        <div class="ui-grid-row" *ngIf="hasFormConfig">
+            <label class="form-label ui-grid-col-2" for="ejpErrorUrlInput">Error URL: </label>
+            <div class="ui-grid-col-6">
+                <input id="ejpErrorUrlInput" pInputText type="text" name="errorUrl" formControlName="errorUrl"/>
+            </div>
+        </div>
+        <div>&nbsp;</div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-2">&nbsp;</div>
+            <div class="ui-grid-col-6">
+                <button pButton type="button" icon="fa fa-save" label="Apply changes" [disabled]="!ejpLoginForm.valid" (click)="saveLoginFormChanges()"></button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<form [formGroup]="ejpRealmForm" *ngIf="currentForm==='realm'">
+    <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-2" for="ejpRealmTypeInput">Type: </label>
+            <div class="ui-grid-col-6">
+                <p-dropdown id="ejpRealmTypeInput" [options]="realmTypeList"
+                    formControlName="realmType" name="realmType" [autoWidth]="false"
+                    (onChange)="realmTypeListChange()"></p-dropdown>
+            </div>
+        </div>
+        <div class="ui-grid-row" *ngIf="customRealmMode">
+            <label class="form-label ui-grid-col-2" for="ejpConnectorFactoryInput">Connector factory: </label>
+            <div class="ui-grid-col-6">
+                <input id="ejpConnectorFactoryInput" pInputText type="text" name="connectorFactory" formControlName="connectorFactory"/>
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-2" for="ejpSecuredAreaInput">Secured area: </label>
+            <div class="ui-grid-col-6">
+                <input id="ejpSecuredAreaInput" pInputText type="text" name="securedArea" formControlName="securedArea"/>
+            </div>
+        </div>
+        <div>&nbsp;</div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-2">&nbsp;</div>
+            <div class="ui-grid-col-6">
+                <button pButton type="button" icon="fa fa-save" label="Apply changes" [disabled]="!ejpLoginForm.valid" (click)="saveRealmFormChanges()"></button>
+            </div>
+        </div>
+    </div>
+</form>

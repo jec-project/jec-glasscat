@@ -1,0 +1,57 @@
+<h1>Global Information</h1>
+<p class="lead">This section provides all information about the Glasscat container global configuration.</p>
+
+<p-panel>
+  <p-header>
+    <i class="fa fa-info-circle"></i> Version
+  </p-header>
+  <div>
+    <p>Current Glasscat server version is: <span class="label-info">{{version}}</span></p>
+  </div>
+</p-panel>
+
+<div>&nbsp;</div>
+
+<p-panel>
+  <p-header>
+    <div class="ui-helper-clearfix">
+      <span class="ui-panel-title"><i class="fa fa-globe"></i> Locale</span>
+      <button *ngIf="editLocaleInactive===false" type="button" class="ui-button-secondary" pButton icon="fa fa-remove" label="Cancel" style="float:right;" (click)="toggleLocaleEditionMode()"></button>
+      <button *ngIf="editLocaleInactive===true" type="button" pButton icon="fa fa-edit" label="Edit" style="float:right;" (click)="toggleLocaleEditionMode()"></button>
+    </div>
+  </p-header>
+  <div>
+    <p>Current Glasscat server locale is: <span class="label-info">{{locale}}</span></p>
+  </div>
+  <div *ngIf="editLocaleInactive===false" style="height:35px;">
+    <div style="float:left;">
+      <p-dropdown [options]="localeList" [(ngModel)]="selectedLocale" [style]="{'width':'150px'}"></p-dropdown>
+    </div>
+    <div style="float:left;width:5px;">&nbsp;</div>
+    <button type="button" pButton icon="fa fa-save" label="Apply changes" (click)="saveLocale()" style="float:left;"></button>
+  </div>
+</p-panel>
+
+<div>&nbsp;</div>
+
+<p-panel>
+  <p-header>
+    <div class="ui-helper-clearfix">
+      <span class="ui-panel-title"><i class="fa fa-eye-slash"></i> Error Page</span>
+      <button *ngIf="editErrorPageInactive===false" type="button" class="ui-button-secondary" pButton icon="fa fa-remove" label="Cancel" style="float:right;" (click)="toggleErrorPageEditionMode()"></button>
+      <button *ngIf="editErrorPageInactive===true" type="button" pButton icon="fa fa-edit" label="Edit" style="float:right;" (click)="toggleErrorPageEditionMode()"></button>
+    </div>
+  </p-header>
+  <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+    <div class="ui-grid-row">
+      <label class="form-label ui-grid-col-2" for="errorPageInput">Error page *: </label>
+      <div class="ui-grid-col-6">
+        <input id="errorPageInput" pInputText type="text" [(ngModel)]="errorPage" [disabled]="editErrorPageInactive===true"/>
+      </div>
+      <div class="ui-grid-col-1"></div>
+      <div class="ui-grid-col-3" *ngIf="editErrorPageInactive===false">
+        <button class="form-label ui-grid-col-2" type="button" pButton icon="fa fa-save" label="Apply changes" (click)="saveErrorPage()"></button>
+      </div>
+    </div>
+  </div>
+</p-panel>

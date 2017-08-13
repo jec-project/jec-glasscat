@@ -1,0 +1,39 @@
+<form [formGroup]="ejpGeneralForm">
+    <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-2">&nbsp;</div>
+            <h3 class="ui-grid-col-6"><i class="fa fa-info-circle"></i> General properties</h3>
+        </div>
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-2" for="ejpNameInput">Name: </label>
+            <div class="ui-grid-col-6">
+                <input id="ejpNameInput" pInputText type="text" name="name" formControlName="name"/>
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-2" for="ejpDescInput">Description: </label>
+            <div class="ui-grid-col-6">
+                <textarea id="ejpDescInput" pInputTextarea name="description" formControlName="description"></textarea>
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-2" for="ejpVersionInput">Version: </label>
+            <div class="ui-grid-col-3">
+                <input id="ejpVersionInput" pInputText type="text" name="version" formControlName="version"/>
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-2" for="ejpAuthorInput">Author: </label>
+            <div class="ui-grid-col-6">
+                <input id="ejpAuthorInput" pInputText type="text" name="author" formControlName="author"/>
+            </div>
+        </div>
+        <div>&nbsp;</div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-2">&nbsp;</div>
+            <div class="ui-grid-col-6">
+                <button pButton type="button" icon="fa fa-save" label="Apply changes" [disabled]="!ejpGeneralForm.valid" (click)="saveGeneralFormChanges()"></button>
+            </div>
+        </div>
+    </div>
+</form>

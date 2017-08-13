@@ -1,0 +1,48 @@
+<form [formGroup]="ejpContextForm">
+    <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-2">&nbsp;</div>
+            <h3 class="ui-grid-col-6"><i class="fa fa-list"></i> Container properties</h3>
+        </div>
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-2" for="ejpContextRootInput">Context root: </label>
+            <div class="ui-grid-col-6">
+                <input id="ejpContextRootInput" pInputText type="text" name="contextRoot" formControlName="contextRoot"/>
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-2" for="ejpStateInput">State: </label>
+            <div class="ui-grid-col-6">
+                <p-dropdown id="ejpStateInput" [options]="stateList" formControlName="state" name="state" [autoWidth]="false"></p-dropdown>
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-2" for="ejpWelcomeFileInput">Welcome file: </label>
+            <div class="ui-grid-col-6">
+                <input id="ejpWelcomeFileInput" pInputText type="text" name="welcomeFile" formControlName="welcomeFile"/>
+            </div>
+        </div>
+        <div>&nbsp;</div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-2">&nbsp;</div>
+            <div class="ui-grid-col-6">
+                <button pButton type="button" icon="fa fa-save" label="Apply changes" [disabled]="!ejpContextForm.valid" (click)="saveContextFormChanges()"></button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>&nbsp;</div>
+
+<div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+    <div class="ui-grid-row">
+        <div class="ui-grid-col-2">&nbsp;</div>
+        <h3 class="ui-grid-col-6"><i class="fa fa-magic"></i> Bootstrap files manager</h3>
+    </div>
+    <div class="ui-grid-row">
+        <div class="ui-grid-col-2">&nbsp;</div>
+        <div class="ui-grid-col-6">
+            <button pButton type="button" class="ui-button-secondary" label="Open manager" (click)="openBootstrapManager()"></button>
+        </div>
+    </div>
+</div>

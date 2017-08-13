@@ -15,7 +15,7 @@
 //   limitations under the License.
 
 import {CommandManager} from "jec-glasscat-cli";
-import {CreateRole} from "../commands/CreateRole";
+import {CreateRole} from "jec-glasscat-commands";
 
 /**
  * The __create-role__ subcommand creates the specified role class into the

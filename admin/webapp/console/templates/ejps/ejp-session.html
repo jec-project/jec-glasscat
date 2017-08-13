@@ -1,0 +1,33 @@
+<form [formGroup]="ejpSessionForm">
+    <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-2">&nbsp;</div>
+            <h3 class="ui-grid-col-6"><i class="fa fa-user-circle-o"></i> Session properties</h3>
+        </div>
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-2" for="ejpStorageInput">Storage: </label>
+            <div class="ui-grid-col-6">
+                <p-dropdown id="ejpStorageInput" [options]="storageList" formControlName="storage" name="storage" [autoWidth]="false"></p-dropdown>
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-2" for="ejpErrorUrlInput">Error URL: </label>
+            <div class="ui-grid-col-6">
+                <input id="ejpErrorUrlInput" pInputText type="text" name="errorUrl" formControlName="errorUrl"/>
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-2" for="ejpMaxAgeInput">Max age: </label>
+            <div class="ui-grid-col-3">
+                <p-spinner id="ejpMaxAgeInput" [min]="0" formControlName="maxAge"></p-spinner>
+            </div>
+        </div>
+        <div>&nbsp;</div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-2">&nbsp;</div>
+            <div class="ui-grid-col-6">
+                <button pButton type="button" icon="fa fa-save" label="Apply changes" [disabled]="!ejpSessionForm.valid" (click)="saveSessionFormChanges()"></button>
+            </div>
+        </div>
+    </div>
+</form>

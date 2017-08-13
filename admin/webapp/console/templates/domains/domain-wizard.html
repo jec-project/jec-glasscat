@@ -1,0 +1,106 @@
+<h1>Domain Wizard</h1>
+<p class="lead">All new domain applications will be deployed in the server workspace.</p>
+
+<p-panel>
+  <p-header>
+    <div class="ui-helper-clearfix">
+      <i class="fa fa-magic"></i> Create a new project
+      <button type="button" class="ui-button-secondary" pButton icon="fa fa-remove" label="Cancel" style="float:right;" (click)="closeWizard()"></button>
+    </div>
+  </p-header>
+  <div>
+    <p-dropdown [options]="modelList" [(ngModel)]="selectedModel" (onChange)="projectModelSelected($event)"></p-dropdown>
+    <div>&nbsp;</div>
+    <h4>Project Model Details:</h4>
+    <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+      <dl class="ui-grid-row">
+        <dt class="ui-grid-col-2">Name:</dt>
+        <dd class="ui-grid-col-10">{{selectedProject.name}}</dd>
+      </dl>
+      <dl class="ui-grid-row">
+        <dt class="ui-grid-col-2">Version:</dt>
+        <dd class="ui-grid-col-10">{{selectedProject.version}}</dd>
+      </dl>
+      <dl class="ui-grid-row">
+        <dt class="ui-grid-col-2">Description:</dt>
+        <dd class="ui-grid-col-10">{{selectedProject.description}}</dd>
+      </dl>
+      <dl class="ui-grid-row">
+        <dt class="ui-grid-col-2">Author:</dt>
+        <dd class="ui-grid-col-10">{{selectedProject.author}}</dd>
+      </dl>
+      <dl class="ui-grid-row">
+        <dt class="ui-grid-col-2">Help:</dt>
+        <dd class="ui-grid-col-10">
+          <div *ngIf="showForm">
+            The following table shows the additional parameters available for this GPM:
+            <div>&nbsp;</div>
+            <table class="helpTable" >
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Type</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>--disableDependencies</code></td>
+                  <td><code>Boolean</code></td>
+                  <td>Prevents the execution of the project dependencies installation task.</td>
+                </tr>
+                <tr>
+                  <td><code>--disableBuild</code></td>
+                  <td><code>Boolean</code></td>
+                  <td>Prevents the execution of the project build task.</td>
+                </tr>
+                <tr>
+                  <td><code>--vscSettings</code></td>
+                  <td><code>Boolean</code></td>
+                  <td>Adds Visual Studio Code settings to the project.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div>&nbsp;</div>
+    <form [formGroup]="modelForm" *ngIf="showForm">
+      <h4>Project Properties:</h4>
+      <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-3" for="projectNameInput">EJP name*: </label>
+            <div class="ui-grid-col-6">
+              <input id="projectNameInput" pInputText type="text" name="projectName" formControlName="projectName" placeholder="required"/>
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-3" for="directoryInput">Project directory*: </label>
+            <div class="ui-grid-col-6">
+              <input id="directoryInput" pInputText type="text" name="directory" formControlName="directory" placeholder="required"/>
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-3" for="contextRootInput">Context root*: </label>
+            <div class="ui-grid-col-6">
+              <input id="contextRootInput" pInputText type="text" name="contextRoot" formControlName="contextRoot" placeholder="required"/>
+            </div>
+        </div>
+         <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-3" for="parametersInput">Additional parameters: </label>
+            <div class="ui-grid-col-6">
+                <textarea id="parametersInput" rows="8" pInputTextarea name="parameters" formControlName="parameters"></textarea>
+            </div>
+        </div>
+        <div>&nbsp;</div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-3">&nbsp;</div>
+            <div class="ui-grid-col-6">
+                <button pButton type="button" [disabled]="!modelForm.valid" icon="fa fa-magic" label="Create project" (click)="createProject()"></button>
+            </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</p-panel>

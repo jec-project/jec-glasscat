@@ -1,0 +1,78 @@
+<div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+    <div class="ui-grid-row">
+        <div class="ui-grid-col-2">&nbsp;</div>
+        <h3 class="ui-grid-col-6"><i class="fa fa-magic"></i> Bootstrap files manager</h3>
+        <div class="ui-grid-col-1">&nbsp;</div>
+        <div class="ui-grid-col-3">
+            <button pButton type="button" icon="fa fa-close" class="ui-button-secondary" label="Close manager" (click)="closeSubView()"></button>
+        </div>
+    </div>
+    <div class="ui-grid-row">
+        <label class="form-label ui-grid-col-2" for="ejpBootstrapInput">Bootstrap files: </label>
+        <div class="ui-grid-col-6">
+            <p-listbox id="ejpBootstrapInput" [(ngModel)]="selectedBootstrap" [options]="bootstrapListModel"
+                (onChange)="bootstrapListChange()"
+                [style]="{'height':'112px','max-height':'112px'}"></p-listbox>
+        </div>
+    </div>
+</div>
+
+<div>&nbsp;</div>
+
+<form [formGroup]="editBootstrapForm">
+    <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+        <div class="ui-grid-row"></div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-2">&nbsp;</div>
+            <div *ngIf="bootstrapEditable===false" class="ui-grid-col-6">New bootstrap file:</div>
+            <div *ngIf="bootstrapEditable" class="ui-grid-col-6"><i class="fa fa-edit"></i> Edit bootstrap file:</div>
+        </div>
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-2" for="ejpBootstrapPathInput">File path: </label>
+            <div class="ui-grid-col-6">
+                <div>
+                    <input id="ejpBootstrapPathInput" style="padding-left:34px;z-index:0" pInputText type="text" name="editBootstrapPath" formControlName="editBootstrapPath"/>
+                    <div style="margin-left:10px;margin-top:-26px;z-index:1;margin-bottom:8px">src/</div>
+                </div>
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-2" for="ejpBootstrapClassNameInput">Class name *: </label>
+            <div class="ui-grid-col-6">
+                <div>
+                    <input id="ejpBootstrapClassNameInput" pInputText type="text" name="editBootstrapClassName" placeholder="required" formControlName="editBootstrapClassName"/>
+                </div>
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-2" for="ejpBootstrapPriotityInput">Priority: </label>
+            <div class="ui-grid-col-6">
+                <p-spinner id="ejpBootstrapPriotityInput" [min]="0" [max]="100" name="editBootstrapPriority" formControlName="editBootstrapPriority"></p-spinner>
+            </div>
+        </div>
+        <div>&nbsp;</div>
+        <div class="ui-grid-row"></div>
+        <div class="ui-grid-row" *ngIf="bootstrapEditable">
+            <div class="ui-grid-col-2">&nbsp;</div>
+            <div class="ui-grid-col-3">
+                <button pButton type="button" icon="fa fa-close" class="ui-button-secondary" label="Cancel" (click)="cancelBootstrapEdit()"></button>
+            </div>
+            <div class="ui-grid-col-3">
+                <button pButton type="button" icon="fa fa-save" label="Apply changes" (click)="updateBootstrapFile()"></button>
+            </div>
+            <div class="ui-grid-col-1">&nbsp;</div>
+            <div  class="ui-grid-col-3">
+                <button pButton type="button" icon="fa fa-trash" class="ui-button-danger" label="Delete" (click)="deleteBootstrapFile()"></button>
+            </div>
+        </div>
+        <div class="ui-grid-row" *ngIf="bootstrapEditable===false">
+            <div class="ui-grid-col-2">&nbsp;</div>
+            <div class="ui-grid-col-3">
+                <button pButton type="button" icon="fa fa-eraser" class="ui-button-secondary" label="Reset" (click)="resetForm()"></button>
+            </div>
+            <div class="ui-grid-col-3">
+                <button pButton type="button" icon="fa fa-plus" label="Create file" [disabled]="!editBootstrapForm.valid" (click)="createBootstrapFile()"></button>
+            </div>
+        </div>
+    </div>
+</form>

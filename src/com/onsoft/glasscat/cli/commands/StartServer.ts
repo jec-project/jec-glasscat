@@ -19,12 +19,7 @@ import {ScriptCommand, AbstractScriptCommand, CommandDescriptorBuilder,
 import {GlassCat} from "../../GlassCat";
 
 /**
- * The command that allows to create and start a new GlassCat container.
- * 
- * @class StartServer
- * @constructor
- * @extends AbstractScriptCommand
- * @implements ScriptCommand
+ * The command that allows to create and start a new GlassCat server instance.
  */
 export class StartServer extends AbstractScriptCommand
                          implements ScriptCommand {
@@ -33,6 +28,9 @@ export class StartServer extends AbstractScriptCommand
   // Constructor function
   //////////////////////////////////////////////////////////////////////////////
 
+  /**
+   * Creates a new <code>StartServer</code> instance.
+   */
   constructor() {
     super();
   }

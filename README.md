@@ -1,7 +1,7 @@
 # JEC GlassCat Project
 
 <p align="center">
-  <img src="./assets/glasscat.png" alt="GlassCat Application Server" width="150"/>
+  <img src="./admin/webapp/styles/assets/glasscat.png" alt="GlassCat Application Server" width="200"/>
 </p>
 
 GlassCat is a **Web Applications Server** which provides advanced functionalities for creating, building and deploying JavaScript microservices and Angular projects over NodeJS.

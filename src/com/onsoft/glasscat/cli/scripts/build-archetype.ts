@@ -15,7 +15,7 @@
 //   limitations under the License.
 
 import {CommandManager} from "jec-glasscat-cli";
-import {BuildArchetype} from "../commands/BuildArchetype";
+import {BuildArchetype} from "jec-glasscat-commands";
 
 /**
  * The __build-archetype__ subcommand creates a new GlassCat EJP from a GPM.

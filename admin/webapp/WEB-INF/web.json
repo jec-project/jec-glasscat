@@ -1,0 +1,87 @@
+{
+  "webapp": {
+    "name": "admin-ejp",
+    "contextRoot": "admin",
+    "welcomeFile": "index.html",
+    "description": "Administration tools for GlassCat servers.",
+    "version": "1.0.0",
+    "author": "ONSOFT SYSTEMS",
+    "state": "stateful",
+    "bootstrap": [
+      {
+        "path": "bootstrap/InitApp"
+      }
+    ],
+    "jslets": {
+      "enableAutowire": false,
+      "config": [
+        "services/WildcatService",
+        "services/GpmService",
+        "services/RoleService",
+        "services/JsletService",
+        "services/EjpService",
+        "services/WorkspaceService",
+        "services/LocaleService",
+        "services/EnvironmentService",
+        "services/ConfigService",
+        "services/DomainsService",
+        "services/ContextService",
+        "services/BootstrapService",
+        "jslets/Console",
+        "jslets/Logout",
+        "jslets/Login",
+        "jslets/Status"
+      ]
+    },
+    "login": {
+      "authMethod": "ejp-form",
+      "formConfig": {
+        "loginUrl": "/login"
+      },
+      "realm": {
+        "type": "admin-file",
+        "securedArea": "GlassCat Admin Console"
+      }
+    },
+    "session": {
+      "storage": "local",
+      "errorUrl": "/login",
+      "maxAge": 3600
+    },
+    "resourceMap": [
+      {
+        "name": "font-awesome",
+        "value": "/styles/font-awesome/fonts"
+      }
+    ],
+    "security": {
+      "roles": [
+        {
+          "name": "ADMIN",
+          "path": "security/AdminRole"
+        }
+      ],
+      "constraints": [
+        {
+          "name": "ConsoleConstraint",
+          "roles": [
+            "ADMIN"
+          ],
+          "urlPattern": "/console/*",
+          "errorUrl": "/login"
+        }
+      ],
+      "staticResources": [
+        {
+          "urlPattern": "/vendor/*"
+        },
+        {
+          "urlPattern": "/styles/*"
+        },
+        {
+          "urlPattern": "/node_modules/*"
+        }
+      ]
+    }
+  }
+}

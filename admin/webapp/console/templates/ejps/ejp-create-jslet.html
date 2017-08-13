@@ -1,0 +1,42 @@
+<form [formGroup]="ejpCreateJsletForm">
+    <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-2">&nbsp;</div>
+            <h3 class="ui-grid-col-6"><i class="fa fa-magic"></i> New Jslet Wizard</h3>
+        </div>
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-2" for="ejpNameInput">Class name: </label>
+            <div class="ui-grid-col-6">
+                <input id="ejpNameInput" pInputText type="text" name="name" formControlName="name" placeholder="required"/>
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <label class="form-label ui-grid-col-2" for="ejpPackageInput">Package: </label>
+            <div class="ui-grid-col-6">
+                <div>
+                    <input id="ejpBootstrapPathInput" style="padding-left:34px;z-index:0" pInputText type="text" name="package" placeholder="required" formControlName="package"/>
+                    <div style="margin-left:10px;margin-top:-26px;z-index:1">src/</div>
+                </div>
+            </div>
+        </div>
+        <div class="ui-grid-row" style="margin-top:24px;">
+            <div class="ui-grid-col-2">&nbsp;</div>
+            <div class="ui-grid-col-6">
+                <div>
+                    <p-checkbox label="add to config file" binary="true" name="addOption" formControlName="addOption"></p-checkbox>
+                </div>
+            </div>
+        </div>
+        <div>&nbsp;</div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-2">&nbsp;</div>
+            <div class="ui-grid-col-6">
+                <button pButton type="button" icon="fa fa-save" label="Create" [disabled]="!ejpCreateJsletForm.valid" (click)="createJslet()"></button>
+            </div>
+            <div class="ui-grid-col-1">&nbsp;</div>
+            <div class="ui-grid-col-3">
+                <button pButton type="button" class="ui-button-secondary" icon="fa fa-close" label="Cancel" (click)="closeSubView()"></button>
+            </div>
+        </div>
+    </div>
+</form>
