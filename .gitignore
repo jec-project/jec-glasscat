@@ -44,9 +44,6 @@ public
 # Ignore 'workspace' folder
 workspace
 
-# Ignore 'typings' folder
-typings
-
 #####################################
 # temp files
 #####################################

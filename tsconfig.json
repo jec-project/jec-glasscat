@@ -13,7 +13,7 @@
     "baseUrl": "."
   },
   "filesGlob": [
-    "./src/**/*.ts",
+    "./src/com/**/*.ts",
     "./test/**/*.ts"
   ],
   "exclude": [
@@ -23,6 +23,6 @@
     "public/**/*",
     "assets/**/*",
     "typings/**/*",
-    "src/resources/wildcat/**/*"
+    "src/resources/**/*"
   ]
 }
