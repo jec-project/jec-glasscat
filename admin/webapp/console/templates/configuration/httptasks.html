@@ -12,9 +12,9 @@
     <p-dataTable [value]="httpTaskListModel" [rows]="5" resizableColumns="true">
       <p-column field="id" header="Name" [sortable]="true"></p-column>
       <p-column header="Action">
-        <template let-item="rowData" pTemplate="type">
+        <ng-template let-item="rowData" pTemplate="type">
           <button type="button" pButton icon="fa fa-edit" label="Edit" (click)="itemSelect(item)"></button>
-        </template>
+        </ng-template>
       </p-column>
     </p-dataTable>
   </div>

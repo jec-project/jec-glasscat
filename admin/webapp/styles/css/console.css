@@ -165,6 +165,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #2d353c;
   border-bottom: 1px dashed #c7c7c7;
 }
+.ui-breadcrumb .ui-state-active {
+  background: none;
+} 
 
 /* PanelMenu component override */
 .ui-panelmenu-panel:first-child {

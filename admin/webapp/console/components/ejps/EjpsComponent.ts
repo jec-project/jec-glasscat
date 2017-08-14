@@ -76,7 +76,6 @@ export class EjpsComponent implements OnInit, OnDestroy {
 
   private _subscriber:Subscription = null;
   private _routerSubscriber:Subscription = null;
-  private readonly EJP_PATH:string = "./ejps/";
   private readonly SLASH:string = "/";
 
   private _routemap:Map<string, MenuItem> = null;
@@ -97,16 +96,15 @@ export class EjpsComponent implements OnInit, OnDestroy {
   }
 
   private initMenu():void {
-    let path:string = this.EJP_PATH + this.ejpDirectory;
     this.ejpMenuModel = [
-      { label: "General", icon: "fa fa-info-circle", routerLink: [path + "/general"] },
-      { label: "Context", icon: "fa fa-list", routerLink: [path + "/context"]},
-      { label: "Jslets", icon: "fa fa-file-code-o", routerLink: [path + "/jslets"] },
+      { label: "General", icon: "fa fa-info-circle", routerLink: ["general"] },
+      { label: "Context", icon: "fa fa-list", routerLink: ["context"]},
+      { label: "Jslets", icon: "fa fa-file-code-o", routerLink: ["jslets"] },
       { label: "Filters", icon: "fa fa-filter", disabled:true },
-      { label: "Security", icon: "fa fa-shield", routerLink: [path + "/security/roles"] },
-      { label: "Login", icon: "fa fa-lock", routerLink: [path + "/login"] },
-      { label: "Session", icon: "fa fa-user-circle-o", routerLink: [path + "/session"] },
-      { label: "Resource Map", icon: "fa fa-map-o", routerLink: [path + "/resource-map"] }
+      { label: "Security", icon: "fa fa-shield", routerLink: ["security/roles"] },
+      { label: "Login", icon: "fa fa-lock", routerLink: ["login"] },
+      { label: "Session", icon: "fa fa-user-circle-o", routerLink: ["session"] },
+      { label: "Resource Map", icon: "fa fa-map-o", routerLink: ["resource-map"] }
     ];
   }
 }

@@ -57,18 +57,18 @@ export class EjpJsletsComponent extends AbstractEjpComponent
 
   public onParamsLoad():void {
     this._ejpConfigFileControl = new FormControl(this.EMPTY_STRING);
+    this._ejpAutowireControl = new FormControl(this.EMPTY_STRING);
     this.ejpJsletsForm = this._fb.group({
-      jsletConfigFile: this._ejpConfigFileControl
+      jsletConfigFile: this._ejpConfigFileControl,
+      enableAutowire: this._ejpAutowireControl
     });
     this._ejpImportedJsletControl =
       new FormControl(
         this.EMPTY_STRING,
         Validators.compose([Validators.required, Validators.minLength(6)])
       );
-    this._ejpAutowireControl = new FormControl(this.EMPTY_STRING);
     this.ejpImportJsletForm = this._fb.group({
-      importedJslet: this._ejpImportedJsletControl,
-      enableAutowire: this._ejpAutowireControl
+      importedJslet: this._ejpImportedJsletControl
     });
   }
 

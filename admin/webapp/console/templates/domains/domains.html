@@ -46,10 +46,10 @@
       <p-column field="name" header="Name" [sortable]="true"></p-column>
       <p-column field="connector.server" header="Server" [sortable]="true"></p-column>
       <p-column header="Action">
-        <template let-item="rowData" pTemplate="type">
+        <ng-template let-item="rowData" pTemplate="type">
           <button type="button" pButton icon="fa fa-dashboard" label="Manage" (click)="manageItemSelect(item)"></button>
           <button type="button" class="ui-button-secondary" pButton icon="fa fa-edit" label="Edit" (click)="itemSelect(item)"></button>
-        </template>
+        </ng-template>
       </p-column>
     </p-dataTable>
   </div>
@@ -68,15 +68,15 @@
     <p-dataTable [value]="domainWokspaceModel" [rows]="10" [class]="domainListStyle">
       <p-column field="name" header="Name" [sortable]="true"></p-column>
       <p-column field="invalid" header="Status" [sortable]="true" [style]="{'width':'100px'}">
-        <template let-project="rowData" pTemplate="type">
+        <ng-template let-project="rowData" pTemplate="type">
             <i *ngIf="project.invalid===false" class="fa fa-check project-status-valid"></i>
             <i *ngIf="project.invalid===true" class="fa fa-times project-status-error"></i>
-        </template>
+        </ng-template>
       </p-column>
       <p-column header="Action">
-        <template let-project="rowData" pTemplate="type">
+        <ng-template let-project="rowData" pTemplate="type">
           <button type="button" pButton class="ui-button-secondary" icon="fa fa-download" [disabled]="project.deployed" label="Load Domain" (click)="loadDomain(project)"></button>
-        </template>
+        </ng-template>
       </p-column>
     </p-dataTable>
   </div>
