@@ -8,7 +8,6 @@ GlassCat is a **Web Applications Server** which provides advanced functionalitie
 
 GlassCat is the default [JavaScript Entreprise Container](https://github.com/pechemann/JEC) _(JEC)_ implementation.
 
-
 <p align="center">
     <a href="https://github.com/pechemann/JEC" title="JavaScript Entreprise Container">
     <img src="https://raw.githubusercontent.com/pechemann/JEC/master/assets/jec-logos/jec-logo.png" alt="JavaScript Entreprise Container" width="500"/>
@@ -27,7 +26,7 @@ JEC GlassCat needs the following system parameters in order to work correctly:
 
 ### JEC-CLI
 
-The easiest way to install Glasscat is to use the [JEC Command Line Interface _(JEC-CLI)_](https://github.com/pechemann/jec-cli) .
+To install Glasscat, you have to use the [JEC Command Line Interface _(JEC-CLI)_](https://github.com/pechemann/jec-cli).
 <br/>
 First install [JEC-CLI](https://github.com/pechemann/jec-cli), then run the following command in the target directory:
 
@@ -39,14 +38,6 @@ or use the alias:
 
 ```bash
 $ jec ig
-```
-
-### Manual Installation
-
-If you do not want use [JEC-CLI](https://github.com/pechemann/jec-cli), clone, or download, the JEC GlassCat module and then set up the server with:
-
-```bash
-$ npm install
 ```
 
 ## Get Started with GlassCat
