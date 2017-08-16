@@ -24,8 +24,6 @@ JEC GlassCat needs the following system parameters in order to work correctly:
 
 ## Installation
 
-### JEC-CLI
-
 To install Glasscat, you have to use the [JEC Command Line Interface _(JEC-CLI)_](https://github.com/pechemann/jec-cli).
 <br/>
 First install [JEC-CLI](https://github.com/pechemann/jec-cli), then run the following command in the target directory:
@@ -38,6 +36,14 @@ or use the alias:
 
 ```bash
 $ jec ig
+```
+
+The server automatically starts after its installation.
+
+To prevent automatic start of the server, use:
+
+```bash
+$ jec install-glasscat --mute
 ```
 
 ## Get Started with GlassCat
