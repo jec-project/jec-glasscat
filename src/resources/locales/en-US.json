@@ -105,6 +105,12 @@
 		"added": "new jslet added to context:\n   * name='%s', URLs='%s', template='%s'",
 		"autowireDetect": "autowired jslet detected: source file='%s'"
 	},
+	"bootstrap": {
+		"newContext": "creation of a new bootstrap context: context root='%s'",
+		"added": "new initialization class added to context:\n   * name='%s'",
+		"autowireDetect": "autowired initialization class detected: source file='%s'",
+		"run": "running initialization script: source file='%s'"
+	},
 	"security": {
 		"context": {
 			"securityAdded": "new security context added: contextRoot='%s'",
@@ -126,8 +132,10 @@
 		"init": "source inspector initialized",
 		"initError": "source inspector already initialized",
 		"processorAdded": "source file processor added: %s",
+		"processorRemoved": "source file processor removed: %s",
 		"sourcePathAdded": "source inspector path added: %s",
 		"lookupStart": "source inspector lookup start",
-		"lookupComplete": "source inspector lookup complete"
+		"lookupComplete": "source inspector lookup complete",
+		"inspectMode": "inspect mode is: %s"
 	}
 }

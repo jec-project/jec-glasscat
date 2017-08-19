@@ -14,10 +14,10 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-import {BootstrapScript, JecContainer} from "jec-commons";
+import {AbstractBootstrapScript, JecContainer} from "jec-commons";
 //import {SourceMapProcessor} from "../../../server/com/onsoft/glasscat/debug/map/SourceMapProcessor";
 
-export class InitApp implements BootstrapScript {
+export class InitApp extends AbstractBootstrapScript {
 
   public run(container:JecContainer):void {
     /*console.log(

@@ -103,7 +103,13 @@
 	"jslet": {
 		"newContext": "création d'un nouveau contexte de jslet : racine du contexte='%s'",
 		"added": "nouvelle jslet ajoutée au contexte :\n   * nom='%s', liste des URL='%s', template='%s'",
-		"autowireDetect": "détection automatique d'unr jslet : fichier source='%s'"
+		"autowireDetect": "détection automatique d'une jslet : fichier source='%s'"
+	},
+	"bootstrap": {
+		"newContext": "création d'un nouveau contexte d'initialisation : racine du contexte='%s'",
+		"added": "nouvelle classe d'initialisation ajoutée au contexte :\n   * nom='%s'",
+		"autowireDetect": "détection automatique d'une classe d'initialisation : fichier source='%s'",
+		"run": "exécution d'un script d'initialisation : fichier source='%s'"
 	},
 	"security": {
 		"context": {
@@ -126,8 +132,10 @@
 		"init": "initialisation de l'inspecteur de sources",
 		"initError": "inspecteur de sources déjà initialisé",
 		"processorAdded": "ajout d'un processeur de fichier source : %s",
+		"processorRemoved": "suppression d'un processeur de fichier source : %s",
 		"sourcePathAdded": "ajout d'un chemin à l'inspecteur de fichier source : %s",
 		"lookupStart": "début de l'inspection des fichiers source",
-		"lookupComplete": "fin de l'inspection des fichiers source"
+		"lookupComplete": "fin de l'inspection des fichiers source",
+		"inspectMode": "le mode d'inspection est : %s"
 	}
 }
