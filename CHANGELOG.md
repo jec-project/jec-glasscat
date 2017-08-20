@@ -1,6 +1,13 @@
 # JEC GlassCat Project: Update Release Notes
 
-<a name="jec-glasscat-0.0.3"></a>
+<a name="jec-glasscat-0.0.4"></a>
+## **0.0.4** (2017-08-20)
+
+### Bug Fixes
+
+- **postinstall**: removing the post install script
+
+<a name="jec-glasscat-0.0.4"></a>
 ## **0.0.3** (2017-08-20)
 
 ### Bug Fixes
