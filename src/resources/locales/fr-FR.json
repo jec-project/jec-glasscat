@@ -85,7 +85,8 @@
 	},
 	"server": {
 		"ready": "le serveur est prêt pour le e-business",
-		"stop": "le serveur est arrêté"
+		"stop": "le serveur est arrêté",
+		"startDuration": "démarrage du serveur en %s ms"
 	},
 	"httpErrors": {
 		"forbidden": {

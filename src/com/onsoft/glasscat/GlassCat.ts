@@ -47,12 +47,10 @@ export class GlassCat {
 
   /**
    * Initializes the container instance. This method is called by the
-   * start() function.
-   *
-   * @method runProcesses
-   * @private
+   * <code>start()</code> function.
    */
   private runProcesses():void {
+    let initDate:number = Date.now();
     this.initKernel();
     this.initLogger();
     this.checkConfig();
@@ -61,14 +59,15 @@ export class GlassCat {
     LoggerManager.getInstance().info(
       LocaleManager.getInstance().get("server.ready")
     );
+    LoggerManager.getInstance().info(
+      LocaleManager.getInstance()
+                   .get("server.startDuration", String(Date.now() - initDate))
+    );
   }
 
   /**
    * Kills all processes used by the container instance. This method is called
-   * by the stop() function.
-   *
-   * @method runProcesses
-   * @private
+   * by the <code>stop()</code> function.
    */
   private killProcesses():void {
     this._kernel.stopServices();
@@ -80,9 +79,6 @@ export class GlassCat {
 
   /**
    * Initializes the container kernel.
-   *
-   * @method initKernel
-   * @private
    */
   private initKernel():void {
     this._kernel = new Kernel();
@@ -91,9 +87,6 @@ export class GlassCat {
 
   /**
    * Initializes the logger for this container instance.
-   *
-   * @method initLogger
-   * @private
    */
   private initLogger():void {
     new LoggerManagerBuilder().context(this._kernel.getContext()).build();
@@ -101,9 +94,6 @@ export class GlassCat {
 
   /**
    * Checks the container context to detect errors.
-   *
-   * @method checkConfig
-   * @private
    */
   private checkConfig():void {
     new ContextValidator().validate(this._kernel);
@@ -126,9 +116,6 @@ export class GlassCat {
 
   /**
    * Initializes all core services of the GlassCat container.
-   *
-   * @method initServices
-   * @private
    */
   private initServices():void {
     this._kernel.initServices();
@@ -136,9 +123,6 @@ export class GlassCat {
 
   /**
    * Initializes the container services.
-   *
-   * @method startServices
-   * @private
    */
   private startServices():void {
     this._kernel.startServices();
@@ -149,18 +133,14 @@ export class GlassCat {
   //////////////////////////////////////////////////////////////////////////////
 
   /**
-   *
-   *
-   * @method start
+   * Starts the GlassCat container.
    */
   public start():void {
     this.runProcesses();
   }
 
   /**
-   *
-   *
-   * @method stop
+   * Stops the GlassCat container.
    */
   public stop():void {
     this.killProcesses();

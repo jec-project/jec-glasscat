@@ -85,7 +85,8 @@
 	},
 	"server": {
 		"ready": "server is ready for e-business",
-		"stop": "server stopped"
+		"stop": "server stopped",
+		"startDuration": "server started in %s ms"
 	},
 	"httpErrors": {
 		"forbidden": {

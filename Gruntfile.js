@@ -42,6 +42,24 @@ module.exports = function(grunt) {
         experimentalDecorators: true,
         alwaysStrict: true
       }
+    },
+    admin : {
+      src: [
+        "admin/src/**/*.ts", 
+        "admin/webapp/**/*.ts", 
+        "!admin/webapp/node_modules/**"
+      ],
+      options: {
+        module: "commonjs",
+        target: "es6",
+        sourceMap: false,
+        declaration: false,
+        removeComments: true,
+        preserveConstEnums: true,
+        emitDecoratorMetadata: true,
+        experimentalDecorators: true,
+        alwaysStrict: true
+      }
     }
   });
 
@@ -97,6 +115,9 @@ module.exports = function(grunt) {
   //--> Task: builds the "jec-glasscat" project:
   grunt.registerTask("build", ["ts:build", "copy:main", "copy:templates"]);
 
+  //--> Task: builds the "jec-glasscat" project:
+  grunt.registerTask("build-admin", ["ts:admin"]);
+  
   //--> Task: builds the "jec-glasscat" API documentation:
   grunt.registerTask("doc", ["typedoc"]);
 }

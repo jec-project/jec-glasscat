@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/pechemann/jec-glasscat#readme",
   "scripts": {
-    "postinstall": "grunt build & node server/com/onsoft/glasscat/cli/install/post-install-tasks"
+    "postinstall": "grunt build & grunt build-admin & node server/com/onsoft/glasscat/cli/install/post-install-tasks"
   },
   "dependencies": {
     "jec-commons": "^1.1.3",
