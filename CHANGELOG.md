@@ -1,5 +1,14 @@
 # JEC GlassCat Project: Update Release Notes
 
+<a name="jec-glasscat-0.0.3"></a>
+## **0.0.3** (2017-08-20)
+
+### Bug Fixes
+
+### Features
+
+- Peer dependendies update.
+
 <a name="jec-glasscat-0.0.2"></a>
 ## **0.0.2** (2017-08-20)
 
