@@ -1,7 +1,7 @@
 {
   "name": "admin-ejp",
   "version": "1.0.0",
-  "description": "Administration tools for GlassCat server 1.0.0 Korat.",
+  "description": "Administration Console for the GlassCat Application Server 1.0.0 Korat.",
   "license": "Apache-2.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

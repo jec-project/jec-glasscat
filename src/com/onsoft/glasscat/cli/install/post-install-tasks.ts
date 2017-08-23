@@ -15,7 +15,7 @@
 //   limitations under the License.
 
 import { InstallTaskRunner, InstallTaskError, InstallTask, BuildDirsTask,
-         CopyConfigFilesTask, CopyDirsTask } from "jec-glasscat-install";
+         CopyConfigFilesTask, CopyDirsTask, BuildConsoleTask } from "jec-glasscat-install";
 
 /**
  * Runs tasks that install core functionalities of the GlassCat Application
@@ -26,7 +26,8 @@ let runner:InstallTaskRunner = new InstallTaskRunner();
 let tasks:InstallTask[] = [
   new BuildDirsTask(),
   new CopyConfigFilesTask(),
-  new CopyDirsTask()
+  new CopyDirsTask(),
+  new BuildConsoleTask()
 ];
 runner.addTasks(tasks);
 runner.runTasks((errors:InstallTaskError[])=>{});
