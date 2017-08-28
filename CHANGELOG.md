@@ -1,7 +1,16 @@
 # JEC GlassCat Project: Update Release Notes
 
+<a name="jec-glasscat-0.0.6"></a>
+## **0.0.6** (2017-08-28)
+
+### Bug Fixes
+
+- **Sandcat Framework Update**: upgrading Sandcat version to fix `SandcatError` import location in linux environment
+
+### Features
+
 <a name="jec-glasscat-0.0.5"></a>
-## **0.0.4** (2017-08-22)
+## **0.0.5** (2017-08-22)
 
 ### Bug Fixes
 
