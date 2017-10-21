@@ -117,7 +117,7 @@ export class HttpTaskEditComponent implements OnInit, OnDestroy {
     this._listener.secured = this.listenerPropertiesForm.get("secured").value;
     this._listener.sslPath = this.listenerPropertiesForm.get("sslPath").value;
     this._listener.monitoring.enabled = this.listenerPropertiesForm.get("monitoring").value;
-     this._listener.monitoring.factory = this.listenerPropertiesForm.get("monitorFactory").value;
+    this._listener.monitoring.factory = this.listenerPropertiesForm.get("monitorFactory").value;
     this.updateContext("HTTP Task changed");
   }
 

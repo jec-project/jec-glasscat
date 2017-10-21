@@ -9,6 +9,8 @@
 
 ### Features
 
+- Admin console improvements
+
 <a name="jec-glasscat-0.0.5"></a>
 ## **0.0.5** (2017-08-22)
 

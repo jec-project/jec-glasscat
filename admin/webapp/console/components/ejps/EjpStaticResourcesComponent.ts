@@ -87,7 +87,8 @@ export class EjpStaticResourcesComponent extends EjpAbstractSecurityComponent
   public createResource():void {
     let resources:Array<EjpStaticResourcesConfig> = this.__ejpModel.webapp.security.staticResources;
     let resource:EjpStaticResourcesConfig = {
-      urlPattern: this.ejpResourcesForm.get("urlPattern").value
+      urlPattern: this.ejpResourcesForm.get("urlPattern").value,
+      cacheControlPolicy: null
     };
     resources.push(resource);
     this.updateEjp();

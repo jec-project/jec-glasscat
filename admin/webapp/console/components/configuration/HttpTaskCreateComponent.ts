@@ -101,13 +101,14 @@ export class HttpTaskCreateComponent implements OnInit, OnDestroy {
   
   public saveContext():void {
     let httpTask:any = { monitoring:{} };
+    let sslPath:string = this.newHttpTaskForm.get("sslPath").value;
     httpTask.id = this.newHttpTaskForm.get("name").value;
     httpTask.server = this.newHttpTaskForm.get("server").value;
     httpTask.address = this.newHttpTaskForm.get("address").value;
     httpTask.domain = this.newHttpTaskForm.get("domain").value;
     httpTask.port = this.newHttpTaskForm.get("port").value;
     httpTask.secured = this.newHttpTaskForm.get("secured").value;
-    httpTask.sslPath = this.newHttpTaskForm.get("sslPath").value;
+    if(sslPath !== "") httpTask.sslPath = sslPath;
     httpTask.monitoring.enabled = this.newHttpTaskForm.get("monitoring").value;
     httpTask.monitoring.factory = this.newHttpTaskForm.get("monitorFactory").value;
     this._context.config.http.listeners.push(httpTask);
@@ -161,5 +162,7 @@ export class HttpTaskCreateComponent implements OnInit, OnDestroy {
     });
     this.newHttpTaskForm.patchValue( { address: "127.0.0.1" });
     this.newHttpTaskForm.patchValue( { domain: "localhost" });
+    this.newHttpTaskForm.patchValue( { secured: false });
+    this.newHttpTaskForm.patchValue( { monitoring: false });
   }
 }

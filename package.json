@@ -1,6 +1,6 @@
 {
   "name": "jec-glasscat",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "JEC GlassCat - The GlassCat Aplication Server is the default JEC implementation.",
   "repository": {
     "type": "git",
@@ -28,18 +28,18 @@
     "postinstall": "grunt build && node server/com/onsoft/glasscat/cli/install/post-install-tasks"
   },
   "dependencies": {
-    "jec-commons": "^1.1.6",
-    "jec-commons-node": "^1.0.5",
-    "jec-exchange": "^1.1.4",
-    "jec-glasscat-cli": "^1.0.3",
-    "jec-glasscat-commands": "^1.0.2",
-    "jec-glasscat-core": "^0.1.3",
-    "jec-glasscat-install": "1.0.3",
-    "jec-wildcat": "^1.0.5",
-    "jec-jars": "^1.0.6",
-    "jec-sandcat": "^1.0.4",
-    "jec-juta": "^1.1.5",
-    "jec-tiger": "^1.1.6"
+    "jec-commons": "^1.1.7",
+    "jec-commons-node": "^1.0.6",
+    "jec-exchange": "^1.1.5",
+    "jec-glasscat-cli": "^1.0.4",
+    "jec-glasscat-commands": "^1.0.3",
+    "jec-glasscat-core": "^0.1.4",
+    "jec-glasscat-install": "1.0.4",
+    "jec-wildcat": "^1.0.6",
+    "jec-jars": "^1.0.7",
+    "jec-sandcat": "^1.0.5",
+    "jec-juta": "^1.1.6",
+    "jec-tiger": "^1.1.7"
   },
   "devDependencies": {
     "@types/node": "^8.0.19",

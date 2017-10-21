@@ -13,7 +13,8 @@
       <div class="list-group">
         <h4>Deployment</h4>
         <button type="button" pButton class="ui-button-secondary" [routerLink]="['/domains']" icon="fa fa-sitemap fa-fw" label="List Deployed Domains"></button>
-        <button type="button" pButton class="ui-button-secondary" icon="fa fa-download fa-fw" label="Deploy a Domain"></button>
+        <button type="button" pButton [disabled]="true" class="ui-button-secondary" icon="fa fa-download fa-fw" label="Deploy a Domain"></button>
+        <button type="button" pButton class="ui-button-success" [routerLink]="['/domains/wizard']" icon="fa fa-magic fa-fw" label="New Project"></button>
       </div>
     </div>
     <div class="ui-g-6">
