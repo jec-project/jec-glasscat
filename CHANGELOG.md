@@ -1,5 +1,14 @@
 # JEC GlassCat Project: Update Release Notes
 
+<a name="jec-glasscat-0.0.7"></a>
+## **0.0.7** (2017-10-29)
+
+### Bug Fixes
+
+- **RXJS 5.x.x**: setting the RXJS version to `5.4.3` for preventing `5.x.x` regression bug with SystemJS
+
+### Features
+
 <a name="jec-glasscat-0.0.6"></a>
 ## **0.0.6** (2017-08-28)
 

@@ -38,14 +38,6 @@ or use the alias:
 $ jec ig
 ```
 
-The server automatically starts after its installation.
-
-To prevent automatic start of the server, use:
-
-```bash
-$ jec install-glasscat --mute
-```
-
 ## Get Started with GlassCat
 
 New to GlassCat and need help setting up and customizing the server or learning the basic building blocks? Learn your way around GlassCat and get started with your first app within minutes.
@@ -54,7 +46,7 @@ New to GlassCat and need help setting up and customizing the server or learning 
 
 ## Update Release Notes
 
-**Current stable release:** [0.0.6](CHANGELOG.md#jec-glasscat-0.0.6)
+**Current stable release:** [0.0.7](CHANGELOG.md#jec-glasscat-0.0.7)
  
 For a complete listing of release notes for all JEC GlassCat update releases, see the [CHANGELOG](CHANGELOG.md) file. 
 
