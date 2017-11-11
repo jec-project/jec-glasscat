@@ -14,22 +14,22 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-import { InstallTaskRunner, InstallTaskError, InstallTask, BuildDirsTask,
-         CopyConfigFilesTask, CopyDirsTask, BuildConsoleTask,
-         InstallDefaultGpmTask } from "jec-glasscat-install";
+import { TestStats } from "jec-juta";
+import { Tiger, TigerFactory } from "jec-tiger";
 
-/**
- * Runs tasks that install core functionalities of the GlassCat Application
- * Server, such as creating the "workspace" folder, adding default setting
- * files, etc..
- */
-let runner:InstallTaskRunner = new InstallTaskRunner();
-let tasks:InstallTask[] = [
-  new BuildDirsTask(),
-  new CopyConfigFilesTask(),
-  new CopyDirsTask(),
-  new BuildConsoleTask(),
-  new InstallDefaultGpmTask()
-];
-runner.addTasks(tasks);
-runner.runTasks((errors:InstallTaskError[])=>{});
+let factory:TigerFactory = new TigerFactory();
+let tiger:Tiger = factory.create();
+tiger.process((stats:TestStats)=> {
+  if(stats.error) console.error(stats.error);
+  else {
+    console.log(
+`Test stats:
+- test lookup process duration: ${stats.time}
+- number of test suites: ${stats.numTestSuites}
+- number of disabled test suites: ${stats.numDisabledTestSuites}
+- number of synchronous test cases: ${stats.numTests}
+- number of asynchronous test cases: ${stats.numAsyncTests}
+- number of disabled test cases: ${stats.numDisabledTests}`
+    );
+  }
+});
