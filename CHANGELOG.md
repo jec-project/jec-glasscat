@@ -1,5 +1,15 @@
 # JEC GlassCat Project: Update Release Notes
 
+<a name="jec-glasscat-0.0.8"></a>
+## **0.0.8** (2017-11-05)
+
+### Bug Fixes
+
+### Features
+
+- Adding default GPM the the GlassCat server installation process
+- Adding tools for running JUTA unit testing classes
+
 <a name="jec-glasscat-0.0.7"></a>
 ## **0.0.7** (2017-10-29)
 
