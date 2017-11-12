@@ -1,5 +1,14 @@
 # JEC GlassCat Project: Update Release Notes
 
+<a name="jec-glasscat-0.1.0"></a>
+## **0.1.0** (2017-11-12)
+
+### Bug Fixes
+
+### Features
+
+- Upgrading the `jec-glasscat-install` module version to 1.0.7
+
 <a name="jec-glasscat-0.0.9"></a>
 ## **0.0.9** (2017-11-12)
 
