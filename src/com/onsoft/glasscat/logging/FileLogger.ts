@@ -15,7 +15,7 @@
 //   limitations under the License.
 
 import {GlassCatLogFormatter} from "jec-glasscat-core";
-import {LogLevelUtil, LogLevel, LogFormatter, AbstractLogger} from "jec-commons";
+import {LogLevelString, LogLevel, LogFormatter, AbstractLogger} from "jec-commons";
 import * as fs from "fs";
 
 /**
@@ -83,7 +83,7 @@ export class FileLogger extends AbstractLogger {
   public debug(marker:any, context:string = ""):void {
     if(this.__logLevel <= LogLevel.DEBUG) {
       this.appendLog(
-        this._formatter.format(LogLevelUtil.DEBUG, marker, true, context)
+        this._formatter.format(LogLevelString.DEBUG, marker, true, context)
       );
     }
   }
@@ -94,7 +94,7 @@ export class FileLogger extends AbstractLogger {
   public error(marker:any, context:string = ""):void {
     if(this.__logLevel <= LogLevel.ERROR) {
       this.appendLog(
-        this._formatter.format(LogLevelUtil.ERROR, marker, true, context)
+        this._formatter.format(LogLevelString.ERROR, marker, true, context)
       );
     }
   }
@@ -105,7 +105,7 @@ export class FileLogger extends AbstractLogger {
   public info(marker:any, context:string = ""):void {
     if(this.__logLevel <= LogLevel.INFO) {
       this.appendLog(
-        this._formatter.format(LogLevelUtil.INFO, marker, true, context)
+        this._formatter.format(LogLevelString.INFO, marker, true, context)
       );
     }
   }
@@ -116,7 +116,7 @@ export class FileLogger extends AbstractLogger {
   public trace(marker:any, context:string = ""):void {
     if(this.__logLevel <= LogLevel.TRACE) {
       this.appendLog(
-        this._formatter.format(LogLevelUtil.TRACE, marker, true, context)
+        this._formatter.format(LogLevelString.TRACE, marker, true, context)
       );
     }
   }
@@ -127,7 +127,7 @@ export class FileLogger extends AbstractLogger {
   public warn(marker:any, context:string = ""):void {
     if(this.__logLevel <= LogLevel.WARN) {
       this.appendLog(
-        this._formatter.format(LogLevelUtil.WARN, marker, true, context)
+        this._formatter.format(LogLevelString.WARN, marker, true, context)
       );
     }
   }

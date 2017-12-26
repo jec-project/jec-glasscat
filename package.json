@@ -1,6 +1,6 @@
 {
   "name": "jec-glasscat",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "JEC GlassCat - The GlassCat Aplication Server is the default JEC implementation.",
   "repository": {
     "type": "git",
@@ -29,18 +29,18 @@
     "test": "mocha juta/tiger/run-unit-tests"
   },
   "dependencies": {
-    "jec-commons": "^1.1.7",
-    "jec-commons-node": "^1.0.6",
-    "jec-exchange": "^1.1.5",
-    "jec-glasscat-cli": "^1.0.4",
-    "jec-glasscat-commands": "^1.0.3",
-    "jec-glasscat-core": "^0.1.4",
-    "jec-glasscat-install": "1.0.7",
-    "jec-wildcat": "^1.0.6",
-    "jec-jars": "^1.0.7",
-    "jec-sandcat": "^1.0.5",
-    "jec-juta": "^1.1.6",
-    "jec-tiger": "^1.1.7"
+    "jec-commons": "^1.1.8",
+    "jec-commons-node": "^1.0.7",
+    "jec-exchange": "^1.1.6",
+    "jec-glasscat-cli": "^1.0.5",
+    "jec-glasscat-commands": "^1.0.4",
+    "jec-glasscat-core": "^0.1.5",
+    "jec-glasscat-install": "1.0.8",
+    "jec-wildcat": "^1.0.7",
+    "jec-jars": "^1.0.8",
+    "jec-sandcat": "^1.0.6",
+    "jec-juta": "^1.1.7",
+    "jec-tiger": "^1.1.8"
   },
   "devDependencies": {
     "@types/node": "^8.0.19",

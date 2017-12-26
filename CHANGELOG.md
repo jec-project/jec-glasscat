@@ -1,5 +1,15 @@
 # JEC GlassCat Project: Update Release Notes
 
+<a name="jec-glasscat-0.1.1"></a>
+## **0.1.1** (2017-12-26)
+
+### Bug Fixes
+
+### Features
+
+- Dependencies upgrade
+- Fixing `LogLevelUtil` breaking changes
+
 <a name="jec-glasscat-0.1.0"></a>
 ## **0.1.0** (2017-11-12)
 

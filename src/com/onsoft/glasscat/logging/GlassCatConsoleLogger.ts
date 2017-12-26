@@ -15,7 +15,7 @@
 //   limitations under the License.
 
 import {GlassCatLogFormatter} from "jec-glasscat-core";
-import {LogLevel, LogLevelUtil, LogFormatter, AbstractLogger} from "jec-commons";
+import {LogLevel, LogLevelString, LogFormatter, AbstractLogger} from "jec-commons";
 
 /**
  * Creates a basic logger wich sends all log messages to the console.
@@ -64,7 +64,7 @@ export class GlassCatConsoleLogger extends AbstractLogger {
    */
   public debug(marker:any, context:string = ""):void {
     console.log(
-      this._formatter.format(LogLevelUtil.DEBUG, marker, false, context)
+      this._formatter.format(LogLevelString.DEBUG, marker, false, context)
     );
   }
 
@@ -73,7 +73,7 @@ export class GlassCatConsoleLogger extends AbstractLogger {
    */
   public error(marker:any, context:string = ""):void {
     console.log(
-      this._formatter.format(LogLevelUtil.ERROR, marker, false, context)
+      this._formatter.format(LogLevelString.ERROR, marker, false, context)
     );
   }
 
@@ -82,7 +82,7 @@ export class GlassCatConsoleLogger extends AbstractLogger {
    */
   public info(marker:any, context:string = ""):void {
     console.log(
-      this._formatter.format(LogLevelUtil.INFO, marker, false, context)
+      this._formatter.format(LogLevelString.INFO, marker, false, context)
     );
   }
 
@@ -91,7 +91,7 @@ export class GlassCatConsoleLogger extends AbstractLogger {
    */
   public trace(marker:any, context:string = ""):void {
     console.log(
-      this._formatter.format(LogLevelUtil.TRACE, marker, false, context)
+      this._formatter.format(LogLevelString.TRACE, marker, false, context)
     );
   }
 
@@ -100,7 +100,7 @@ export class GlassCatConsoleLogger extends AbstractLogger {
    */
   public warn(marker:any, context:string = ""):void {
     console.log(
-      this._formatter.format(LogLevelUtil.WARN, marker, false, context)
+      this._formatter.format(LogLevelString.WARN, marker, false, context)
     );
   }
 
