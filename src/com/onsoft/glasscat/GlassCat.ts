@@ -14,8 +14,8 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-import {LocaleManager, LoggerManager, LoggerManagerBuilder, Kernel,
-        ContextValidator, EnvironmentValidator} from "jec-glasscat-core";
+import {LoggerManager, LoggerManagerBuilder, Kernel, EnvironmentValidator,
+        ContextValidator, GlassCatLocaleManager } from "jec-glasscat-core";
 import {JcadContextManager, DecoratorConnectorManager} from "jec-commons";
 
 /**
@@ -57,11 +57,12 @@ export class GlassCat {
     this.initServices();
     this.startServices();
     LoggerManager.getInstance().info(
-      LocaleManager.getInstance().get("server.ready")
+      GlassCatLocaleManager.getInstance().get("server.ready")
     );
     LoggerManager.getInstance().info(
-      LocaleManager.getInstance()
-                   .get("server.startDuration", String(Date.now() - initDate))
+      GlassCatLocaleManager.getInstance().get(
+        "server.startDuration", String(Date.now() - initDate)
+      )
     );
   }
 
@@ -73,7 +74,7 @@ export class GlassCat {
     this._kernel.stopServices();
     this._kernel = null;
     LoggerManager.getInstance().info(
-      LocaleManager.getInstance().get("server.stop")
+      GlassCatLocaleManager.getInstance().get("server.stop")
     );
   }
 
@@ -99,14 +100,14 @@ export class GlassCat {
     new ContextValidator().validate(this._kernel);
     new EnvironmentValidator().validate(this._kernel);
     LoggerManager.getInstance().info(
-      LocaleManager.getInstance().get(
+      GlassCatLocaleManager.getInstance().get(
         "singleton.info",
         "[JcadContextManager]",
         JcadContextManager.getInstance().getId()
       )
     );
     LoggerManager.getInstance().info(
-      LocaleManager.getInstance().get(
+      GlassCatLocaleManager.getInstance().get(
         "singleton.info",
         "[DecoratorConnectorManager]",
         DecoratorConnectorManager.getInstance().getId()

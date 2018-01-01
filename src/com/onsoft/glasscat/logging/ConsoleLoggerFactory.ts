@@ -14,7 +14,7 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-import {LoggerFactory, LoggerContext, LocaleManager} from "jec-glasscat-core";
+import {LoggerFactory, LoggerContext, GlassCatLocaleManager} from "jec-glasscat-core";
 import {GlassCatConsoleLogger} from "./GlassCatConsoleLogger";;
 import {Logger, LogLevelUtil} from "jec-commons";
 
@@ -45,7 +45,7 @@ export class ConsoleLoggerFactory implements LoggerFactory {
     logger.setName(context.name);
     if(context.logLevel !== null) {
       let llu:LogLevelUtil = new LogLevelUtil();
-      LocaleManager.getInstance().get(
+      GlassCatLocaleManager.getInstance().get(
         "warnings.invalidLogLevel",
         llu.logLevelToString(context.logLevel)
       )
