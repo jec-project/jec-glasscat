@@ -38,6 +38,7 @@
     "jec-glasscat-install": "1.0.8",
     "jec-wildcat": "^1.0.7",
     "jec-jdi": "^0.0.1",
+    "jec-sokoke": "^0.0.1",
     "jec-jars": "^1.0.8",
     "jec-sandcat": "^1.0.6",
     "jec-juta": "^1.1.7",
