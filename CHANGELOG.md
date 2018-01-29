@@ -9,6 +9,7 @@
 
 - Dependencies upgrade
 - Fixing `LogLevelUtil` breaking changes
+- Setting the bootstrap config log level to `TRACE`
 
 <a name="jec-glasscat-0.1.0"></a>
 ## **0.1.0** (2017-11-12)

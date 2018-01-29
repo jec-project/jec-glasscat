@@ -1,6 +1,6 @@
 {
 	"loggers": {
-		"init": "logger initialisé: logLevel=%s",
+		"init": "loggers initialisés: logLevel=%s",
 		"num": "logger n°%s",
 		"name": "nom : %s",
 		"classref": "reférence de la classe : %s",

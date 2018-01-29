@@ -5,7 +5,7 @@
   },
   "config": {
     "loggers": {
-      "logLevel": "TRACE",
+      "logLevel": "INFO",
       "factories": [
         {
           "name": "consoleLogger",
