@@ -52,6 +52,7 @@
 		"speed": "vitesse : %s"
 	},
 	"domains": {
+		"start": "démarage du processus d'initialisation du domaine : connecteur='%s'",
 		"connectors": {
 			"added": "connecteur ajouté au gestionnaire de domaines :",
 			"name": "nom : %s",

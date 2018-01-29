@@ -49,6 +49,7 @@ export class StartServer extends AbstractScriptCommand
       container.start();
       callback(null);
     } catch(err) {
+      //console.log("StartServer Error:", err);
       callback(err);
     }
   }

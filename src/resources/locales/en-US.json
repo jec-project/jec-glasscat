@@ -52,6 +52,7 @@
 		"speed": "speed: %s"
 	},
 	"domains": {
+		"start": "domain initialization process start: connector='%s'",
 		"connectors": {
 			"added": "new connector added to the domain manager:",
 			"name": "name: %s",
