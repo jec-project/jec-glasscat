@@ -26,6 +26,7 @@ import {ConsoleMessage} from "../../business/messaging/ConsoleMessage";
 import {DialogMessageService} from '../../services/messaging/DialogMessageService';
 import {SelectItem} from "primeng/components/common/api";
 import {LoggerFactoryConfig, BootstrapConfig} from "jec-glasscat-core";
+import {LogLevelString} from 'jec-commons';
 
 @Component({
   selector: 'app-loggers',
@@ -50,9 +51,9 @@ export class LoggersComponent implements OnInit, OnDestroy {
   public editLogLevelInactive:boolean = true;
 
   public loggerListModel:LoggerFactoryConfig[] = null;
-  public logLevel:string = null;
+  public logLevel:LogLevelString = null;
   public logLevelList:SelectItem[] = null;
-  public selectedLogLevel:string = null;
+  public selectedLogLevel:LogLevelString = null;
 
   /**
    * @override
@@ -118,11 +119,11 @@ export class LoggersComponent implements OnInit, OnDestroy {
 
   private initLogLevelList():void {
     this.logLevelList = [
-        { label:"TRACE", value: "TRACE" },
-        { label:"DEBUG", value: "DEBUG" },
-        { label:"INFO", value: "INFO" },
-        { label:"WARN", value: "WARN" },
-        { label:"ERROR", value: "ERROR" }
+        { label: LogLevelString.TRACE, value: LogLevelString.TRACE },
+        { label: LogLevelString.DEBUG, value: LogLevelString.DEBUG },
+        { label: LogLevelString.INFO, value: LogLevelString.INFO },
+        { label: LogLevelString.WARN, value: LogLevelString.WARN },
+        { label: LogLevelString.ERROR, value: LogLevelString.ERROR }
     ];
   }
 

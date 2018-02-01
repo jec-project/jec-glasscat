@@ -15,7 +15,6 @@
 //   limitations under the License.
 
 import {HttpJslet, WebJslet, HttpRequest, HttpResponse} from "jec-exchange";
-import {HttpStatusCode} from "jec-commons";
 
 @WebJslet({
   name: "Login",
