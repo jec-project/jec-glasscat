@@ -23,8 +23,8 @@ import { InstallTaskRunner, InstallTaskError, InstallTask, BuildDirsTask,
  * Server, such as creating the "workspace" folder, adding default setting
  * files, etc..
  */
-let runner:InstallTaskRunner = new InstallTaskRunner();
-let tasks:InstallTask[] = [
+const runner:InstallTaskRunner = new InstallTaskRunner();
+const tasks:InstallTask[] = [
   new BuildDirsTask(),
   new CopyConfigFilesTask(),
   new CopyDirsTask(),

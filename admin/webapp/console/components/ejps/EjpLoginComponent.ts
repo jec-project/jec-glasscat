@@ -25,6 +25,8 @@ import {MessagingService} from '../../services/messaging/MessagingService';
 import {FormBuilder, FormGroup, FormControl, Validators} from "@angular/forms";
 import {AbstractEjpComponent} from "./AbstractEjpComponent";
 import {SelectItem} from "primeng/components/common/api";
+import {RealmTypeUtil} from "../../utils/RealmTypeUtil";
+import { AuthMethodUtil } from "../../utils/AuthMethodUtil";
 
 @Component({
   selector: "app-ejp",
@@ -80,7 +82,7 @@ export class EjpLoginComponent extends AbstractEjpComponent
     let login:EjpLoginConfig = this.__ejpModel.webapp.login;
     let EjpFormConfig:EjpFormConfig = login.formConfig;
     let authMethod:string = this.ejpLoginForm.get("authMethod").value;
-    login.authMethod = authMethod;
+    login.authMethod = AuthMethodUtil.resolveAuthMethod(authMethod);
     if(authMethod === "form" || authMethod === "ejp-form") {
       EjpFormConfig.errorUrl = this.ejpLoginForm.get("errorUrl").value;
       EjpFormConfig.loginUrl = this.ejpLoginForm.get("loginUrl").value;
@@ -93,7 +95,7 @@ export class EjpLoginComponent extends AbstractEjpComponent
   public saveRealmFormChanges():void {
     let realm:EjpRealmConfig = this.__ejpModel.webapp.login.realm;
     let type:string = this.ejpRealmForm.get("realmType").value;
-    realm.type = type;
+    realm.type = RealmTypeUtil.resolveRealmType(type);
     realm.securedArea = this.ejpRealmForm.get("securedArea").value;
     if(type === "custom") {
       realm.connectorFactory = this.ejpRealmForm.get("connectorFactory").value;

@@ -50,7 +50,7 @@ export class GlassCat {
    * <code>start()</code> function.
    */
   private runProcesses():void {
-    let initDate:number = Date.now();
+    const initDate:number = Date.now();
     this.initKernel();
     this.initLogger();
     this.checkConfig();

@@ -41,10 +41,10 @@ export class ConsoleLoggerFactory implements LoggerFactory {
    * @inheritDoc
    */
   public build(context:LoggerContext):Logger {
-    let logger:Logger = new GlassCatConsoleLogger();
+    const logger:Logger = new GlassCatConsoleLogger();
     logger.setName(context.name);
     if(context.logLevel !== null) {
-      let llu:LogLevelUtil = new LogLevelUtil();
+      const llu:LogLevelUtil = new LogLevelUtil();
       GlassCatLocaleManager.getInstance().get(
         "warnings.invalidLogLevel",
         llu.logLevelToString(context.logLevel)

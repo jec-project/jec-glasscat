@@ -36,26 +36,28 @@
     "jec-glasscat-commands": "^1.0.4",
     "jec-glasscat-core": "^0.1.5",
     "jec-glasscat-install": "1.0.8",
-    "jec-wildcat": "^1.0.7",
-    "jec-jdi": "^0.0.1",
-    "jec-sokoke": "^0.0.1",
     "jec-jars": "^1.0.8",
-    "jec-sandcat": "^1.0.6",
+    "jec-jdi": "^0.0.1",
     "jec-juta": "^1.1.7",
-    "jec-tiger": "^1.1.8"
+    "jec-sandcat": "^1.0.6",
+    "jec-sokoke": "^0.0.1",
+    "jec-tiger": "^1.1.8",
+    "jec-wildcat": "^1.0.7",
+    "socket.io": "^2.0.4"
   },
   "devDependencies": {
     "@types/node": "^8.0.19",
+    "@types/socket.io": "^1.4.31",
     "chai": "^3.5.0",
     "chai-spies": "^0.7.1",
-    "mocha": "^3.5.0",
-    "typedoc": "^0.8.0",
     "grunt": "^1.0.1",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-mocha-test": "^0.13.2",
     "grunt-ts": "^6.0.0-beta.16",
     "grunt-typedoc": "^0.2.4",
+    "mocha": "^3.5.0",
+    "typedoc": "^0.8.0",
     "typescript": "^2.5.1"
   }
 }

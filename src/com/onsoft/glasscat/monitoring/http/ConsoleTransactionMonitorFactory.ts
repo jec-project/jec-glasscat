@@ -39,7 +39,7 @@ export class ConsoleTransactionMonitorFactory
    * @inheritDoc
    */
   public build():TransactionMonitor {
-    let monitor:TransactionMonitor = new ConsoleTransactionMonitor();
+    const monitor:TransactionMonitor = new ConsoleTransactionMonitor();
     return monitor;
   }
 }

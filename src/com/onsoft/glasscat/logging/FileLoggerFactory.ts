@@ -41,7 +41,7 @@ export class FileLoggerFactory implements LoggerFactory {
    * @inheritDoc
    */
   public build(context:LoggerContext):Logger {
-    let logger:Logger = new FileLogger();
+    const logger:Logger = new FileLogger();
     logger.setName(context.name);
     logger.setLogLevel(context.logLevel);
     return logger;

@@ -58,8 +58,8 @@ export class StartServer extends AbstractScriptCommand
    * @inheritDoc
    */
   public getHelp(argv:any):CommandDescriptor {
-    let builder:CommandDescriptorBuilder = new CommandDescriptorBuilder();
-    let descriptor:CommandDescriptor = builder.build(
+    const builder:CommandDescriptorBuilder = new CommandDescriptorBuilder();
+    const descriptor:CommandDescriptor = builder.build(
       "$glasscat start-server",
       "Starts all services for a GlassCat Application Server."
     );
