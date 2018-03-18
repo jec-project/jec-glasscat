@@ -15,7 +15,7 @@
 //   limitations under the License.
 
 import {LoggerFactory, LoggerContext, GlassCatLocaleManager} from "jec-glasscat-core";
-import {GlassCatConsoleLogger} from "./GlassCatConsoleLogger";;
+import {GlassCatConsoleLogger} from "./GlassCatConsoleLogger";
 import {Logger, LogLevelUtil} from "jec-commons";
 
 /**
