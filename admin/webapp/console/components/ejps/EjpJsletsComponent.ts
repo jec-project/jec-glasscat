@@ -73,10 +73,10 @@ export class EjpJsletsComponent extends AbstractEjpComponent
   }
 
   public onEjpLoad():void {
-    let webapp:EjpWebAppConfig = this.__ejpModel.webapp;
-    let jslets:EjpJsletsConfig = webapp.jslets;
-    let configModel:SelectItem[] = new Array<SelectItem>();
-    let config:string[] = jslets.config;
+    const webapp:EjpWebAppConfig = this.__ejpModel.webapp;
+    const jslets:EjpJsletsConfig = webapp.jslets;
+    const configModel:SelectItem[] = new Array<SelectItem>();
+    const config:string[] = jslets.config;
     let jslet:string = null;
     let len:number = config.length;
     this.ejpJsletsForm.patchValue( { jsletConfigFile: jslets.configFile });
@@ -100,7 +100,7 @@ export class EjpJsletsComponent extends AbstractEjpComponent
   }
 
   public importJslet():void {
-    let jslet:string = this.ejpImportJsletForm.get("importedJslet").value.toString();
+    const jslet:string = this.ejpImportJsletForm.get("importedJslet").value.toString();
     this.jsletListModel.push({label:jslet, value:jslet});
     this._ejpImportedJsletControl.reset();
   }
@@ -110,8 +110,8 @@ export class EjpJsletsComponent extends AbstractEjpComponent
   }
 
   public removeJslets():void {
-    let jslets:string[] = this.__ejpModel.webapp.jslets.config;
-    let buffer:string[] = this.selectedJslets.splice(0);
+    const jslets:string[] = this.__ejpModel.webapp.jslets.config;
+    const buffer:string[] = this.selectedJslets.splice(0);
     let len:number = buffer.length;
     let jslet:string = null;
     let index:number = -1;

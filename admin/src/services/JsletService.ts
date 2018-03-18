@@ -27,10 +27,10 @@ import {UrlUtils, LoggerManager} from "jec-glasscat-core";
 export class JsletService extends HttpJslet {
 
   public doPost(req:HttpRequest, res:HttpResponse, exit:Function):void {
-    let infoFile:JsletFileInfo = req.getBody();
-    let command:CreateJslet = new CreateJslet();
+    const infoFile:JsletFileInfo = req.getBody();
+    const command:CreateJslet = new CreateJslet();
     command.setLogger(LoggerManager.getInstance());
-    let argv:any = {
+    const argv:any = {
       projectPath: infoFile.ejpDirectory,
       name: infoFile.className,
       path: infoFile.path,

@@ -61,9 +61,9 @@ export class LoggerEditComponent implements OnInit, OnDestroy {
     this._confirmDialogMessageService.push({
       message: "This operation cannot be undone. Would you like to proceed?",
       accept:() => {
-        let factories:LoggerFactoryConfig[] =
+        const factories:LoggerFactoryConfig[] =
                                          this._context.config.loggers.factories;
-        let pos:number = factories.indexOf(this._logger);
+        const pos:number = factories.indexOf(this._logger);
         factories.splice(pos, 1);
         this.updateContext("Logger deleted");
       }
@@ -171,9 +171,9 @@ export class LoggerEditComponent implements OnInit, OnDestroy {
   }
 
   private getLogger():LoggerFactoryConfig {
+    const factories:LoggerFactoryConfig[] = this._context.config.loggers.factories;
     let logger:LoggerFactoryConfig = null;
     let rawLogger:LoggerFactoryConfig = null;
-    let factories:LoggerFactoryConfig[] = this._context.config.loggers.factories;
     let len:number = -1;
     if(factories) {
       len = factories.length;

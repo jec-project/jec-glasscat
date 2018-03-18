@@ -30,7 +30,7 @@ export class ConsoleMessage implements Message {
 
   public static buildMessage(severity:string, summary:string,
                              detail:string = "You must restart the server to apply these changes."):Message{
-    let msg:Message = new ConsoleMessage(severity, summary, detail);
+    const msg:Message = new ConsoleMessage(severity, summary, detail);
     return msg;
   }
 }

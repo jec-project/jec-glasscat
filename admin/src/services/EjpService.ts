@@ -40,8 +40,8 @@ export class EjpService extends HttpJslet {
   }
 
   public doGet(req:HttpRequest, res:HttpResponse, exit:Function):void {
+    const url:string = req.getOriginalUrl();
     let ejpConfig:EjpConfig = null;
-    let url:string = req.getOriginalUrl();
     let result:any = null;
     let target:string = null;
     let dataId:string = null;
@@ -64,8 +64,8 @@ export class EjpService extends HttpJslet {
   }
 
   public doPut(req:HttpRequest, res:HttpResponse, exit:Function):void {
+    const url:string = req.getOriginalUrl();
     let ejpConfig:EjpConfig = null;
-    let url:string = req.getOriginalUrl();
     let dataId:string = null;
     let projectPath:string = null;
     this.get("indexedRoute").match(url,

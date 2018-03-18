@@ -145,7 +145,7 @@ export class ServerConfigComponent implements OnInit, OnDestroy {
     this._contextSubscriber = this._contextService.getContext().subscribe(
       data => {
         this._context = data;
-        let info:any = data.glasscat;
+        const info:any = data.glasscat;
         this.version = info.version;
         this.locale = info.locale;
         this.errorPage = data.config.errorPage;

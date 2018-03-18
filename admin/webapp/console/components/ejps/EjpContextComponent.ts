@@ -63,7 +63,7 @@ export class EjpContextComponent extends AbstractEjpComponent
   }
 
   public onEjpLoad():void {
-    let webapp:EjpWebAppConfig = this.__ejpModel.webapp;
+    const webapp:EjpWebAppConfig = this.__ejpModel.webapp;
     this.ejpContextForm.patchValue( { contextRoot: webapp.contextRoot });
     this.ejpContextForm.patchValue( { state: webapp.state });
     this.ejpContextForm.patchValue( { welcomeFile: webapp.welcomeFile });
@@ -74,7 +74,7 @@ export class EjpContextComponent extends AbstractEjpComponent
   }
 
   public saveContextFormChanges():void {
-    let webapp:EjpWebAppConfig = this.__ejpModel.webapp;
+    const webapp:EjpWebAppConfig = this.__ejpModel.webapp;
     webapp.contextRoot = this.ejpContextForm.get("contextRoot").value;
     webapp.state = this.ejpContextForm.get("state").value;
     webapp.welcomeFile = this.ejpContextForm.get("welcomeFile").value;

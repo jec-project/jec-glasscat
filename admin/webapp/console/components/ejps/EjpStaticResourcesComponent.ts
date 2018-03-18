@@ -66,7 +66,7 @@ export class EjpStaticResourcesComponent extends EjpAbstractSecurityComponent
   public selectListChange():void {
     if(this.selectedItem) {
       this.resourceEditable = true;
-      let resources:EjpStaticResourcesConfig = this.selectedItem as EjpStaticResourcesConfig;
+      const resources:EjpStaticResourcesConfig = this.selectedItem as EjpStaticResourcesConfig;
       this.ejpResourcesForm.patchValue( { urlPattern: resources.urlPattern });
     } else {
       this.cancel();
@@ -85,8 +85,8 @@ export class EjpStaticResourcesComponent extends EjpAbstractSecurityComponent
   }
   
   public createResource():void {
-    let resources:Array<EjpStaticResourcesConfig> = this.__ejpModel.webapp.security.staticResources;
-    let resource:EjpStaticResourcesConfig = {
+    const resources:Array<EjpStaticResourcesConfig> = this.__ejpModel.webapp.security.staticResources;
+    const resource:EjpStaticResourcesConfig = {
       urlPattern: this.ejpResourcesForm.get("urlPattern").value,
       cacheControlPolicy: null
     };
@@ -95,14 +95,14 @@ export class EjpStaticResourcesComponent extends EjpAbstractSecurityComponent
   }
   
   public updateResource():void {
-    let resource:EjpStaticResourcesConfig = this.selectedItem as EjpStaticResourcesConfig;
+    const resource:EjpStaticResourcesConfig = this.selectedItem as EjpStaticResourcesConfig;
     resource.urlPattern = this.ejpResourcesForm.get("urlPattern").value;
     this.updateEjp();
   }
 
   public removeResource():void {
-    let resources:Array<EjpStaticResourcesConfig> = this.__ejpModel.webapp.security.staticResources;
-    let resource:EjpStaticResourcesConfig = this.selectedItem as EjpStaticResourcesConfig;
+    const resources:Array<EjpStaticResourcesConfig> = this.__ejpModel.webapp.security.staticResources;
+    const resource:EjpStaticResourcesConfig = this.selectedItem as EjpStaticResourcesConfig;
     resources.splice(resources.indexOf(resource), 1);
     this.updateEjp();
   }
@@ -111,11 +111,11 @@ export class EjpStaticResourcesComponent extends EjpAbstractSecurityComponent
   
   private initResourceModel():void {
     if(this.itemListModel) this.itemListModel.splice(0);
-    let security:EjpSecurityConfig = this.__ejpModel.webapp.security;
-    let resources:Array<EjpStaticResourcesConfig> = security.staticResources;
+    const security:EjpSecurityConfig = this.__ejpModel.webapp.security;
+    const resources:Array<EjpStaticResourcesConfig> = security.staticResources;
+    const resourceList:SelectItem[] = new Array<SelectItem>();
     let resource:EjpStaticResourcesConfig = null;
     let len:number = resources.length;
-    let resourceList:SelectItem[] = new Array<SelectItem>();
     while(len--) {
       resource = resources[len];
       resourceList.push( { label: resource.urlPattern, value: resource } );

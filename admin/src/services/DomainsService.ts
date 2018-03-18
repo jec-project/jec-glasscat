@@ -44,8 +44,8 @@ export class DomainsService extends HttpJslet {
   }
 
   public doGet(req:HttpRequest, res:HttpResponse, exit:Function):void {
+    const url:string = req.getOriginalUrl();
     let domainConfig:DomainConfig = null;
-    let url:string = req.getOriginalUrl();
     let result:any = null;
     let target:string = null;
     switch(true) {
@@ -105,7 +105,7 @@ export class DomainsService extends HttpJslet {
   private _loader:EjpConfigLoader = null;
 
   private buildDomain(data:any):Domain {
-    let domain:Domain = new Domain();
+    const domain:Domain = new Domain();
     domain.name = data.webapp.name;
     domain.connector = new DomainConnectorConfig();
     return domain;

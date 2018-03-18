@@ -118,8 +118,8 @@ export class DomainLoadComponent implements OnInit, OnDestroy {
   }
 
   public serverChangeHandler(event:any):void {
-    let serverId:string = event.value;
-    let newHost:string = this._hostMap.get(serverId);
+    const serverId:string = event.value;
+    const newHost:string = this._hostMap.get(serverId);
     this.projectPropertiesForm.patchValue( { host: newHost });
     this.domain.connector.server = serverId;
     this.domain.host = newHost;
@@ -172,7 +172,7 @@ export class DomainLoadComponent implements OnInit, OnDestroy {
     this._domainService.loadDomain(this.domainDirectory).subscribe(
       data => {
         this.domain = data;
-        let name:string = this.domain.name;
+        const name:string = this.domain.name;
         this.domainName = name;
         this.domain.target = this._target;
         this.projectPropertiesForm.patchValue( { target: this._target});
@@ -212,10 +212,10 @@ export class DomainLoadComponent implements OnInit, OnDestroy {
   }
 
   private initServerList():void {
-    let listeners:HttpListenerConfig[] = this._context.config.http.listeners;
+    const listeners:HttpListenerConfig[] = this._context.config.http.listeners;
+    const list:SelectItem[] = new Array<SelectItem>();
     let listener:HttpListenerConfig = null;
     let len:number = listeners.length;
-    let list:SelectItem[] = new Array<SelectItem>();
     this._hostMap = new Map<string, string>();
     let serverId:string = null;
     list.push({ label: "Select server", value: null });

@@ -74,7 +74,7 @@ export class EjpConstraintsComponent extends EjpAbstractSecurityComponent
   public selectListChange():void {
     if(this.selectedItem) {
       this.constraintEditable = true;
-      let constraint:EjpConstraintConfig = this.selectedItem as EjpConstraintConfig;
+      const constraint:EjpConstraintConfig = this.selectedItem as EjpConstraintConfig;
       this.ejpConstraintForm.patchValue( { constraintName: constraint.name });
       this.ejpConstraintForm.patchValue( { constraintRoles: constraint.roles.join(", ") });
       this.ejpConstraintForm.patchValue( { urlPattern: constraint.urlPattern });
@@ -96,8 +96,8 @@ export class EjpConstraintsComponent extends EjpAbstractSecurityComponent
   }
   
   public createResource():void {
-    let constraints:Array<EjpConstraintConfig> = this.__ejpModel.webapp.security.constraints;
-    let constraint:EjpConstraintConfig = {
+    const constraints:Array<EjpConstraintConfig> = this.__ejpModel.webapp.security.constraints;
+    const constraint:EjpConstraintConfig = {
       name: this.ejpConstraintForm.get("constraintName").value,
       roles: this.getRolesArray(),
       urlPattern: this.ejpConstraintForm.get("urlPattern").value,
@@ -108,7 +108,7 @@ export class EjpConstraintsComponent extends EjpAbstractSecurityComponent
   }
   
   public updateConstraint():void {
-    let constraint:EjpConstraintConfig = this.selectedItem as EjpConstraintConfig;
+    const constraint:EjpConstraintConfig = this.selectedItem as EjpConstraintConfig;
     constraint.name = this.ejpConstraintForm.get("constraintName").value;
     constraint.roles = this.getRolesArray();
     constraint.urlPattern = this.ejpConstraintForm.get("urlPattern").value;
@@ -117,8 +117,8 @@ export class EjpConstraintsComponent extends EjpAbstractSecurityComponent
   }
 
   public removeConstraint():void {
-    let constraints:Array<EjpConstraintConfig> = this.__ejpModel.webapp.security.constraints;
-    let constraint:EjpConstraintConfig = this.selectedItem as EjpConstraintConfig;
+    const constraints:Array<EjpConstraintConfig> = this.__ejpModel.webapp.security.constraints;
+    const constraint:EjpConstraintConfig = this.selectedItem as EjpConstraintConfig;
     constraints.splice(constraints.indexOf(constraint), 1);
     this.updateEjp();
   }
@@ -130,11 +130,11 @@ export class EjpConstraintsComponent extends EjpAbstractSecurityComponent
   
   private initConstraintModel():void {
     if(this.itemListModel) this.itemListModel.splice(0);
-    let security:EjpSecurityConfig = this.__ejpModel.webapp.security;
-    let constraints:Array<EjpConstraintConfig> = security.constraints;
+    const security:EjpSecurityConfig = this.__ejpModel.webapp.security;
+    const constraints:Array<EjpConstraintConfig> = security.constraints;
+    const constraintList:SelectItem[] = new Array<SelectItem>();
     let constraint:EjpConstraintConfig = null;
     let len:number = constraints.length;
-    let constraintList:SelectItem[] = new Array<SelectItem>();
     while(len--) {
       constraint = constraints[len];
       constraintList.push( { label: constraint.name, value: constraint } );

@@ -57,14 +57,14 @@ export class DomainsService {
   }
 
   public addDomain(domain:Domain):Observable<Number> {
-    let updatedDomainList:Domain[] = this._domainList.slice(0);
+    const updatedDomainList:Domain[] = this._domainList.slice(0);
     updatedDomainList.push(domain);
    return this.updateDomainList(updatedDomainList);
   }
 
   public updateDomain(domain:Domain):Observable<Number> {
-    let updatedDomainList:Domain[] = this._domainList.slice(0);
-    let pos:number = this._domainList.indexOf(domain);
+    const updatedDomainList:Domain[] = this._domainList.slice(0);
+    const pos:number = this._domainList.indexOf(domain);
     updatedDomainList.splice(pos, 1, domain);
     return this.updateDomainList(updatedDomainList);
   }
@@ -79,10 +79,10 @@ export class DomainsService {
   }
 
   public unloadDomain(domain:Domain):Observable<Number> {
+    const updatedDomainList:Domain[] = new Array<Domain>();
+    const domainId:string = domain.name;
     let len:number = this._domainList.length;
-    let updatedDomainList:Domain[] = new Array<Domain>();
     let registeredDomain:Domain = null;
-    let domainId:string = domain.name;
     while(len--) {
       registeredDomain = this._domainList[len];
       if(registeredDomain.name !== domainId) {
@@ -94,9 +94,9 @@ export class DomainsService {
 
   public deleteDomain(domain:Domain):Observable<Number> {
     /*let len:number = this._domainList.length;
-    let updatedDomainList:Domain[] = new Array<Domain>();
+    const updatedDomainList:Domain[] = new Array<Domain>();
     let registeredDomain:Domain = null;
-    let domainId:string = domain.name;
+    const domainId:string = domain.name;
     while(len--) {
       registeredDomain = this._domainList[len];
       if(registeredDomain.name !== domainId) {
@@ -122,7 +122,7 @@ export class DomainsService {
   private _domainList:Domain[] = null;
 
   private initHeaderOptions():void {
-    let headers = new Headers({ 'Content-Type': 'application/json' });
+    const headers = new Headers({ 'Content-Type': 'application/json' });
     this._requestOptions = new RequestOptions({ headers: headers });
   }
 }

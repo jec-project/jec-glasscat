@@ -48,7 +48,7 @@ export class EjpGeneralComponent extends AbstractEjpComponent
   public ejpGeneralForm:FormGroup = null;
 
   public onEjpLoad():void {
-    let webapp:EjpWebAppConfig = this.__ejpModel.webapp;
+    const webapp:EjpWebAppConfig = this.__ejpModel.webapp;
     this.ejpGeneralForm.patchValue( { name: webapp.name });
     this.ejpGeneralForm.patchValue( { description: webapp.description });
     this.ejpGeneralForm.patchValue( { version: webapp.version });
@@ -70,7 +70,7 @@ export class EjpGeneralComponent extends AbstractEjpComponent
   }
 
   public saveGeneralFormChanges():void {
-    let webapp:EjpWebAppConfig = this.__ejpModel.webapp;
+    const webapp:EjpWebAppConfig = this.__ejpModel.webapp;
     webapp.name = this.ejpGeneralForm.get("name").value;
     webapp.description = this.ejpGeneralForm.get("description").value;
     webapp.version = this.ejpGeneralForm.get("version").value;

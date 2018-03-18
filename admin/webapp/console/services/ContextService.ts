@@ -47,8 +47,8 @@ export class ContextService {
   }
 
   public saveContext(config:BootstrapConfig):Observable<BootstrapConfig> {
-    let headers = new Headers({ 'Content-Type': 'application/json' });
-    let options = new RequestOptions({ headers: headers });
+    const headers = new Headers({ 'Content-Type': 'application/json' });
+    const options = new RequestOptions({ headers: headers });
     return this._http.put("./data/context", config)
                      .map((res:Response) => {
                        this._config = config;

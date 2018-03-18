@@ -64,7 +64,7 @@ export class EjpService {
   private _ejpObservable:Observable<EjpConfig> = null;
 
   private initHeaderOptions():void {
-    let headers = new Headers({ 'Content-Type': 'application/json' });
+    const headers = new Headers({ 'Content-Type': 'application/json' });
     this._requestOptions = new RequestOptions({ headers: headers });
   }
 }

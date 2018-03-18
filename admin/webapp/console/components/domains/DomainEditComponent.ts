@@ -163,8 +163,8 @@ export class DomainEditComponent implements OnInit, OnDestroy {
   }
 
   public serverChangeHandler(event:any):void {
-    let serverId:string = event.value;
-    let newHost:string = this._hostMap.get(serverId);
+    const serverId:string = event.value;
+    const newHost:string = this._hostMap.get(serverId);
     this.projectPropertiesForm.patchValue( { host: newHost });
     this.domain.connector.server = serverId;
     this.domain.host = newHost;
@@ -232,9 +232,9 @@ export class DomainEditComponent implements OnInit, OnDestroy {
   }
 
   private checkServer():void {
+    const serverId:string = this.domain.connector.server;
+    const hostName:string = this.domain.host;
     let isValidserver:boolean = false;
-    let serverId:string = this.domain.connector.server;
-    let hostName:string = this.domain.host;
     let server:any = null;
     let len:number = this.serverList.length;
     while(len--) {
@@ -275,10 +275,10 @@ export class DomainEditComponent implements OnInit, OnDestroy {
   }
 
   private initServerList():void {
-    let listeners:HttpListenerConfig[] = this._context.config.http.listeners;
+    const listeners:HttpListenerConfig[] = this._context.config.http.listeners;
+    const list:SelectItem[] = new Array<SelectItem>();
     let listener:HttpListenerConfig = null;
     let len:number = listeners.length;
-    let list:SelectItem[] = new Array<SelectItem>();
     this._hostMap = new Map<string, string>();
     let serverId:string = null;
     while(len--) {

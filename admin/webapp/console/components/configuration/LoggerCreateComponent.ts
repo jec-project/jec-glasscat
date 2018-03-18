@@ -106,7 +106,7 @@ export class LoggerCreateComponent implements OnInit, OnDestroy {
     this._contextSubscriber = this._contextService.getContext().subscribe(
       data => {
         this._context = data;
-        let info:any = data.config.loggers;
+        const info:any = data.config.loggers;
       },
       err => {
         this._dialogMessageService.push(ConsoleMessage.buildMessage(
@@ -119,7 +119,7 @@ export class LoggerCreateComponent implements OnInit, OnDestroy {
   }
   
   public saveContext():void {
-    let logger:any = {};
+    const logger:any = {};
     logger.name = this.newLoggerForm.get("name").value;
     logger.factory = this.newLoggerForm.get("factory").value;
     logger.logLevel = this.selectedLogLevel.value;

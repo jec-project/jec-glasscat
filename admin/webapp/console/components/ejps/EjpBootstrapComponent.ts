@@ -113,9 +113,9 @@ export class EjpBootstrapComponent extends AbstractEjpComponent
   }
 
   public createBootstrapFile():void {
-    let fileInfo:BootstrapFileInfo = new BootstrapFileInfo();
-    let bootstrapCfg:EjpBootstrapConfig[] = this.__ejpModel.webapp.bootstrap;
-    let props:ClassPathProperties =
+    const fileInfo:BootstrapFileInfo = new BootstrapFileInfo();
+    const bootstrapCfg:EjpBootstrapConfig[] = this.__ejpModel.webapp.bootstrap;
+    const props:ClassPathProperties =
       this._classPathUtils.createClassPathProperties(
         this._editBootstrapClassNameControl.value,
         this._ejpEditBootstrapPathControl.value
@@ -150,9 +150,9 @@ export class EjpBootstrapComponent extends AbstractEjpComponent
   }
 
   public updateBootstrapFile():void {
-    let bootstrapCfg:EjpBootstrapConfig[] = this.__ejpModel.webapp.bootstrap;
-    let bootstrapId:number = bootstrapCfg.indexOf(this.selectedBootstrap);
-    let fileCfg:EjpBootstrapConfig = {
+    const bootstrapCfg:EjpBootstrapConfig[] = this.__ejpModel.webapp.bootstrap;
+    const bootstrapId:number = bootstrapCfg.indexOf(this.selectedBootstrap);
+    const fileCfg:EjpBootstrapConfig = {
       path: this.selectedBootstrap.path,
       priority: this._ejpEditBootstrapPriorityControl.value
     };
@@ -161,14 +161,14 @@ export class EjpBootstrapComponent extends AbstractEjpComponent
   }
 
   public deleteBootstrapFile():void {
-    let bootstrapCfg:EjpBootstrapConfig[] = this.__ejpModel.webapp.bootstrap;
-    let bootstrapId:number = bootstrapCfg.indexOf(this.selectedBootstrap);
+    const bootstrapCfg:EjpBootstrapConfig[] = this.__ejpModel.webapp.bootstrap;
+    const bootstrapId:number = bootstrapCfg.indexOf(this.selectedBootstrap);
     bootstrapCfg.splice(bootstrapId, 1);
     this.updateEjp();
   }
 
   protected initBreadcrumb():void {
-    let dirPath:string = this.SLASH + this.ejpDirectory;
+    const dirPath:string = this.SLASH + this.ejpDirectory;
     this.__breadcrumbService.push([
       ConsoleMenuItem.buildItem("Console", [this.SLASH]),
       ConsoleMenuItem.buildItem("EJPs"),
@@ -185,14 +185,14 @@ export class EjpBootstrapComponent extends AbstractEjpComponent
   private _classPathUtils:ClassPathUtils = null;
   
   private initBootstrapListModel():void {
-    let webapp:EjpWebAppConfig = this.__ejpModel.webapp;
-    let bootstrapCfg:EjpBootstrapConfig[] = webapp.bootstrap;
+    const webapp:EjpWebAppConfig = this.__ejpModel.webapp;
+    const bootstrapCfg:EjpBootstrapConfig[] = webapp.bootstrap;
     let configModel:SelectItem[] = null;
     let len:number = -1;
     let fileCfg:EjpBootstrapConfig = null;
     if(this.bootstrapListModel) this.bootstrapListModel.splice(0);
     if(bootstrapCfg) {
-      let configModel:SelectItem[] = new Array<SelectItem>();
+      const configModel:SelectItem[] = new Array<SelectItem>();
       let len:number = bootstrapCfg.length;
       while(len--) {
         fileCfg = bootstrapCfg[len];

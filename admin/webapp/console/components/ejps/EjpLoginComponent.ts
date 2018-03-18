@@ -25,8 +25,6 @@ import {MessagingService} from '../../services/messaging/MessagingService';
 import {FormBuilder, FormGroup, FormControl, Validators} from "@angular/forms";
 import {AbstractEjpComponent} from "./AbstractEjpComponent";
 import {SelectItem} from "primeng/components/common/api";
-import {RealmTypeUtil} from "../../utils/RealmTypeUtil";
-import { AuthMethodUtil } from "../../utils/AuthMethodUtil";
 
 @Component({
   selector: "app-ejp",
@@ -62,9 +60,9 @@ export class EjpLoginComponent extends AbstractEjpComponent
   public customRealmMode:boolean = false;
 
   public onEjpLoad():void {
-    let login:EjpLoginConfig = this.__ejpModel.webapp.login;
-    let form:EjpFormConfig = login.formConfig;
-    let realm:EjpRealmConfig = login.realm;
+    const login:EjpLoginConfig = this.__ejpModel.webapp.login;
+    const form:EjpFormConfig = login.formConfig;
+    const realm:EjpRealmConfig = login.realm;
     
     this.ejpLoginForm.patchValue( { authMethod: login.authMethod });
     this.ejpLoginForm.patchValue( { errorUrl: form.errorUrl });
@@ -79,10 +77,10 @@ export class EjpLoginComponent extends AbstractEjpComponent
   }
 
   public saveLoginFormChanges():void {
-    let login:EjpLoginConfig = this.__ejpModel.webapp.login;
-    let EjpFormConfig:EjpFormConfig = login.formConfig;
-    let authMethod:string = this.ejpLoginForm.get("authMethod").value;
-    login.authMethod = AuthMethodUtil.resolveAuthMethod(authMethod);
+    const login:EjpLoginConfig = this.__ejpModel.webapp.login;
+    const EjpFormConfig:EjpFormConfig = login.formConfig;
+    const authMethod:any = this.ejpLoginForm.get("authMethod").value;
+    login.authMethod = authMethod;
     if(authMethod === "form" || authMethod === "ejp-form") {
       EjpFormConfig.errorUrl = this.ejpLoginForm.get("errorUrl").value;
       EjpFormConfig.loginUrl = this.ejpLoginForm.get("loginUrl").value;
@@ -93,9 +91,9 @@ export class EjpLoginComponent extends AbstractEjpComponent
   }
 
   public saveRealmFormChanges():void {
-    let realm:EjpRealmConfig = this.__ejpModel.webapp.login.realm;
-    let type:string = this.ejpRealmForm.get("realmType").value;
-    realm.type = RealmTypeUtil.resolveRealmType(type);
+    const realm:EjpRealmConfig = this.__ejpModel.webapp.login.realm;
+    const type:any = this.ejpRealmForm.get("realmType").value;
+    realm.type = type;
     realm.securedArea = this.ejpRealmForm.get("securedArea").value;
     if(type === "custom") {
       realm.connectorFactory = this.ejpRealmForm.get("connectorFactory").value;

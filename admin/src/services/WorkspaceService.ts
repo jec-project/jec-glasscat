@@ -44,8 +44,8 @@ export class WorkspaceService extends HttpJslet {
    * @inheritDoc
    */
   public doGet(req:HttpRequest, res:HttpResponse, exit:Function):void {
-    let url:string = req.getOriginalUrl();
-    let result:ProjectListItem[] = new Array<any>();
+    const url:string = req.getOriginalUrl();
+    const result:ProjectListItem[] = new Array<any>();
     let tgt:string = null;
     let filesNum:number = 0;
     let webapp:any = null;
@@ -63,7 +63,7 @@ export class WorkspaceService extends HttpJslet {
               filesNum = files.length;
               files.forEach((value:string)=> {
                 tgt = path.normalize(this._workspace + "/" + value);
-                let project:ProjectListItem = new ProjectListItem();
+                const project:ProjectListItem = new ProjectListItem();
                 project.target = tgt;
                 project.directory = value;
                 result.push(project);

@@ -27,8 +27,8 @@ import {UrlUtils, LoggerManager} from "jec-glasscat-core";
 export class WildcatService extends HttpJslet {
 
   public doPost(req:HttpRequest, res:HttpResponse, exit:Function):void {
-    let argv:any = req.getBody();
-    let command:BuildArchetype = new BuildArchetype();
+    const argv:any = req.getBody();
+    const command:BuildArchetype = new BuildArchetype();
     command.setLogger(LoggerManager.getInstance());
     command.execute(argv, (err:any)=> {
       if(err) {

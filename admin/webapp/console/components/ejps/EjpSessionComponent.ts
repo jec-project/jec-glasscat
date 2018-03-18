@@ -51,7 +51,7 @@ export class EjpSessionComponent extends AbstractEjpComponent
   public storageList:SelectItem[] = null;
 
   public onEjpLoad():void {
-    let session:EjpSessionConfig = this.__ejpModel.webapp.session;
+    const session:EjpSessionConfig = this.__ejpModel.webapp.session;
     this.ejpSessionForm.patchValue( { errorUrl: session.errorUrl });
     this.ejpSessionForm.patchValue( { maxAge: session.maxAge });
     this.ejpSessionForm.patchValue( { storage: session.storage });
@@ -70,7 +70,7 @@ export class EjpSessionComponent extends AbstractEjpComponent
   }
 
   public saveSessionFormChanges():void {
-    let session:EjpSessionConfig = this.__ejpModel.webapp.session;
+    const session:EjpSessionConfig = this.__ejpModel.webapp.session;
     session.storage = this.ejpSessionForm.get("storage").value;
     session.errorUrl = this.ejpSessionForm.get("errorUrl").value;
     session.maxAge = this.ejpSessionForm.get("maxAge").value;

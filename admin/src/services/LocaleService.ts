@@ -30,7 +30,7 @@ export class LocaleService extends HttpJslet {
    * @inheritDoc
    */
   public doGet(req:HttpRequest, res:HttpResponse, exit:Function):void {
-    let result:any[] = new Array<any>();
+    const result:any[] = new Array<any>();
     let locale:string = null;
     fs.readdir(
       "./public/locales",

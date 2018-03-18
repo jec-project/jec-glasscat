@@ -69,7 +69,7 @@ export class EjpResourceMapComponent extends AbstractEjpComponent
   public resourceListChange():void {
     if(this.selectedResource) {
       this.resourceEditable = true;
-      let resource:EjpResourceMapperConfig = this.selectedResource as EjpResourceMapperConfig;
+      const resource:EjpResourceMapperConfig = this.selectedResource as EjpResourceMapperConfig;
       this.ejpResourceMapForm.patchValue( { resourceName: resource.name });
       this.ejpResourceMapForm.patchValue( { resourceMapping: resource.value });
     } else {
@@ -89,8 +89,8 @@ export class EjpResourceMapComponent extends AbstractEjpComponent
   }
   
   public createResource():void {
-    let resources:Array<EjpResourceMapperConfig> = this.__ejpModel.webapp.resourceMap;
-    let resource:EjpResourceMapperConfig = {
+    const resources:Array<EjpResourceMapperConfig> = this.__ejpModel.webapp.resourceMap;
+    const resource:EjpResourceMapperConfig = {
       name: this.ejpResourceMapForm.get("resourceName").value,
       value: this.ejpResourceMapForm.get("resourceMapping").value
     };
@@ -99,15 +99,15 @@ export class EjpResourceMapComponent extends AbstractEjpComponent
   }
   
   public updateResource():void {
-    let resource:EjpResourceMapperConfig = this.selectedResource as EjpResourceMapperConfig;
+    const resource:EjpResourceMapperConfig = this.selectedResource as EjpResourceMapperConfig;
     resource.name = this.ejpResourceMapForm.get("resourceName").value;
     resource.value = this.ejpResourceMapForm.get("resourceMapping").value;
     this.updateEjp();
   }
 
   public removeResource():void {
-    let resources:Array<EjpResourceMapperConfig> = this.__ejpModel.webapp.resourceMap;
-    let resource:EjpResourceMapperConfig = this.selectedResource as EjpResourceMapperConfig;
+    const resources:Array<EjpResourceMapperConfig> = this.__ejpModel.webapp.resourceMap;
+    const resource:EjpResourceMapperConfig = this.selectedResource as EjpResourceMapperConfig;
     resources.splice(resources.indexOf(resource), 1);
     this.updateEjp();
   }
@@ -119,9 +119,9 @@ export class EjpResourceMapComponent extends AbstractEjpComponent
   private _ejpResourceMappingControl:FormControl = null;
   
   private initResourceModel():void {
-    let webapp:EjpWebAppConfig = this.__ejpModel.webapp;
-    let resources:Array<EjpResourceMapperConfig> = webapp.resourceMap;
-    let configModel:SelectItem[] = new Array<SelectItem>();
+    const webapp:EjpWebAppConfig = this.__ejpModel.webapp;
+    const resources:Array<EjpResourceMapperConfig> = webapp.resourceMap;
+    const configModel:SelectItem[] = new Array<SelectItem>();
     let resource:EjpResourceMapperConfig = null;
     let len:number = -1;
     if(resources) {

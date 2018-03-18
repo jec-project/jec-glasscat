@@ -30,7 +30,7 @@ export class ClassPathUtils {
   constructor(){}
  
   public getClassPathProperties(rawPath:string):ClassPathProperties {
-    let properties:ClassPathProperties = new ClassPathProperties();
+    const properties:ClassPathProperties = new ClassPathProperties();
     properties.fullPath = rawPath;
     let path:string = rawPath;
     let className:string = this.EMPTY_STRING;
@@ -49,9 +49,9 @@ export class ClassPathUtils {
   }
 
   public createClassPathProperties(rawClassName:string, rawPath:string):ClassPathProperties {
-    let properties:ClassPathProperties = new ClassPathProperties();
+    const properties:ClassPathProperties = new ClassPathProperties();
     let path:string = rawPath;
-    let slashId:number = path.lastIndexOf(this.SLASH);
+    const slashId:number = path.lastIndexOf(this.SLASH);
     if(slashId === path.length - 1) {
       path = path.substring(0, slashId);
     }

@@ -58,12 +58,12 @@ export class EjpAbstractSecurityComponent extends AbstractEjpComponent
   public readonly SECURITY_PATH:string = "/security/";
 
   public navigClickHandler(event:any):void {
-    let path:string = this.PARENT_PATH + this.currentForm;
+    const path:string = this.PARENT_PATH + this.currentForm;
     this.__router.navigate([path], { relativeTo: this.__route });
   }
 
   protected initBreadcrumb():void {
-    let dirPath:string = this.SLASH + this.ejpDirectory;
+    const dirPath:string = this.SLASH + this.ejpDirectory;
     this.__breadcrumbService.push([
       ConsoleMenuItem.buildItem("Console", [this.SLASH]),
       ConsoleMenuItem.buildItem("EJPs"),

@@ -36,8 +36,8 @@ export class TerminalComponent implements OnInit {
   public response:string = null;
 
   public onCommand(event:any):void {
-    let cmd:string = event.command;
-    let node:any;
+    const cmd:string = event.command;
+    let node:any = null;
     switch(cmd) {
       case "clear" :
         node = window.document.querySelector(".ui-terminal-content");

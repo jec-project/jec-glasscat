@@ -66,7 +66,7 @@ export class DomainWizardComponent implements OnInit, OnDestroy {
 
   public createProject():void {
     this._waitingService.push(true);
-    let projectProperties:any = {
+    const projectProperties:any = {
       gpm: this.selectedProject.target,
       projectName: this._projectName.value,
       directory: this._projectDirectory.value,
@@ -140,7 +140,7 @@ export class DomainWizardComponent implements OnInit, OnDestroy {
   }
 
   private loadModel():void {
-    let emptyModel:GpmInfo = this.getEmptyModel();
+    const emptyModel:GpmInfo = this.getEmptyModel();
     this.selectedProject = emptyModel;
     this.modelList = new Array<SelectItem>();
     this.modelList.push( { label:"Select a project model", value:emptyModel } );
@@ -161,7 +161,7 @@ export class DomainWizardComponent implements OnInit, OnDestroy {
   }
 
   private extractAdditionalParams(projectProperties:any):void {
-    let params:string = this._projectParameters.value;
+    const params:string = this._projectParameters.value;
     let result:RegExpMatchArray = null;
     let param:string = null;
     let key:string = null;

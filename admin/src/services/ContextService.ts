@@ -34,8 +34,8 @@ export class ContextService extends HttpJslet {
   }
 
   public doGet(req:HttpRequest, res:HttpResponse, exit:Function):void {
-    let configParser:BootstrapConfigParser;
-    let config:BootstrapConfig;
+    let configParser:BootstrapConfigParser = null;
+    let config:BootstrapConfig = null;
     this._glassCatConfigLoader.load(
       (data:any)=> {
         configParser = new BootstrapConfigParser();

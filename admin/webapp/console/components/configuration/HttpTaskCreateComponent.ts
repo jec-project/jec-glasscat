@@ -100,8 +100,8 @@ export class HttpTaskCreateComponent implements OnInit, OnDestroy {
   }
   
   public saveContext():void {
-    let httpTask:any = { monitoring:{} };
-    let sslPath:string = this.newHttpTaskForm.get("sslPath").value;
+    const httpTask:any = { monitoring:{} };
+    const sslPath:string = this.newHttpTaskForm.get("sslPath").value;
     httpTask.id = this.newHttpTaskForm.get("name").value;
     httpTask.server = this.newHttpTaskForm.get("server").value;
     httpTask.address = this.newHttpTaskForm.get("address").value;

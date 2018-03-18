@@ -72,12 +72,12 @@ export class EjpCreateJsletComponent extends AbstractEjpComponent
   }
   
   public createJslet():void {
-    let fileInfo:JsletFileInfo = new JsletFileInfo();
-    let jslets:string[] = this.__ejpModel.webapp.jslets.config;
+    const fileInfo:JsletFileInfo = new JsletFileInfo();
+    const jslets:string[] = this.__ejpModel.webapp.jslets.config;
+    const addOption:boolean = this._ejpAddOptionControl.value;
     let path:string = this._ejpPackageControl.value;
-    let addOption:boolean = this._ejpAddOptionControl.value;
-    let slashId:number = path.lastIndexOf(this.SLASH);
-    let className:string = this._ejpNameControl.value;
+    const slashId:number = path.lastIndexOf(this.SLASH);
+    const className:string = this._ejpNameControl.value;
     let fullPath:string = null;
     if(slashId === path.length - 1) {
       path = path.substring(0, slashId);
@@ -113,7 +113,7 @@ export class EjpCreateJsletComponent extends AbstractEjpComponent
   }
 
   protected initBreadcrumb():void {
-    let dirPath:string = this.SLASH + this.ejpDirectory;
+    const dirPath:string = this.SLASH + this.ejpDirectory;
     this.__breadcrumbService.push([
       ConsoleMenuItem.buildItem("Console", [this.SLASH]),
       ConsoleMenuItem.buildItem("Domains", ['/domains']),

@@ -58,9 +58,9 @@ export class HttpTaskEditComponent implements OnInit, OnDestroy {
     this._confirmDialogMessageService.push({
       message: "This operation cannot be undone. Would you like to proceed?",
       accept:() => {
-        let listeners:HttpListenerConfig[] =
+        const listeners:HttpListenerConfig[] =
                                             this._context.config.http.listeners;
-        let pos:number = listeners.indexOf(this._listener);
+        const pos:number = listeners.indexOf(this._listener);
         listeners.splice(pos, 1);
         this.updateContext("HTTP Task deleted");
       }
@@ -198,9 +198,9 @@ export class HttpTaskEditComponent implements OnInit, OnDestroy {
   }
 
   private getListener():HttpListenerConfig {
+    const listeners:HttpListenerConfig[] = this._context.config.http.listeners;
     let listener:HttpListenerConfig = null;
     let rawListener:HttpListenerConfig = null;
-    let listeners:HttpListenerConfig[] = this._context.config.http.listeners;
     let len:number = -1;
     if(listeners) {
       len = listeners.length;

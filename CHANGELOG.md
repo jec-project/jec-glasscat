@@ -1,5 +1,17 @@
 # JEC GlassCat Project: Update Release Notes
 
+<a name="jec-glasscat-0.1.2"></a>
+## **0.1.2** (2018-03-18)
+
+### Bug Fixes
+
+- Fixing bugs due to JEC enums imports into the Angular app components
+
+### Features
+
+- Dependencies upgrade
+- Replacing unset let variables by constants
+
 <a name="jec-glasscat-0.1.1"></a>
 ## **0.1.1** (2017-12-26)
 

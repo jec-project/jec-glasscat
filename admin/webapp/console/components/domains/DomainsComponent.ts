@@ -67,7 +67,7 @@ export class DomainsComponent implements OnInit, OnDestroy {
   }
 
   public manageItemSelect(item:Domain):void {
-    let itemName:string = item.name;
+    const itemName:string = item.name;
     if(itemName === "admin-ejp") {
       this._router.navigate(['/ejps', "admin"]);
     } else {
@@ -109,7 +109,7 @@ export class DomainsComponent implements OnInit, OnDestroy {
     this._projectListSubscriber = 
                         this._workspaceService.getWorkspaceProjects().subscribe(
       data => {
-        let buffer:Map<string, boolean> = new Map<string, boolean>();
+        const buffer:Map<string, boolean> = new Map<string, boolean>();
         let len:number = this.domainListModel.length;
         let project:ProjectListItem = null;
         while(len--) {

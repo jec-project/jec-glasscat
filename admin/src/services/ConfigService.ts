@@ -32,11 +32,11 @@ export class ConfigService extends HttpJslet {
   private readonly ESCAPED_SEMICOLON:string = ";<br/>";*/
 
   public doGet(req:HttpRequest, res:HttpResponse, exit:Function):void {
-    let rawRelease:any = process.release;
-    let release:any[] = [];
+    const rawRelease:any = process.release;
+    const release:any[] = [];
+    const config:any[] = [];
     let rawConfig:any = process.config.target_defaults;
-    let config:any[] = [];
-    let val:string;
+    let val:string = null;
     for(let key in rawConfig) {
       val = rawConfig[key];
       config.push( { name:key, value:val, type:"target_defaults" } );

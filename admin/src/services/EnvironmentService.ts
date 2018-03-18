@@ -32,10 +32,10 @@ export class EnvironmentService extends HttpJslet {
   private readonly ESCAPED_SEMICOLON:string = ";<br/>";
 
   public doGet(req:HttpRequest, res:HttpResponse, exit:Function):void {
-    let rawEnv:any = process.env;
-    let env:any = {};
-    let environment:any[] = [];
-    let val:string;
+    const rawEnv:any = process.env;
+    const env:any = {};
+    const environment:any[] = [];
+    let val:string = null;
     for(let key in rawEnv) {
       val = rawEnv[key];
       val = val.replace(this.BRACE_O, this.ESCAPED_BRACE_O)

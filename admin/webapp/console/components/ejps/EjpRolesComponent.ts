@@ -107,15 +107,15 @@ export class EjpRolesComponent extends EjpAbstractSecurityComponent
   }
   
   public createRole():void {
-    let roles:Array<EjpRoleConfig> = this.__ejpModel.webapp.security.roles;
-    let roleName:string = this._ejpRoleNameControl.value;
-    let props:ClassPathProperties =
+    const roles:Array<EjpRoleConfig> = this.__ejpModel.webapp.security.roles;
+    const roleName:string = this._ejpRoleNameControl.value;
+    const props:ClassPathProperties =
       this._classPathUtils.createClassPathProperties(
         this._ejpClassNameControl.value,
         this._ejpRolePathControl.value
       );
+    const createClass:boolean = this._ejpCreateClassOptionControl.value;
     let role:EjpRoleConfig = null;
-    let createClass:boolean = this._ejpCreateClassOptionControl.value;
     let fileInfo:RoleFileInfo = null;
     if(createClass) {
       fileInfo = new RoleFileInfo();
@@ -156,20 +156,20 @@ export class EjpRolesComponent extends EjpAbstractSecurityComponent
   }
   
   public updateRole():void {
-    let props:ClassPathProperties =
+    const props:ClassPathProperties =
       this._classPathUtils.createClassPathProperties(
         this._ejpClassNameControl.value,
         this._ejpRolePathControl.value
       );
-    let role:EjpRoleConfig = this.selectedItem as EjpRoleConfig;
+    const role:EjpRoleConfig = this.selectedItem as EjpRoleConfig;
     role.name = this._ejpRoleNameControl.value;
     role.path = props.fullPath;
     this.updateEjp();
   }
 
   public removeRole():void {
-    let roles:Array<EjpRoleConfig> = this.__ejpModel.webapp.security.roles;
-    let role:EjpRoleConfig = this.selectedItem as EjpRoleConfig;
+    const roles:Array<EjpRoleConfig> = this.__ejpModel.webapp.security.roles;
+    const role:EjpRoleConfig = this.selectedItem as EjpRoleConfig;
     roles.splice(roles.indexOf(role), 1);
     this.updateEjp();
   }
@@ -186,11 +186,11 @@ export class EjpRolesComponent extends EjpAbstractSecurityComponent
   }
 
   private initRoleModel():void {
-    let security:EjpSecurityConfig = this.__ejpModel.webapp.security;
-    let roles:EjpRoleConfig[] = security.roles;
+    const security:EjpSecurityConfig = this.__ejpModel.webapp.security;
+    const roles:EjpRoleConfig[] = security.roles;
+    const roleList:SelectItem[] = new Array<SelectItem>();
     let role:EjpRoleConfig = null;
     let len:number = roles.length;
-    let roleList:SelectItem[] = new Array<SelectItem>();
     if(this.itemListModel) this.itemListModel.splice(0);
     while(len--) {
       role = roles[len];

@@ -27,10 +27,10 @@ import {UrlUtils, LoggerManager} from "jec-glasscat-core";
 export class RoleService extends HttpJslet {
 
   public doPost(req:HttpRequest, res:HttpResponse, exit:Function):void {
-    let infoFile:RoleFileInfo = req.getBody();
-    let command:CreateRole = new CreateRole();
+    const infoFile:RoleFileInfo = req.getBody();
+    const command:CreateRole = new CreateRole();
     command.setLogger(LoggerManager.getInstance());
-    let argv:any = {
+    const argv:any = {
       projectPath: infoFile.ejpDirectory,
       name: infoFile.className,
       path: infoFile.path,

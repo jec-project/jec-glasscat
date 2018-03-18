@@ -23,7 +23,7 @@ export class InitApp extends AbstractBootstrapScript {
     /*console.log(
       "Script file loaded."
     );
-    let mapProcessor:SourceMapProcessor = new SourceMapProcessor();
+    const mapProcessor:SourceMapProcessor = new SourceMapProcessor();
     container.getSourceFileInspector().addProcessor(mapProcessor);*/
   }
 }

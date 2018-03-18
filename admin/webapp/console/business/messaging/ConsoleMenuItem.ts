@@ -36,7 +36,7 @@ export class ConsoleMenuItem implements MenuItem {
   public disabled:boolean = false;
 
   public static buildItem(label:string, routerLink?:any, icon?:string):MenuItem{
-    let msg:MenuItem = new ConsoleMenuItem(label, routerLink, icon);
+    const msg:MenuItem = new ConsoleMenuItem(label, routerLink, icon);
     return msg;
   }
 }
