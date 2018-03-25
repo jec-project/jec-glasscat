@@ -16,7 +16,7 @@
 
 import { InstallTaskRunner, InstallTaskError, InstallTask, BuildDirsTask,
          CopyConfigFilesTask, CopyDirsTask, BuildConsoleTask,
-         InstallDefaultGpmTask } from "jec-glasscat-install";
+         CreateMetadataTask, InstallDefaultGpmTask } from "jec-glasscat-install";
 
 /**
  * Runs tasks that install core functionalities of the GlassCat Application
@@ -28,6 +28,7 @@ const tasks:InstallTask[] = [
   new BuildDirsTask(),
   new CopyConfigFilesTask(),
   new CopyDirsTask(),
+  new CreateMetadataTask(),
   new BuildConsoleTask(),
   new InstallDefaultGpmTask()
 ];
