@@ -17,8 +17,8 @@
 import { TestStats } from "jec-juta";
 import { Tiger, TigerFactory } from "jec-tiger";
 
-let factory:TigerFactory = new TigerFactory();
-let tiger:Tiger = factory.create();
+const factory:TigerFactory = new TigerFactory();
+const tiger:Tiger = factory.create();
 tiger.process((stats:TestStats)=> {
   if(stats.error) console.error(stats.error);
   else {
