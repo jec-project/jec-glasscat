@@ -10,6 +10,7 @@
 - Dependencies upgrade
 - Adding dependencies to the `jec-jars-mock` module
 - JEC refactoring the `web.json` file has been removed from the `webapp/WEB-INF` directory and added to the new `JEC-INF` directory
+- Adding support for the GlassCat configuration utilities
 
 <a name="jec-glasscat-0.1.3"></a>
 ## **0.1.3** (2018-03-25)

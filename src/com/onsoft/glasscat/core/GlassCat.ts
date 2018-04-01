@@ -17,6 +17,7 @@
 import {LoggerManager, LoggerManagerBuilder, Kernel, EnvironmentValidator,
         ContextValidator, GlassCatLocaleManager } from "jec-glasscat-core";
 import {JcadContextManager, DecoratorConnectorManager} from "jec-commons";
+import {GlassCatConfig} from "./GlassCatConfig";
 
 /**
  * Represents the entry point for a GlassCat container instance.
@@ -29,8 +30,13 @@ export class GlassCat {
 
   /**
    * Creates a new <code>GlassCat</code> instance.
+   * 
+   * @param {GlassCatConfig} config the configuration for this
+   *                                <code>GlassCat</code> instance.
    */
-  constructor() { }
+  constructor(config:GlassCatConfig) {
+    this.initObj(config);
+  }
 
   //////////////////////////////////////////////////////////////////////////////
   // Private properties
@@ -41,9 +47,24 @@ export class GlassCat {
    */
   private _kernel:Kernel = null;
 
+  /**
+   * The configuration for this <code>GlassCat</code> instance.
+   */
+  private _config:GlassCatConfig = null;
+
   //////////////////////////////////////////////////////////////////////////////
   // Private methods
   //////////////////////////////////////////////////////////////////////////////
+
+  /**
+   * Initializes this object.
+   * 
+   * @param {GlassCatConfig} config the configuration for this
+   *                                <code>GlassCat</code> instance.
+   */
+  private initObj(config:GlassCatConfig):void {
+    this._config = config;
+  }
 
   /**
    * Initializes the container instance. This method is called by the

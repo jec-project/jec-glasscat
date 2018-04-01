@@ -16,7 +16,7 @@
 
 import {ScriptCommand, AbstractScriptCommand, CommandDescriptorBuilder,
         CommandDescriptor} from "jec-glasscat-cli";
-import {GlassCat} from "../../GlassCat";
+import {GlassCatBuilder} from "../../util/GlassCatBuilder";
 
 /**
  * The command that allows to create and start a new GlassCat server instance.
@@ -43,10 +43,9 @@ export class StartServer extends AbstractScriptCommand
    * @inheritDoc
    */
   public execute(argv:any, callback:(err:any)=>void):void {
-    let container:GlassCat = null;
+    const builder:GlassCatBuilder = new GlassCatBuilder();
     try{
-      container = new GlassCat();
-      container.start();
+      builder.build(argv).start();
       callback(null);
     } catch(err) {
       //console.log("StartServer Error:", err);
