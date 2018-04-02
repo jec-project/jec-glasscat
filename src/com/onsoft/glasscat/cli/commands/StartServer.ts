@@ -16,7 +16,7 @@
 
 import {ScriptCommand, AbstractScriptCommand, CommandDescriptorBuilder,
         CommandDescriptor} from "jec-glasscat-cli";
-import {GlassCatBuilder} from "../../util/GlassCatBuilder";
+import {GlassCatBuilder} from "jec-glasscat-core";
 
 /**
  * The command that allows to create and start a new GlassCat server instance.

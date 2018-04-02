@@ -1,7 +1,7 @@
 # JEC GlassCat Project: Update Release Notes
 
-<a name="jec-glasscat-0.1.4"></a>
-## **0.1.4** (2018-03-27)
+<a name="jec-glasscat-0.1.5"></a>
+## **0.1.5** (2018-04-02)
 
 ### Bug Fixes
 
@@ -11,6 +11,16 @@
 - Adding dependencies to the `jec-jars-mock` module
 - JEC refactoring the `web.json` file has been removed from the `webapp/WEB-INF` directory and added to the new `JEC-INF` directory
 - Adding support for the GlassCat configuration utilities
+- Removing the GlassCat `core` package
+
+<a name="jec-glasscat-0.1.4"></a>
+## **0.1.4** (2018-03-27)
+
+### Bug Fixes
+
+### Features
+
+- Dependencies upgrade
 
 <a name="jec-glasscat-0.1.3"></a>
 ## **0.1.3** (2018-03-25)
