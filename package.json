@@ -32,6 +32,7 @@
     "jec-commons": "^1.1.8",
     "jec-commons-node": "^1.0.7",
     "jec-exchange": "^1.1.6",
+    "jec-exchange-mock": "^1.0.0",
     "jec-glasscat-cli": "^1.0.5",
     "jec-glasscat-commands": "^1.0.4",
     "jec-glasscat-core": "^0.1.6",
