@@ -135,6 +135,7 @@
 		"initError": "inspecteur de sources déjà initialisé",
 		"processorAdded": "ajout d'un processeur de fichier source : %s",
 		"processorRemoved": "suppression d'un processeur de fichier source : %s",
+		"allProcessorRemoved": "suppression des processeurs de fichier source : %s",
 		"sourcePathAdded": "ajout d'un chemin à l'inspecteur de fichier source : %s",
 		"lookupStart": "début de l'inspection des fichiers source",
 		"lookupComplete": "fin de l'inspection des fichiers source",

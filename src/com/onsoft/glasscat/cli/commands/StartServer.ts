@@ -48,7 +48,7 @@ export class StartServer extends AbstractScriptCommand
       builder.build(argv).start();
       callback(null);
     } catch(err) {
-      //console.log("StartServer Error:", err);
+      console.log("StartServer Error:", err);
       callback(err);
     }
   }

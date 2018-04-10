@@ -135,6 +135,7 @@
 		"initError": "source inspector already initialized",
 		"processorAdded": "source file processor added: %s",
 		"processorRemoved": "source file processor removed: %s",
+		"allProcessorRemoved": "source file processors removed: %s",
 		"sourcePathAdded": "source inspector path added: %s",
 		"lookupStart": "source inspector lookup start",
 		"lookupComplete": "source inspector lookup complete",

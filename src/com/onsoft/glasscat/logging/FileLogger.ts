@@ -135,6 +135,15 @@ export class FileLogger extends AbstractLogger {
   /**
    * @inheritDoc
    */
+  public always(marker:any, context:string = ""):void {
+    this.appendLog(
+      this._formatter.format(LogLevelString.ALWAYS, marker, true, context)
+    );
+  }
+
+  /**
+   * @inheritDoc
+   */
   public toString():string {
     return "[Logger::FileLogger]";
   }
