@@ -6,11 +6,11 @@
 
 GlassCat is a **Web Applications Server** which provides advanced functionalities for creating, building and deploying JavaScript microservices and Angular projects over NodeJS.
 
-GlassCat is the default [JavaScript Entreprise Container](https://github.com/pechemann/JEC) _(JEC)_ implementation.
+GlassCat is the default [JavaScript Enterprise Container](http://jecproject.org) _(JEC)_ implementation.
 
 <p align="center">
-    <a href="https://github.com/pechemann/JEC" title="JavaScript Entreprise Container">
-    <img src="https://raw.githubusercontent.com/pechemann/JEC/master/assets/jec-logos/jec-logo.png" alt="JavaScript Entreprise Container" width="500"/>
+    <a href="http://jecproject.org" title="JavaScript Enterprise Container">
+    <img src="https://raw.githubusercontent.com/pechemann/JEC/master/assets/jec-logos/jec-logo.png" alt="JavaScript Enterprise Container" width="500"/>
     </a>
 </p>
 
@@ -42,7 +42,7 @@ $ jec ig
 
 New to GlassCat and need help setting up and customizing the server or learning the basic building blocks? Learn your way around GlassCat and get started with your first app within minutes.
 
-[Browse documentation >](https://github.com/pechemann/jec-glasscat/wiki)
+[Browse documentation >](http://jecproject.org/wiki)
 
 ## Update Release Notes
 
