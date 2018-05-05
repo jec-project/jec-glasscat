@@ -10,7 +10,7 @@ GlassCat is the default [JavaScript Enterprise Container](http://jecproject.org)
 
 <p align="center">
     <a href="http://jecproject.org" title="JavaScript Enterprise Container">
-    <img src="https://raw.githubusercontent.com/pechemann/JEC/master/assets/jec-logos/jec-logo.png" alt="JavaScript Enterprise Container" width="500"/>
+    <img src="https://raw.githubusercontent.com/jec-project/JEC/master/assets/jec-logos/jec-logo.png" alt="JavaScript Enterprise Container" width="500"/>
     </a>
 </p>
 
@@ -24,9 +24,9 @@ JEC GlassCat needs the following system parameters in order to work correctly:
 
 ## Installation
 
-To install GlassCat, you have to use the [JEC Command Line Interface _(JEC-CLI)_](https://github.com/pechemann/jec-cli).
+To install GlassCat, you have to use the [JEC Command Line Interface _(JEC-CLI)_](https://github.com/jec-project/jec-cli).
 <br/>
-First install [JEC-CLI](https://github.com/pechemann/jec-cli), then run the following command in the target directory:
+First install [JEC-CLI](https://github.com/jec-project/jec-cli), then run the following command in the target directory:
 
 ```bash
 $ jec install-glasscat
