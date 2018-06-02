@@ -1,5 +1,14 @@
 # JEC GlassCat Project: Update Release Notes
 
+<a name="jec-glasscat-0.1.7"></a>
+## **0.1.7** (2018-06-02)
+
+### Bug Fixes
+
+### Features
+
+- Upgrading microservice GPM from `1.0.3` to `1.0.4`
+
 <a name="jec-glasscat-0.1.6"></a>
 ## **0.1.6** (2018-06-02)
 
