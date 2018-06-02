@@ -46,7 +46,7 @@ New to GlassCat and need help setting up and customizing the server or learning 
 
 ## Update Release Notes
 
-**Current stable release:** [0.1.5](CHANGELOG.md#jec-glasscat-0.1.5)
+**Current stable release:** [0.1.6](CHANGELOG.md#jec-glasscat-0.1.6)
  
 For a complete listing of release notes for all JEC GlassCat update releases, see the [CHANGELOG](CHANGELOG.md) file. 
 
