@@ -18,7 +18,7 @@ import {Component, OnInit, OnDestroy} from "@angular/core";
 import {ActivatedRoute, Router} from '@angular/router';
 import {Subscription} from "rxjs/Rx";
 import {EjpService} from "../../services/EjpService";
-import {EjpConfig} from "jec-glasscat-core";
+import {EjpConfig} from "jec-glasscat-config";
 import {MessagingService} from "../../services/messaging/MessagingService";
 import {BreadcrumbService} from "../../services/messaging/BreadcrumbService";
 import {ConsoleMenuItem} from "../../business/messaging/ConsoleMenuItem";

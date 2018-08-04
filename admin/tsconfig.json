@@ -11,7 +11,10 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": "./"
+    "baseUrl": "./",
+
+
+    "skipLibCheck": true
   },
   "filesGlob": [
     "./src/**/*.ts",

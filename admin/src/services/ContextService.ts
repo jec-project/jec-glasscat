@@ -15,9 +15,9 @@
 //   limitations under the License.
 
 import {HttpJslet, WebJslet, HttpRequest, HttpResponse} from "jec-exchange";
-import {HttpStatusCode} from "jec-commons";
-import {BootstrapConfig, BootstrapConfigParser, GlassCatConfigLoader,
-        GlassCatConfigUpdater} from "jec-glasscat-core";
+import {HttpStatusCode, HttpHeader} from "jec-commons";
+import {BootstrapConfig} from "jec-glasscat-config";
+import {BootstrapConfigParser, GlassCatConfigLoader, GlassCatConfigUpdater} from "jec-glasscat-core";
 
 @WebJslet({
   name: "ContextService",
@@ -34,8 +34,10 @@ export class ContextService extends HttpJslet {
   }
 
   public doGet(req:HttpRequest, res:HttpResponse, exit:Function):void {
+    res.setHeader(HttpHeader.ACCESS_CONTROL_ALLOW_ORIGIN, "*");
     let configParser:BootstrapConfigParser = null;
     let config:BootstrapConfig = null;
+
     this._glassCatConfigLoader.load(
       (data:any)=> {
         configParser = new BootstrapConfigParser();

@@ -15,10 +15,9 @@
 //   limitations under the License.
 
 import {HttpJslet, WebJslet, HttpRequest, HttpResponse} from "jec-exchange";
-import {EjpConfigParser, EjpConfigLoader, EjpConfigUpdater, EjpConfig, Routes} from "jec-glasscat-core";
+import {EjpConfigParser, EjpConfigLoader, EjpConfigUpdater, Routes} from "jec-glasscat-core";
 import {HttpStatusCode} from "jec-commons";
-import * as fs from "fs";
-import * as path from "path";
+import {EjpConfig} from "jec-glasscat-config";
 
 
 @WebJslet({

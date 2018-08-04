@@ -25,7 +25,7 @@ import {FormBuilder, FormGroup, FormControl, Validators} from "@angular/forms";
 import {BreadcrumbService} from "../../services/messaging/BreadcrumbService";
 import {ConsoleMenuItem} from "../../business/messaging/ConsoleMenuItem";
 import {DialogMessageService} from '../../services/messaging/DialogMessageService';
-import {HttpListenerConfig, BootstrapConfig} from "jec-glasscat-core";
+import {HttpListenerConfig, BootstrapConfig} from "jec-glasscat-config";
 
 @Component({
   selector: "app-loggers",

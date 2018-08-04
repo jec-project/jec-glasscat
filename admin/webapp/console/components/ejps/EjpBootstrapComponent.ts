@@ -19,7 +19,7 @@ import {Router, ActivatedRoute} from '@angular/router';
 import {Subscription} from "rxjs/Rx";
 import {EjpService} from "../../services/EjpService";
 import {BootstrapService} from "../../services/BootstrapService";
-import {EjpWebAppConfig, EjpBootstrapConfig} from "jec-glasscat-core";
+import {EjpWebAppConfig, EjpBootstrapConfig} from "jec-glasscat-config";
 import {BreadcrumbService} from "../../services/messaging/BreadcrumbService";
 import {DialogMessageService} from '../../services/messaging/DialogMessageService';
 import {MessagingService} from '../../services/messaging/MessagingService';
@@ -187,8 +187,6 @@ export class EjpBootstrapComponent extends AbstractEjpComponent
   private initBootstrapListModel():void {
     const webapp:EjpWebAppConfig = this.__ejpModel.webapp;
     const bootstrapCfg:EjpBootstrapConfig[] = webapp.bootstrap;
-    let configModel:SelectItem[] = null;
-    let len:number = -1;
     let fileCfg:EjpBootstrapConfig = null;
     if(this.bootstrapListModel) this.bootstrapListModel.splice(0);
     if(bootstrapCfg) {

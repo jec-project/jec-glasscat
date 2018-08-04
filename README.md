@@ -1,5 +1,10 @@
 # JEC GlassCat Project
 
+[![JEC version](https://img.shields.io/badge/JEC-1.0-%23ba00ff.svg)](http://jecproject.org)
+[![GlassCat version](https://img.shields.io/badge/GlassCat-1.0-%230a50ff.svg)](http://jecproject.org)
+[![npm version](https://badge.fury.io/js/jec-glasscat.svg)](https://www.npmjs.com/package/jec-glasscat)
+[![Apache 2.0](https://img.shields.io/hexpm/l/plug.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+
 <p align="center">
   <img src="./admin/webapp/styles/assets/glasscat.png" alt="GlassCat Application Server" width="200"/>
 </p>
@@ -46,7 +51,7 @@ New to GlassCat and need help setting up and customizing the server or learning 
 
 ## Update Release Notes
 
-**Current stable release:** [0.1.7](CHANGELOG.md#jec-glasscat-0.1.7)
+**Current stable release:** [0.1.9](CHANGELOG.md#jec-glasscat-0.1.9)
  
 For a complete listing of release notes for all JEC GlassCat update releases, see the [CHANGELOG](CHANGELOG.md) file. 
 

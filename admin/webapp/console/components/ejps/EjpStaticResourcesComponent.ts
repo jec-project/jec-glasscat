@@ -16,16 +16,14 @@
 
 import {Component, OnInit, OnDestroy} from "@angular/core";
 import {ActivatedRoute, Router} from '@angular/router';
-import {Subscription} from "rxjs/Rx";
 import {EjpService} from "../../services/EjpService";
-import {EjpStaticResourcesConfig, EjpSecurityConfig} from "jec-glasscat-core";
+import {EjpStaticResourcesConfig, EjpSecurityConfig} from "jec-glasscat-config";
 import {BreadcrumbService} from "../../services/messaging/BreadcrumbService";
 import {DialogMessageService} from '../../services/messaging/DialogMessageService';
 import {MessagingService} from '../../services/messaging/MessagingService';
 import {FormBuilder, FormGroup, FormControl, Validators} from "@angular/forms";
 import {EjpAbstractSecurityComponent} from "./EjpAbstractSecurityComponent";
 import {SelectItem} from "primeng/components/common/api";
-import {ConsoleMenuItem} from "../../business/messaging/ConsoleMenuItem";
 
 @Component({
   selector: "app-ejp",

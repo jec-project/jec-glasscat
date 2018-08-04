@@ -23,7 +23,7 @@ import {LocaleService} from "../../services/LocaleService";
 import {DialogMessageService} from '../../services/messaging/DialogMessageService';
 import {MessagingService} from "../../services/messaging/MessagingService";
 import {ConsoleMessage} from "../../business/messaging/ConsoleMessage";
-import {BootstrapConfig} from "jec-glasscat-core";
+import {BootstrapConfig} from "jec-glasscat-config";
 
 @Component({
   selector: 'app-server-config',

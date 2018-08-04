@@ -27,7 +27,7 @@ import {ConfirmDialogMessageService} from '../../services/messaging/ConfirmDialo
 import {ContextService} from "../../services/ContextService";
 import {DialogMessageService} from '../../services/messaging/DialogMessageService';
 import {SelectItem} from "primeng/components/common/api";
-import {HttpListenerConfig, BootstrapConfig, Domain} from "jec-glasscat-core";
+import {HttpListenerConfig, BootstrapConfig, Domain} from "jec-glasscat-config";
 
 @Component({
   selector: "app-domains",

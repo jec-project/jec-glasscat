@@ -22,7 +22,7 @@ import {ContextService} from "../../services/ContextService";
 import {MessagingService} from "../../services/messaging/MessagingService";
 import {ConsoleMessage} from "../../business/messaging/ConsoleMessage";
 import {Subscription} from "rxjs/Rx";
-import {HttpListenerConfig, BootstrapConfig} from "jec-glasscat-core";
+import {HttpListenerConfig, BootstrapConfig} from "jec-glasscat-config";
 import {DialogMessageService} from '../../services/messaging/DialogMessageService';
 
 @Component({

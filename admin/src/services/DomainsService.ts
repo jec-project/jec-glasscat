@@ -15,10 +15,10 @@
 //   limitations under the License.
 
 import {HttpJslet, WebJslet, HttpRequest, HttpResponse} from "jec-exchange";
-import {DomainConfigLoader, DomainConfigUpdater, DomainConfigParser, Domain,
-        DomainConfig, DomainConnectorConfig, EjpConfigLoader, Routes} from "jec-glasscat-core";
+import {DomainConfigLoader, DomainConfigUpdater, DomainConfigParser,
+        EjpConfigLoader, Routes, DomainImpl, DomainConnectorConfigImpl} from "jec-glasscat-core";
+import {Domain, DomainConfig, DomainConnectorConfig} from "jec-glasscat-config";
 import {HttpStatusCode} from "jec-commons";
-import * as fs from "fs";
 import * as path from "path";
 
 @WebJslet({
@@ -105,9 +105,9 @@ export class DomainsService extends HttpJslet {
   private _loader:EjpConfigLoader = null;
 
   private buildDomain(data:any):Domain {
-    const domain:Domain = new Domain();
+    const domain:Domain = new DomainImpl();
     domain.name = data.webapp.name;
-    domain.connector = new DomainConnectorConfig();
+    domain.connector = new DomainConnectorConfigImpl();
     return domain;
   }
 }

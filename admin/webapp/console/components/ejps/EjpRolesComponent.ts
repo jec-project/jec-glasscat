@@ -19,7 +19,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {Subscription} from "rxjs/Rx";
 import {EjpService} from "../../services/EjpService";
 import {RoleService} from "../../services/RoleService";
-import {EjpRoleConfig, EjpSecurityConfig} from "jec-glasscat-core";
+import {EjpRoleConfig, EjpSecurityConfig} from "jec-glasscat-config";
 import {BreadcrumbService} from "../../services/messaging/BreadcrumbService";
 import {DialogMessageService} from '../../services/messaging/DialogMessageService';
 import {MessagingService} from '../../services/messaging/MessagingService';

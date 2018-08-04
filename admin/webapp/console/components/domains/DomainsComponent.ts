@@ -19,7 +19,7 @@ import {Router} from '@angular/router';
 import {Subscription} from "rxjs/Rx";
 import {DomainsService} from "../../services/DomainsService";
 import {WorkspaceService} from "../../services/WorkspaceService";
-import {Domain} from "jec-glasscat-core";
+import {Domain} from "jec-glasscat-config";
 import {BreadcrumbService} from "../../services/messaging/BreadcrumbService";
 import {ConsoleMenuItem} from "../../business/messaging/ConsoleMenuItem";
 import {DialogMessageService} from '../../services/messaging/DialogMessageService';

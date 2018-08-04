@@ -18,7 +18,7 @@ import {Injectable} from '@angular/core';
 import {Http, Response, Headers, RequestOptions} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/Rx';
-import {Domain, DomainConfig} from "jec-glasscat-core";
+import {Domain, DomainConfig} from "jec-glasscat-config";
 
 @Injectable()
 export class DomainsService {

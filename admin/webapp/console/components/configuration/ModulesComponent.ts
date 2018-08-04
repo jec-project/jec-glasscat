@@ -21,8 +21,7 @@ import {Subscription} from "rxjs/Rx";
 import {ContextService} from "../../services/ContextService";
 import {LocaleService} from "../../services/LocaleService";
 import {MessagingService} from "../../services/messaging/MessagingService";
-import {ConsoleMessage} from "../../business/messaging/ConsoleMessage";
-import {BootstrapConfig} from "jec-glasscat-core";
+import {BootstrapConfig} from "jec-glasscat-config";
 
 @Component({
   selector: 'app-server-config',

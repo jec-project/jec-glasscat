@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const jec_tiger_1 = require("jec-tiger");
-let factory = new jec_tiger_1.TigerFactory();
-let tiger = factory.create();
+const factory = new jec_tiger_1.TigerFactory();
+const tiger = factory.create();
 tiger.process((stats) => {
     if (stats.error)
         console.error(stats.error);

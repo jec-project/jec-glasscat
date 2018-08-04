@@ -20,12 +20,11 @@ import {BreadcrumbService} from "../../services/messaging/BreadcrumbService";
 import {ConsoleMenuItem} from "../../business/messaging/ConsoleMenuItem";
 import {ContextService} from "../../services/ContextService";
 import {Subscription} from "rxjs/Rx";
-import {FormBuilder, FormGroup, FormControl, Validators} from "@angular/forms";
 import {MessagingService} from "../../services/messaging/MessagingService";
 import {ConsoleMessage} from "../../business/messaging/ConsoleMessage";
 import {DialogMessageService} from '../../services/messaging/DialogMessageService';
 import {SelectItem} from "primeng/components/common/api";
-import {LoggerFactoryConfig, BootstrapConfig} from "jec-glasscat-core";
+import {LoggerFactoryConfig, BootstrapConfig} from "jec-glasscat-config";
 
 @Component({
   selector: 'app-loggers',
